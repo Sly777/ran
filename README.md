@@ -6,16 +6,17 @@
 
 ## Features
 
-- ***Instant feedback***
+- ***Hot-Reload Ready for Dev***
 
-- ***Next generation JavaScript***
+- ***Next Generation JavaScript (ES6)***
 
-- ***Next generation CSS (CSS-in-JS)***
+- ***Next Generation CSS (CSS-in-JS)***
 
-- ***SEO***
+- ***SEO-Ready***
 
 - ***Performance-first***
 
+- ***Deployment Ready for Now, Digital Ocean and Heroku***
 
 ## How to use
 
