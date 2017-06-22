@@ -12,7 +12,10 @@
     "bundle:analyze": "ANALYZE_BUNDLE=true yarn dev",
     "bundle:view": "webpack-bundle-analyzer .next/stats.json",
     "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "setup:before": "npm i shelljs",
+    "setup": "npm run setup:before && node ./helper_scripts/setup.js && npm run setup:after",
+    "setup:after": "npm rm shelljs"
   },
   "dependencies": {
     "chalk": "1.1.3",
@@ -56,7 +59,8 @@
     "run"
   ],
   "engines": {
-    "node": ">=7.6.0"
+    "node": ">=7.6.0",
+    "npm": ">=4"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {

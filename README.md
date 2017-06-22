@@ -19,20 +19,16 @@
 
 ## How to use
 
-Clone the repo to your folder:
+- Firstly, Clone the repo with this command.
 
 ```bash
-mkdir ran
-cd ran
-git clone https://github.com/Sly777/ran.git
+git clone --depth=1 https://github.com/Sly777/ran.git RAN
+cd RAN
 ```
 
-Install it and run:
+- Then run ```yarn run setup``` to prepare the project.
+- After It's finished, run ```yarn run dev```
 
-```bash
-yarn
-yarn run dev
-```
 
 And that's all!
 
