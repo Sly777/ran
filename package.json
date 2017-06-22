@@ -15,7 +15,8 @@
     "precommit": "lint-staged",
     "setup:before": "npm i shelljs figlet cli-clear",
     "setup": "npm run setup:before && node ./helper_scripts/setup.js && npm run setup:after",
-    "setup:after": "npm rm shelljs figlet cli-clear"
+    "setup:after": "npm rm shelljs figlet cli-clear",
+    "heroku-postbuild": "next build"
   },
   "dependencies": {
     "chalk": "1.1.3",
