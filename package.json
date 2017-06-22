@@ -13,9 +13,9 @@
     "bundle:view": "webpack-bundle-analyzer .next/stats.json",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
-    "setup:before": "npm i shelljs",
+    "setup:before": "npm i shelljs figlet cli-clear",
     "setup": "npm run setup:before && node ./helper_scripts/setup.js && npm run setup:after",
-    "setup:after": "npm rm shelljs"
+    "setup:after": "npm rm shelljs figlet cli-clear"
   },
   "dependencies": {
     "chalk": "1.1.3",

@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
+/* eslint-disable import/no-unresolved */
+
 const shell = require('shelljs');
+const figlet = require('figlet');
+const clear = require('cli-clear');
 const exec = require('child_process').exec;
 const path = require('path');
 const fs = require('fs');
 
+clear();
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-
-process.stdout.write('\n');
-process.stdout.write('Cleaning RAN! for preparing new project...');
-process.stdout.write('\n');
 
 /**
  * Initializes git again
@@ -40,7 +41,11 @@ function installDepsCallback(error) {
   deleteFileInCurrentDir('setup.js', () => {
     process.stdout.write('Initialising new repository...');
     initGit(() => {
-      process.stdout.write('\nDone! RAN! is ready to go!');
+      clear();
+      process.stdout.write('\n');
+      process.stdout.write('\nRAN! is ready to go!');
+      process.stdout.write('\n');
+      process.stdout.write('\n');
       process.exit(0);
     });
   });
@@ -64,9 +69,9 @@ function installDeps() {
           _err ||
           process.env.USE_YARN === 'false'
         ) {
-          exec('npm install', installDepsCallback());
+          exec('npm install', installDepsCallback);
         } else {
-          exec('yarn install', installDepsCallback());
+          exec('yarn install', installDepsCallback);
         }
       });
     }
@@ -81,7 +86,24 @@ function cleanRepo(callback) {
   callback();
 }
 
-cleanRepo(() => {
-  process.stdout.write('Installing dependencies... (This might take a while)');
-  installDeps();
-});
+figlet.text(
+  'RAN!',
+  {
+    verticalLayout: 'full'
+  },
+  (err, data) => {
+    process.stdout.write('\n');
+    process.stdout.write(data);
+    process.stdout.write('\n');
+    process.stdout.write('\n');
+    process.stdout.write('Cleaning RAN! for preparing new project...');
+    process.stdout.write('\n');
+
+    cleanRepo(() => {
+      process.stdout.write(
+        'Installing dependencies... (This might take a while)'
+      );
+      installDeps();
+    });
+  }
+);
