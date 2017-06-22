@@ -38,7 +38,8 @@
     "react-redux": "5.0.5",
     "redux": "3.7.0",
     "styled-components": "2.0.0",
-    "babel-plugin-styled-components": "1.1.4"
+    "babel-plugin-styled-components": "1.1.4",
+    "remote-redux-devtools": "^0.5.12"
   },
   "description": "React . Apollo (GraphQL) . Next.js Boilerplate",
   "author": "Ilker Guller <me@ilkerguller.com> (http://ilkerguller.com)",
@@ -86,7 +87,6 @@
     "nodemon": "1.11.0",
     "pre-commit": "1.2.2",
     "prettier": "1.4.4",
-    "remote-redux-devtools": "^0.5.12",
     "webpack-bundle-analyzer": "2.8.2"
   }
 }
