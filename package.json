@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "node server.js",
     "dev:next": "next",
-    "start": "next start -p $PORT",
+    "start": "NODE_ENV=production node server.js",
     "start:next": "next start",
     "lint": "eslint --fix '{pages,components,libraries,server}/**/*.js'",
     "bundle:analyze": "ANALYZE_BUNDLE=true yarn dev",
