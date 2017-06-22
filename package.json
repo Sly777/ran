@@ -28,7 +28,7 @@
     "localforage": "1.5.0",
     "lru-cache": "4.1.1",
     "moment": "2.18.1",
-    "next": "beta",
+    "next": "2.4.4",
     "next-url-prettifier": "1.1.4",
     "prop-types": "15.5.10",
     "react": "15.6.1",
