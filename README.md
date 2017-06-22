@@ -1,4 +1,3 @@
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/sly777/ran)
 # RAN!
 ### React . Apollo (GraphQL) . Next.js Boilerplate
 
