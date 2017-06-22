@@ -2,6 +2,8 @@
 # RAN!
 ### React . Apollo (GraphQL) . Next.js Boilerplate
 
+[![Join the chat at https://gitter.im/ran-boilerplate/Lobby](https://badges.gitter.im/ran-boilerplate/Lobby.svg)](https://gitter.im/ran-boilerplate/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![license](https://img.shields.io/github/license/sly777/ran.svg)]() 
 
 ## Features
