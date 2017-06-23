@@ -35,7 +35,11 @@ let PostInfo = ({ data: { Post }, className }) => {
           <b>{moment(Post.createdAt).format('DD.MM.YYYY kk:mm')}</b>
         </span>
       </div>
-      <p><a href={Post.url}>{Post.url}</a></p>
+      <p>
+        <a target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
+          {Post.url}
+        </a>
+      </p>
     </section>
   );
 };

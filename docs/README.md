@@ -4,13 +4,25 @@
 ## Table of Contents
 
 - [Deployment](Deployment)
-  - [With now](Deployment/with-now.md)
+
+  - [NOW](Deployment/with-now.md)
+
   - [Amazon - AWS](Deployment/aws.md)
+
   - [Heroku](Deployment/heroku.md)
+
   - [Digital Ocean](Deployment/digital-ocean.md)
+
 - [Architecture](Architecture.md)
+
 - [Packages](Packages.md)
+
 - [Styling](Styling.md)
+
+- [Routing](Routing.md)
+
 - [Helper Scripts](Helper-scripts.md)
+
 - [Roadmap](Roadmap.md)
+
 - [Contributing](Contributing.md)
