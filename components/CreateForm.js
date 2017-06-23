@@ -1,13 +1,18 @@
 import { gql, graphql } from 'react-apollo';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Filter from 'bad-words';
 
 let CreateForm = ({ createPost }) => {
   function handleSubmit(e) {
     e.preventDefault();
+    const filter = new Filter({ placeHolder: '' });
 
-    const title = e.target.elements.title.value;
+    let title = e.target.elements.title.value;
     let url = e.target.elements.url.value;
+
+    if (title && title !== '') title = filter.clean(title).trim();
+    if (url && url !== '') url = filter.clean(url).trim();
 
     if (title === '' || url === '') {
       window.alert('Both fields are required.');
