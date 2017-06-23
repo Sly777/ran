@@ -15,7 +15,7 @@
 
 - ***Performance-first***
 
-- ***Deployment Ready for Now, Digital Ocean and Heroku***
+- ***Production Deployment Ready for Now, Digital Ocean and Heroku***
 
 ## How to use
 
