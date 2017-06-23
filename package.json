@@ -38,7 +38,7 @@
     "react-redux": "5.0.5",
     "redux": "3.7.0",
     "styled-components": "2.0.0",
-    "babel-plugin-styled-components": "1.1.4",
+    "babel-plugin-styled-components": "1.1.5",
     "remote-redux-devtools": "0.5.12"
   },
   "description": "React . Apollo (GraphQL) . Next.js Boilerplate",
