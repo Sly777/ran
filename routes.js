@@ -11,6 +11,14 @@ routes.push({
   ]
 });
 
+routes.push({
+  page: 'create',
+  prettyUrl: () => '/create_post',
+  prettyUrlPatterns: [
+    { pattern: '/create_post', defaultParams: { lang: 'en' } }
+  ]
+});
+
 const urlPrettifier = new UrlPrettifier(routes);
 
 exports.default = routes;
