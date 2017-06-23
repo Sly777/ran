@@ -14,8 +14,14 @@ let CreateForm = ({ createPost }) => {
     let title = e.target.elements.title.value;
     let url = e.target.elements.url.value;
 
-    if (title && title !== '') title = filter.clean(title).trim();
-    if (url && url !== '') url = filter.clean(url).trim();
+    if (title && title !== '') {
+      title = filter.clean(title).trim();
+      e.target.elements.title.value = title;
+    }
+    if (url && url !== '') {
+      url = filter.clean(url).trim();
+      e.target.elements.url.value = url;
+    }
 
     if (title === '' || url === '') {
       window.alert('Both fields are required.');
