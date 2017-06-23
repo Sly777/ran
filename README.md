@@ -31,6 +31,10 @@ cd RAN
 
 And that's all!
 
+## Example
+
+[Click here](https://ran-boilerplate.herokuapp.com/) to see example project to understand how RAN! works on production.
+
 ## Documentation
 
 [Click here](docs) to see all details of RAN!

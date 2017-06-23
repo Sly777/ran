@@ -1,14 +1,15 @@
-import Link from 'next/link';
+import { Link } from 'next-url-prettifier';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Router } from '../routes';
 
 const LinkList = ({ className, pathname }) =>
   <nav className={className}>
     <Link prefetch href="/">
       <a className={pathname === '/' && 'is-active'}>Main Page</a>
     </Link>
-    <Link prefetch href="/create">
-      <a className={pathname === '/create' && 'is-active'}>Create</a>
+    <Link prefetch route={Router.linkPage('create')}>
+      <a className={pathname === '/create_post' && 'is-active'}>Create</a>
     </Link>
     <a
       href="https://github.com/Sly777/ran"
