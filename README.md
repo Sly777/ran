@@ -49,7 +49,7 @@ RAN! is using [SemVer](http://semver.org/) for versioning. For the versions avai
 
 ## Author
 
-* **Ilker Guller** - [website](https://ilkerguller.com) / [twitter](https://twitter.com/the_bluescreen)
+* **Ilker Guller** - [website](http://ilkerguller.com) / [twitter](https://twitter.com/the_bluescreen)
 
 See also the list of [maintainers](MAINTAINERS.md) who participated in this project.
 
