@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Filter from 'bad-words';
 import words from '../libraries/badWords';
 
-const filter = new Filter({ placeHolder: '' });
+const filter = new Filter({ placeHolder: ' ' });
 filter.addWords(words);
 
 let CreateForm = ({ createPost }) => {
