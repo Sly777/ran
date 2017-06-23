@@ -2,11 +2,14 @@ import { gql, graphql } from 'react-apollo';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Filter from 'bad-words';
+import words from '../libraries/badWords';
+
+const filter = new Filter({ placeHolder: '' });
+filter.addWords(words);
 
 let CreateForm = ({ createPost }) => {
   function handleSubmit(e) {
     e.preventDefault();
-    const filter = new Filter({ placeHolder: '' });
 
     let title = e.target.elements.title.value;
     let url = e.target.elements.url.value;
