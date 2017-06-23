@@ -39,6 +39,10 @@ And that's all!
 
 [Click here](docs) to see all details of RAN!
 
+## FAQ
+
+[Click here](docs/FAQ.md) for FAQ of RAN! If it doesn't enough for you problem, feel free to open Issue on github!
+
 ## Contributing
 
 Please read [Contributing doc](docs/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.

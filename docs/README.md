@@ -26,3 +26,5 @@
 - [Roadmap](Roadmap.md)
 
 - [Contributing](Contributing.md)
+
+- [FAQ](FAQ.md)
