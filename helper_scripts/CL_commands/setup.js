@@ -3,11 +3,11 @@
 /* eslint-disable import/no-unresolved */
 
 const shell = require('shelljs');
-const figlet = require('figlet');
 const clear = require('cli-clear');
 const exec = require('child_process').exec;
 const path = require('path');
 const fs = require('fs');
+const helper = require('./__helpers');
 
 clear();
 process.stdin.resume();
@@ -86,24 +86,15 @@ function cleanRepo(callback) {
   callback();
 }
 
-figlet.text(
-  'RAN!',
-  {
-    verticalLayout: 'full'
-  },
-  (err, data) => {
-    process.stdout.write('\n');
-    process.stdout.write(data);
-    process.stdout.write('\n');
-    process.stdout.write('\n');
-    process.stdout.write('Cleaning RAN! for preparing new project...');
-    process.stdout.write('\n');
+helper.writeRan(() => {
+  process.stdout.write('\n');
+  process.stdout.write('Cleaning RAN! for preparing new project...');
+  process.stdout.write('\n');
 
-    cleanRepo(() => {
-      process.stdout.write(
-        'Installing dependencies... (This might take a while)'
-      );
-      installDeps();
-    });
-  }
-);
+  cleanRepo(() => {
+    process.stdout.write(
+      'Installing dependencies... (This might take a while)'
+    );
+    installDeps();
+  });
+});

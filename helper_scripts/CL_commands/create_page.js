@@ -1,0 +1,104 @@
+#!/usr/bin/env node
+
+const inquirer = require('inquirer');
+const fs = require('fs');
+const helper = require('./__helpers');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+function afterPageCreation(filename, prettyurl = null) {
+  process.stdout.write('\n');
+  process.stdout.write(`New Page ${filename} is created and ready!`);
+  process.stdout.write('\n');
+  if (prettyurl) {
+    process.stdout.write(
+      'Please add the code below to "./routes.js" file to use pretty URL'
+    );
+    process.stdout.write('\n');
+    helper.getTempfromHandlebar(
+      `${helper.config.templatesDir}/route.hbs`,
+      {
+        filename,
+        prettyurl
+      },
+      code => {
+        process.stdout.write('\n');
+        process.stdout.write(code);
+        process.stdout.write('\n');
+        process.stdout.write('\n');
+        process.exit(0);
+      }
+    );
+  }
+}
+
+function askQuestions() {
+  const questions = [
+    {
+      name: 'filename',
+      type: 'input',
+      message: 'Enter page name:',
+      validate(value) {
+        if (value.length) {
+          if (
+            helper.isUsedOnDir(
+              helper.config.pagesDir,
+              value.indexOf('.js') > 0 ? value : `${value}.js`
+            )
+          ) {
+            return "It's already added. Please enter new page name.";
+          }
+          return true;
+        }
+        return 'It cannot be empty. Please enter it correctly...';
+      }
+    },
+    {
+      name: 'isPretty',
+      type: 'confirm',
+      message: ({ filename }) =>
+        `Do you want different URL? (current: /${filename})`,
+      default: false
+    },
+    {
+      name: 'prettyurl',
+      type: 'input',
+      message: 'Enter new URL:',
+      when: ({ isPretty }) => isPretty,
+      validate(value) {
+        if (value.length) {
+          if (helper.isUsedOnRoutes(value)) {
+            return "It's already added. Please enter new URL.";
+          }
+          return true;
+        }
+        return 'It cannot be empty. Please enter it correctly...';
+      }
+    }
+  ];
+
+  inquirer.prompt(questions).then(({ filename, prettyurl = null }) => {
+    helper.getTempfromHandlebar(
+      `${helper.config.templatesDir}/page.hbs`,
+      {
+        filename,
+        prettyurl
+      },
+      code => {
+        fs.writeFile(
+          `${helper.config.pagesDir}/${filename}.js`,
+          code,
+          { flag: 'wx' },
+          _err => {
+            if (_err) throw _err;
+
+            afterPageCreation(filename, prettyurl);
+          }
+        );
+      }
+    );
+  });
+}
+
+helper.writeRan(askQuestions);

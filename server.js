@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = isDev && process.env.ENABLE_TUNNEL ? require('ngrok') : null;
 
 const customHost = process.env.HOST;
-const host = customHost || null; // Let http.Server use its default IPv6/4 host
+const host = customHost || null;
 const prettyHost = customHost || 'localhost';
 const port = parseInt(process.env.PORT, 10) || 3000;
 
@@ -20,7 +20,7 @@ const handle = app.getRequestHandler();
 
 const ssrCache = new LRUCache({
   max: 100,
-  maxAge: 1000 * 60 * 60 // 1hour
+  maxAge: 3600 // 1 hour
 });
 
 /*
@@ -39,14 +39,12 @@ const renderAndCache = function renderAndCache(
 ) {
   const key = getCacheKey(req);
 
-  // If we have a page in the cache, let's serve it
   if (ssrCache.has(key) && !isDev) {
     console.log(`CACHE HIT: ${key}`);
     res.send(ssrCache.get(key));
     return;
   }
 
-  // If not let's render the page into HTML
   app
     .renderToHTML(req, res, pagePath, queryParams)
     .then(html => {
@@ -84,7 +82,6 @@ app.prepare().then(() => {
       return logger.error(err.message);
     }
 
-    // Connect to ngrok in dev mode
     if (ngrok) {
       ngrok.connect(port, (innerErr, url) => {
         if (innerErr) {

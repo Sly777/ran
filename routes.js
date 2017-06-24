@@ -1,5 +1,7 @@
 const UrlPrettifier = require('next-url-prettifier').default;
 
+const routes = [];
+
 //
 // Because of awesome Next.js, You don't need to add routes for all pages.
 // Every file on Pages folder basically has route as they named.
@@ -8,8 +10,10 @@ const UrlPrettifier = require('next-url-prettifier').default;
 // If you want to change url (for SEO or put different path), please add your route below.
 // for more info, please look at https://github.com/Sly777/ran/blob/master/docs/Routing.md
 //
-
-const routes = [];
+//
+// Please add your route between of comments
+//
+// ------------ ROUTES ---------------
 
 routes.push({
   page: 'details',
@@ -27,6 +31,10 @@ routes.push({
     { pattern: '/create_post', defaultParams: { lang: 'en' } }
   ]
 });
+
+// ------------ ROUTES ---------------
+//
+//
 
 const urlPrettifier = new UrlPrettifier(routes);
 
