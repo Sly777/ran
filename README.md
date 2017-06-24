@@ -11,6 +11,8 @@
 
 - ***Next Generation CSS (CSS-in-JS)***
 
+- ***Create New Page in a Second (with CLI)***
+
 - ***SEO-Ready***
 
 - ***Performance-first***
@@ -34,6 +36,10 @@ And that's all!
 ## Example
 
 [Click here](https://ran-boilerplate.herokuapp.com/) to see example project to understand how RAN! works on production.
+
+## Commands
+
+Best feature of RAN! is **CL commands**. You can just run one command to create page with route! [Click here](docs/Commands.md) to see details how It works on RAN!.
 
 ## Documentation
 

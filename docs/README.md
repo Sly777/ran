@@ -17,6 +17,8 @@
 
 - [Packages](Packages.md)
 
+- [Commands](Commands.md)
+
 - [Styling](Styling.md)
 
 - [Routing](Routing.md)
