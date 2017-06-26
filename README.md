@@ -41,6 +41,8 @@ And that's all!
 
 Best feature of RAN! is **CL commands**. You can just run one command to create page with route! [Click here](docs/Commands.md) to see details how It works on RAN!.
 
+![YAY](https://media.giphy.com/media/l0Iy6nmyS5p7hIAso/giphy.gif)
+
 ## Documentation
 
 [Click here](docs) to see all details of RAN!
