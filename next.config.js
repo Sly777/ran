@@ -17,7 +17,7 @@ module.exports = {
       );
     }
 
-    if (prod) {
+    if (prod && process.env.OFFLINE_SUPPORT) {
       config.plugins.push(
         new OfflinePlugin({
           publicPath: '/',

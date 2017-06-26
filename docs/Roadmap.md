@@ -3,7 +3,8 @@
 ## Roadmap
 
 - [ ] Improve Documentation
-- [ ] CL Commands (for creating component, page, preparing the project)
+- [ ] CL Commands (Add/remove routes, Remove pages, Add/remove addons)
+- [ ] Offline Support (WIP)
 - [ ] Example for using NGINX
 - [ ] Example for using Style Themes
 - [ ] Improve Performance More

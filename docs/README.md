@@ -23,6 +23,8 @@
 
 - [Routing](Routing.md)
 
+- [Offline Support](Offline.md)
+
 - [Helper Scripts](Helper-scripts.md)
 
 - [Roadmap](Roadmap.md)
