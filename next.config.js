@@ -1,5 +1,4 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const { DefinePlugin } = require('webpack');
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
@@ -19,12 +18,6 @@ module.exports = {
     }
 
     if (prod) {
-      config.plugins.push(
-        new DefinePlugin({
-          ON_PRODUCTION: JSON.stringify(true)
-        })
-      );
-
       config.plugins.push(
         new OfflinePlugin({
           publicPath: '/',

@@ -7,7 +7,11 @@ let offlineInstalled = false;
 const App = ({ children, theme }) => {
   const themeName = !themeList[theme] ? 'main' : theme;
 
-  if (ON_PRODUCTION && process.browser && !offlineInstalled) {
+  if (
+    process.env.NODE_ENV === 'production' &&
+    process.browser &&
+    !offlineInstalled
+  ) {
     const OfflinePlugin = require('offline-plugin/runtime'); // eslint-disable-line global-require
 
     OfflinePlugin.install({
