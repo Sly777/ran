@@ -3,11 +3,14 @@ const express = require('express');
 const next = require('next');
 const compression = require('compression');
 const LRUCache = require('lru-cache');
+const path = require('path');
+const fs = require('fs');
 
 const Router = require('./routes').Router;
 const logger = require('./server/logger');
 
 const isDev = process.env.NODE_ENV !== 'production';
+const isProd = !isDev;
 const ngrok = isDev && process.env.ENABLE_TUNNEL ? require('ngrok') : null;
 
 const customHost = process.env.HOST;
@@ -22,6 +25,14 @@ const ssrCache = new LRUCache({
   max: 100,
   maxAge: 3600 // 1 hour
 });
+
+const buildStats = isProd
+  ? JSON.parse(fs.readFileSync('./.next/build-stats.json', 'utf8').toString())
+  : null;
+
+const buildId = isProd
+  ? fs.readFileSync('./.next/BUILD_ID', 'utf8').toString()
+  : null;
 
 /*
  * NB: make sure to modify this to take into account anything that should trigger
@@ -49,8 +60,10 @@ const renderAndCache = function renderAndCache(
     .renderToHTML(req, res, pagePath, queryParams)
     .then(html => {
       // Let's cache this page
-      console.log(`CACHE MISS: ${key}`);
-      ssrCache.set(key, html);
+      if (!isDev) {
+        console.log(`CACHE MISS: ${key}`);
+        ssrCache.set(key, html);
+      }
 
       res.send(html);
     })
@@ -74,6 +87,30 @@ app.prepare().then(() => {
       )
     )
   );
+
+  server.get('/sw.js', (req, res) =>
+    app.serveStatic(req, res, path.resolve('./.next/sw.js'))
+  );
+
+  server.get('/manifest.html', (req, res) =>
+    app.serveStatic(req, res, path.resolve('./.next/manifest.html'))
+  );
+
+  server.get('/manifest.appcache', (req, res) =>
+    app.serveStatic(req, res, path.resolve('./.next/manifest.appcache'))
+  );
+
+  if (isProd) {
+    server.get('/_next/-/app.js', (req, res) =>
+      app.serveStatic(req, res, path.resolve('./.next/app.js'))
+    );
+
+    const hash = buildStats['app.js'] ? buildStats['app.js'].hash : buildId;
+
+    server.get(`/_next/${hash}/app.js`, (req, res) =>
+      app.serveStatic(req, res, path.resolve('./.next/app.js'))
+    );
+  }
 
   server.get('*', (req, res) => handle(req, res));
 

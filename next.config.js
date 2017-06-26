@@ -1,0 +1,75 @@
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { DefinePlugin } = require('webpack');
+const OfflinePlugin = require('offline-plugin');
+
+module.exports = {
+  webpack: (config, { dev }) => {
+    const prod = !dev;
+
+    if (process.env.ANALYZE_BUILD) {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'disabled',
+          // For all options see th0r/webpack-bundle-analyzer#as-plugin
+          generateStatsFile: true,
+          // Will be available at `.next/stats.json`
+          statsFilename: 'stats.json'
+        })
+      );
+    }
+
+    if (prod) {
+      config.plugins.push(
+        new DefinePlugin({
+          ON_PRODUCTION: JSON.stringify(true)
+        })
+      );
+
+      config.plugins.push(
+        new OfflinePlugin({
+          publicPath: '/',
+          relativePaths: false,
+          externals: ['/', '/manifest.html'],
+          excludes: ['.htaccess'],
+          safeToUseOptionalCaches: true,
+          caches: 'all',
+          rewrites: function rewrites(asset) {
+            if (
+              asset.indexOf('.hot-update.js') > -1 ||
+              asset.indexOf('build-stats.json') > -1 ||
+              asset === 'BUILD_ID' ||
+              asset.indexOf('dist/') === 0
+            ) {
+              return null;
+            }
+
+            if (asset[0] === '/') {
+              return asset;
+            }
+
+            if (asset.indexOf('bundles/pages/') === 0) {
+              return `/_next/-/${asset
+                .replace('bundles/pages', 'page')
+                .replace('index.js', '')
+                .replace(/\.js$/, '')}`;
+            }
+
+            return `/_next/-/${asset}`;
+          },
+          autoUpdate: 1000 * 60 * 5,
+          __tests: dev ? { ignoreRuntime: true } : {},
+          ServiceWorker: {
+            events: true,
+            navigateFallbackURL: '/'
+          },
+          AppCache: {
+            directory: './',
+            events: true
+          }
+        })
+      );
+    }
+
+    return config;
+  }
+};

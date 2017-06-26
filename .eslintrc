@@ -23,7 +23,8 @@
     "AUTH0_DOMAIN": false,
     "GRAPHQL_ENDPOINT": false,
     "NEWSLETTER_FORM_ACTION": false,
-    "NEWSLETTER_FORM_INPUT_NAME": false
+    "NEWSLETTER_FORM_INPUT_NAME": false,
+    "ON_PRODUCTION": true
   },
   "rules": {
     "react/forbid-prop-types": 0,

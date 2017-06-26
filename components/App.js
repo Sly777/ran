@@ -2,8 +2,24 @@ import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import themeList from './../libraries/theme';
 
+let offlineInstalled = false;
+
 const App = ({ children, theme }) => {
   const themeName = !themeList[theme] ? 'main' : theme;
+
+  if (ON_PRODUCTION && process.browser && !offlineInstalled) {
+    const OfflinePlugin = require('offline-plugin/runtime'); // eslint-disable-line global-require
+
+    OfflinePlugin.install({
+      onUpdateReady() {
+        OfflinePlugin.applyUpdate();
+      },
+      onUpdated() {
+        window.location.reload();
+      }
+    });
+    offlineInstalled = true;
+  }
 
   return (
     <ThemeProvider theme={themeList[themeName]}>
