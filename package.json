@@ -19,7 +19,7 @@
     "heroku-postbuild": "next build"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "1.1.5",
+    "babel-plugin-styled-components": "1.1.6",
     "chalk": "1.1.3",
     "compression": "1.6.2",
     "express": "4.15.3",

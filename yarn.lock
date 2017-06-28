@@ -511,9 +511,9 @@ babel-plugin-react-require@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.0.0.tgz#2e4e7b4496b93a654a1c80042276de4e4eeb20e3"
 
-babel-plugin-styled-components@1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.1.5.tgz#ff2c8e0e2f3a0d3279e7454a7aaa2973749e714d"
+babel-plugin-styled-components@1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.1.6.tgz#72ffdc1be310f0521af3b574bffedd730405cda9"
   dependencies:
     stylis "^3.0.19"
 
@@ -5036,17 +5036,13 @@ styled-jsx@1.0.5:
     string-hash "1.1.1"
     stylis "3.1.5"
 
-stylis@3.1.5:
+stylis@3.1.5, stylis@^3.0.19:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.1.5.tgz#c585186286aaa79856c9ac62bbb38113923edda3"
 
 stylis@^2.0.0:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-2.0.12.tgz#547253055d170f2a7ac2f6d09365d70635f2bec6"
-
-stylis@^3.0.19:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.1.9.tgz#638370451f980437f57c59e58d2e296be29fafb7"
 
 supports-color@^2.0.0:
   version "2.0.0"
