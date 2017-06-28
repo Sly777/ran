@@ -28,7 +28,7 @@ git clone --depth=1 https://github.com/Sly777/ran.git RAN
 cd RAN
 ```
 
-- Then run ```yarin install && yarn run setup``` to prepare the project. (or ```npm install && npm run setup```)
+- Then run ```yarn install && yarn run setup``` to prepare the project. (or ```npm install && npm run setup```)
 - After It's finished, run ```yarn run dev``` (or ```npm run dev```)
 
 And that's all!
