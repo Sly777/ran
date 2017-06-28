@@ -9,6 +9,8 @@
 
 - ***Next Generation JavaScript (ES6)***
 
+- ***Offline Ready (Experimental!)***
+
 - ***Next Generation CSS (CSS-in-JS)***
 
 - ***Create New Page in a Second (with CLI)***
