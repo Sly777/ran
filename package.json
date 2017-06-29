@@ -9,11 +9,12 @@
     "start": "NODE_ENV=production node server.js",
     "start:next": "next start",
     "lint": "eslint --fix '{pages,components,libraries,server,helper_scripts}/**/*.js'",
-    "analyze": "ANALYZE_BUILD=true npm run build && webpack-bundle-analyzer .next/stats.json",
+    "analyze": "ANALYZE_BUILD=true npm run build",
     "setup:before": "npm i shelljs cli-clear",
     "setup": "npm run setup:before && node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm rm shelljs cli-clear",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
+    "create:route": "node ./helper_scripts/CL_commands/create_route.js",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
     "heroku-postbuild": "next build"

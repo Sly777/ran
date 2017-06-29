@@ -8,11 +8,9 @@ module.exports = {
     if (process.env.ANALYZE_BUILD) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
-          analyzerMode: 'disabled',
-          // For all options see th0r/webpack-bundle-analyzer#as-plugin
-          generateStatsFile: true,
-          // Will be available at `.next/stats.json`
-          statsFilename: 'stats.json'
+          analyzerMode: 'server',
+          analyzerPort: 8888,
+          openAnalyzer: true
         })
       );
     }

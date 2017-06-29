@@ -21,6 +21,8 @@
 
 - ***Production Deployment Ready for Now, Digital Ocean and Heroku***
 
+- ***Prettier and Eslint integrated***
+
 ## How to use
 
 - Firstly, Clone the repo with this command.
