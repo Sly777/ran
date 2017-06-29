@@ -29,7 +29,7 @@
     "localforage": "1.5.0",
     "lru-cache": "4.1.1",
     "moment": "2.18.1",
-    "next": "3.0.1-beta.1",
+    "next": "3.0.1-beta.3",
     "next-url-prettifier": "1.1.4",
     "offline-plugin": "4.8.1",
     "prop-types": "15.5.10",
