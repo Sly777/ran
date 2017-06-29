@@ -20,7 +20,9 @@ let PostList = ({
           {allPosts.map((post, index) =>
             <li key={post.id}>
               <div>
-                <span>{index + 1}. </span>
+                <span>
+                  {index + 1}.{' '}
+                </span>
                 <Link
                   route={Router.linkPage('details', {
                     postId: post.id,
@@ -98,7 +100,7 @@ const allPosts = gql`
       title
       votes
       createdAt
-    },
+    }
     _allPostsMeta {
       count
     }

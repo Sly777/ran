@@ -4,8 +4,8 @@
   "main": "server.js",
   "scripts": {
     "build": "next build",
-    "dev": "node server.js",
-    "dev:next": "next",
+    "dev": "npm run lint && node server.js",
+    "dev:next": "npm run lint && next",
     "start": "NODE_ENV=production node server.js",
     "start:next": "next start",
     "lint": "eslint --fix '{pages,components,libraries,server,helper_scripts}/**/*.js'",

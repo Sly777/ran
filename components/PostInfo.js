@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import moment from 'moment';
 
 const postInfoQuery = gql`
-  query getPost($postId:ID!) {
-    Post (id: $postId) {
-      title,
-      votes,
-      id,
-      url,
+  query getPost($postId: ID!) {
+    Post(id: $postId) {
+      title
+      votes
+      id
+      url
       createdAt
     }
   }
@@ -26,9 +26,13 @@ let PostInfo = ({ data: { Post }, className }) => {
 
   return (
     <section className={className}>
-      <h1>{Post.title}</h1>
+      <h1>
+        {Post.title}
+      </h1>
       <div>
-        <span>ID: <b>{Post.id}</b></span>
+        <span>
+          ID: <b>{Post.id}</b>
+        </span>
         <span>&nbsp;|&nbsp;</span>
         <span>
           Created At: {' '}
