@@ -1,7 +1,9 @@
+import { mergeObjects } from './helpers';
+
 const themeList = {};
 
 themeList.extend = (themename, newsetting) =>
-  Object.assign({}, themeList[themename], newsetting);
+  mergeObjects(themeList[themename], newsetting);
 
 themeList.main = {
   font: {
