@@ -33,7 +33,7 @@ cd RAN
 ```
 
 - Then run ```yarn install && yarn run setup``` to prepare the project. (or ```npm install && npm run setup```)
-- After It's finished, run ```yarn run dev``` (or ```npm run dev```)
+- After it's finished, run ```yarn run dev``` (or ```npm run dev```)
 
 And that's all!
 
@@ -53,11 +53,11 @@ Best feature of RAN! is **CL commands**. You can just run one command to create 
 
 ## FAQ
 
-[Click here](docs/FAQ.md) for FAQ of RAN! If it doesn't enough for you problem, feel free to open Issue on github!
+[Click here](docs/FAQ.md) for FAQ of RAN! If it doesn't solve your problem, feel free to open an issue on GitHub!
 
 ## Contributing
 
-Please read [Contributing doc](docs/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [Contributing doc](docs/Contributing.md) for details on our code of conduct, and the process for submitting pull requests.
 
 ## Versioning
 
