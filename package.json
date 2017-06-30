@@ -12,7 +12,7 @@
     "analyze": "ANALYZE_BUILD=true npm run build",
     "setup:before": "npm i shelljs cli-clear",
     "setup": "npm run setup:before && node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
-    "setup:after": "npm rm shelljs cli-clear",
+    "setup:after": "npm run build",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
     "lint-staged": "lint-staged",

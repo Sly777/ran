@@ -1,9 +1,12 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { IgnorePlugin } = require('webpack');
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
   webpack: (config, { dev }) => {
     const prod = !dev;
+
+    config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/));
 
     if (process.env.ANALYZE_BUILD) {
       config.plugins.push(
