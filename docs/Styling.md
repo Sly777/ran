@@ -2,6 +2,8 @@
 
 ## Styling
 
+![Theme support on RAN!](https://media.giphy.com/media/3o7btVPbDir4D1X3S8/giphy.gif)
+
 RAN! is using theme system of wondrous [Styled Components](https://www.styled-components.com/) library for styling app (css-in-js). [Click here for details](https://www.styled-components.com/docs/advanced#theming)
 
 There is basic theme component ([./libraries/theme.js](./libraries/theme.js)) on RAN!. You can access all theme props by using ```props.theme``` on your styling. Also there is helper for color manupulation as you can access that by using ```props.theme.helper```. On this prop, RAN! is using [color.js](https://github.com/Qix-/color) that has support for most important color manipulation functions.
