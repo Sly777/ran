@@ -22,6 +22,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "1.1.6",
     "chalk": "2.0.1",
+    "color": "2.0.0",
     "compression": "1.6.2",
     "express": "4.15.3",
     "graphql": "0.10.3",
