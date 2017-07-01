@@ -3042,9 +3042,9 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-husky@0.14.1:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-0.14.1.tgz#8edba33e728ceed75343e88bb8002e4cbd8d1b40"
+husky@0.14.2:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-0.14.2.tgz#6df06483965d2254db95dd143c445d6d8509b4b8"
   dependencies:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
