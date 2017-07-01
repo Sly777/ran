@@ -39,7 +39,7 @@ And that's all!
 
 ## Example
 
-[Click here](https://ran-boilerplate.herokuapp.com/) to see example project to understand how RAN! works on production.
+[Click here](https://ran-boilerplate.herokuapp.com/) to see example project to understand how RAN! works on production. I used [graph.cool](https://graph.cool/) service for GraphQL in the example.
 
 ## Commands
 
