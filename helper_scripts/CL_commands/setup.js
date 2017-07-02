@@ -63,17 +63,7 @@ function installDeps() {
           'Unsupported node.js version, make sure you have the latest version installed.'
       );
     } else {
-      exec('yarn --version', (_err, _stdout) => {
-        if (
-          parseFloat(_stdout) < 0.15 ||
-          _err ||
-          process.env.USE_YARN === 'false'
-        ) {
-          exec('npm install', installDepsCallback);
-        } else {
-          exec('yarn install', installDepsCallback);
-        }
-      });
+      installDepsCallback();
     }
   });
 }

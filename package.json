@@ -10,8 +10,7 @@
     "start:next": "next start",
     "lint": "eslint --fix '{pages,components,libraries,server,helper_scripts}/**/*.js'",
     "analyze": "ANALYZE_BUILD=true npm run build",
-    "setup:before": "npm i shelljs cli-clear",
-    "setup": "npm run setup:before && node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
+    "setup": "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm run build",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
@@ -78,6 +77,7 @@
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
+    "cli-clear": "1.0.4",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.3.0",
@@ -95,6 +95,7 @@
     "pre-commit": "1.2.2",
     "prettier": "1.5.2",
     "release": "1.2.3",
+    "shelljs": "0.7.8",
     "webpack-bundle-analyzer": "2.8.2"
   }
 }
