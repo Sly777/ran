@@ -20,7 +20,7 @@
     "release": "release"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "1.1.6",
+    "babel-plugin-styled-components": "1.1.7",
     "chalk": "2.0.1",
     "color": "2.0.0",
     "compression": "1.6.2",
