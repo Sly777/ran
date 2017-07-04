@@ -20,7 +20,7 @@
     "release": "release"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "1.1.6",
+    "babel-plugin-styled-components": "1.1.7",
     "chalk": "2.0.1",
     "color": "2.0.0",
     "compression": "1.6.2",
@@ -31,7 +31,7 @@
     "localforage": "1.5.0",
     "lru-cache": "4.1.1",
     "moment": "2.18.1",
-    "next": "3.0.1-beta.3",
+    "next": "3.0.1-beta.8",
     "next-url-prettifier": "1.1.4",
     "offline-plugin": "4.8.1",
     "prop-types": "15.5.10",
@@ -42,7 +42,7 @@
     "react-redux": "5.0.5",
     "redux": "3.7.1",
     "remote-redux-devtools": "0.5.12",
-    "styled-components": "2.0.0"
+    "styled-components": "2.1.1"
   },
   "description": "React . Apollo (GraphQL) . Next.js Boilerplate",
   "author": "Ilker Guller <me@ilkerguller.com> (http://ilkerguller.com)",
