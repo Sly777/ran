@@ -89,7 +89,7 @@
     "handlebars": "4.0.10",
     "husky": "0.14.3",
     "inquirer": "3.1.1",
-    "lint-staged": "4.0.0",
+    "lint-staged": "4.0.1",
     "ngrok": "2.2.13",
     "nodemon": "1.11.0",
     "pre-commit": "1.2.2",
