@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -52,11 +53,6 @@ const signUpMutation = gql`
   }
 `;
 
-SignUpFormContainer.propTypes = {
-  Create: PropTypes.func.isRequired,
-  signInDispatcher: PropTypes.func.isRequired
-};
-
 const SignUpWithData = graphql(signUpMutation, {
   props: ({ mutate }) => ({
     Create: ({ firstName, lastName, email, password }) =>
@@ -76,5 +72,10 @@ const mapDispatchToProps = dispatch => ({
 const SignUpWithDataAndDispatch = connect(null, mapDispatchToProps)(
   SignUpWithData
 );
+
+SignUpFormContainer.propTypes = {
+  Create: PropTypes.func,
+  signInDispatcher: PropTypes.func.isRequired
+};
 
 export default SignUpWithDataAndDispatch;

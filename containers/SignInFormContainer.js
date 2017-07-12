@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -16,7 +17,7 @@ class SignInFormContainer extends React.Component {
 
   handleSubmit(values) {
     this.props
-      .Signin({ variables: values })
+      .mutate({ variables: values })
       .then(response => {
         if (response) {
           this.props.signInDispatcher(response.data.signinUser.token);
@@ -40,11 +41,6 @@ const signInMutation = gql`
   }
 `;
 
-SignInFormContainer.propTypes = {
-  Signin: PropTypes.func.isRequired,
-  signInDispatcher: PropTypes.func.isRequired
-};
-
 const SignInWithData = graphql(signInMutation)(SignInFormContainer);
 
 const mapDispatchToProps = dispatch => ({
@@ -57,5 +53,9 @@ const mapDispatchToProps = dispatch => ({
 const SignInWithDataAndState = connect(null, mapDispatchToProps)(
   SignInWithData
 );
+
+SignInFormContainer.propTypes = {
+  mutate: PropTypes.func
+}
 
 export default SignInWithDataAndState;
