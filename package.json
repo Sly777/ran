@@ -23,7 +23,7 @@
     "babel-plugin-styled-components": "1.1.7",
     "chalk": "2.0.1",
     "color": "2.0.0",
-    "compression": "1.6.2",
+    "compression": "1.7.0",
     "express": "4.15.3",
     "graphql": "0.10.3",
     "ip": "1.1.5",
