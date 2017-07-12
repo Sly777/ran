@@ -1,6 +1,8 @@
 import { createStore } from 'redux';
 import getReducer from './reducer';
 import createMiddleware from './middleware';
+import { AUTH_SIGNIN, AUTH_SIGNOUT } from '../actions';
+import persist from './persist';
 
 let reduxStore = null;
 
@@ -9,6 +11,14 @@ export default (apolloClient, initialState) => {
   if (!process.browser || !reduxStore) {
     const middleware = createMiddleware(apolloClient.middleware());
     store = createStore(getReducer(apolloClient), initialState, middleware);
+    (async () => {
+      const token = await Promise.resolve(persist.willGetAccessToken());
+      if (token) {
+        store.dispatch({ type: AUTH_SIGNIN });
+      } else if (!token) {
+        store.dispatch({ type: AUTH_SIGNOUT });
+      }
+    })();
     if (!process.browser) {
       return store;
     }

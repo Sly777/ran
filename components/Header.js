@@ -2,14 +2,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LinkList from './LinkList';
 
-const Header = ({ className, pathname }) =>
+const Header = ({ className, pathname, authenticated, logout }) =>
   <header className={className}>
-    <LinkList pathname={pathname} />
+    <LinkList
+      pathname={pathname}
+      authenticated={authenticated}
+      logout={logout}
+    />
   </header>;
+
+Header.defaultProps = {
+  authenticated: false
+};
 
 Header.propTypes = {
   pathname: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string.isRequired,
+  authenticated: PropTypes.bool.isRequired,
+  logout: PropTypes.func.isRequired
 };
 
 export default styled(Header)`

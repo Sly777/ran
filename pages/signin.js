@@ -1,15 +1,15 @@
 import { Helmet } from 'react-helmet';
 import App from '../components/App';
 import Header from '../containers/Header';
-import CreatePost from '../components/CreateForm';
+import SignInFormContainer from '../containers/SignInFormContainer';
 import withData from '../libraries/withData';
 
 export default withData(props =>
   <App>
     <Helmet>
-      <title>Create Post :: RAN! Example</title>
+      <title>SignIn :: RAN! Example</title>
     </Helmet>
     <Header pathname={props.url.pathname} />
-    <CreatePost />
+    <SignInFormContainer />
   </App>
 );

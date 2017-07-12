@@ -2,6 +2,7 @@
 .next/
 config.js
 .env
+yarn.lock
 coverage/
 
 # Created by https://www.gitignore.io/api/node,macos,linux,windows,webstorm,sublimetext,visualstudiocode
