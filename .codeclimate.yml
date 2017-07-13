@@ -12,6 +12,8 @@ engines:
     checks:
       import/extensions:
         enabled: false
+      prettier/prettier:
+        enabled: false
   fixme:
     enabled: true
 ratings:
