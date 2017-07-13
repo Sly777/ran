@@ -9,6 +9,9 @@ engines:
     enabled: true
     config:
       config: /.eslintrc
+    checks:
+      import/extensions:
+        enabled: false
   fixme:
     enabled: true
 ratings:
