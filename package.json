@@ -100,6 +100,6 @@
     "prettier": "1.5.2",
     "release": "1.2.3",
     "shelljs": "0.7.8",
-    "webpack-bundle-analyzer": "2.8.2"
+    "webpack-bundle-analyzer": "2.8.3"
   }
 }
