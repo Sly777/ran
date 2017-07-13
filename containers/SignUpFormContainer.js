@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import persist from '../libraries/persist';
 import SignUpForm from '../components/SignUpForm';
 import { signIn } from '../actions';
+import redirect from '../libraries/redirect';
 
 class SignUpFormContainer extends React.Component {
   constructor(props) {
@@ -17,24 +18,23 @@ class SignUpFormContainer extends React.Component {
 
   handleSubmit(values) {
     this.props
-      .Create(values)
+      .NewUser(values)
       .then(response => {
-        if (response) {
-          this.props.signInDispatcher(response.data.signinUser.token);
+        if (response.data) {
+          this.props.signUpDispatcher(response.data.signinUser.token);
         }
+      }).catch(err => {
+        this.setState({errors: [err.graphQLErrors[0]]})
       })
-      .catch(err => {
-        console.error(err);
-      });
   }
 
   render() {
-    return <SignUpForm onSubmit={this.handleSubmit} />;
+    return <SignUpForm onSubmit={this.handleSubmit} errors={this.state.errors} />;
   }
 }
 
 const signUpMutation = gql`
-  mutation Create(
+  mutation NewUser(
     $firstName: String!
     $lastName: String!
     $email: String!
@@ -55,7 +55,7 @@ const signUpMutation = gql`
 
 const SignUpWithData = graphql(signUpMutation, {
   props: ({ mutate }) => ({
-    Create: ({ firstName, lastName, email, password }) =>
+    NewUser: ({ firstName, lastName, email, password }) =>
       mutate({
         variables: { firstName, lastName, email, password }
       })
@@ -63,7 +63,7 @@ const SignUpWithData = graphql(signUpMutation, {
 })(SignUpFormContainer);
 
 const mapDispatchToProps = dispatch => ({
-  signInDispatcher(token) {
+  signUpDispatcher(token) {
     persist.willSetAccessToken(token);
     dispatch(signIn(token));
   }
@@ -74,8 +74,7 @@ const SignUpWithDataAndDispatch = connect(null, mapDispatchToProps)(
 );
 
 SignUpFormContainer.propTypes = {
-  Create: PropTypes.func,
-  signInDispatcher: PropTypes.func.isRequired
+  NewUser: PropTypes.func,
 };
 
 export default SignUpWithDataAndDispatch;

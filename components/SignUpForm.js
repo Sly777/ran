@@ -2,6 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 const renderField = ({ input, label, type, meta: { touched, error } }) =>
   <div>
@@ -16,9 +17,9 @@ const renderField = ({ input, label, type, meta: { touched, error } }) =>
 const renderErrors = errors =>
   <div className="alert alert-danger" role="alert">
     {errors &&
-      errors.map(error =>
-        <span key={error.id}>
-          {error.value}
+      errors.map(err =>
+        <span key={shortid.generate()}>
+          {err.message}
         </span>
       )}
   </div>;
@@ -64,12 +65,10 @@ const validate = values => {
   const errors = {};
   if (!values.firstName) {
     errors.firstName = 'Required';
-    errors.id = 1;
   }
 
   if (!values.lastName) {
     errors.lastName = 'Required';
-    errors.id = 2;
   }
 
   if (!values.email) {
@@ -77,15 +76,12 @@ const validate = values => {
     errors.id = 3;
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Invalid email address';
-    errors.id = 4;
   }
 
   if (!values.password) {
     errors.password = 'Required';
-    errors.id = 5;
   } else if (values.password.length <= 3) {
     errors.password = 'Must be at least 4 characters';
-    errors.id = 6;
   }
 
   return errors;
@@ -104,12 +100,12 @@ renderField.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   meta: PropTypes.object.isRequired,
-  errors: PropTypes.array.isRequired
+  errors: PropTypes.array
 };
 
 AuthForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
-  errors: PropTypes.array.isRequired
+  errors: PropTypes.array
 };
 
 AuthForm = styled(AuthForm)`

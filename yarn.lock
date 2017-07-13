@@ -5331,7 +5331,7 @@ shelljs@0.7.8, shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-shortid@^2.2.6:
+shortid@^2.2.6, shortid@^2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.8.tgz#033b117d6a2e975804f6f0969dbe7d3d0b355131"
 
