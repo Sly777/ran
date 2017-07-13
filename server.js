@@ -5,6 +5,8 @@ const compression = require('compression');
 const LRUCache = require('lru-cache');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');
+const helmet = require('helmet');
 
 const Router = require('./routes').Router;
 const logger = require('./server/logger');
@@ -76,6 +78,14 @@ app.prepare().then(() => {
   const server = express();
 
   server.use(compression({ threshold: 0 }));
+  server.use(
+    cors({
+      origin:
+        prettyHost.indexOf('http') !== -1 ? prettyHost : `http://${prettyHost}`,
+      credentials: true
+    })
+  );
+  server.use(helmet());
 
   Router.forEachPattern((page, pattern, defaultParams) =>
     server.get(pattern, (req, res) =>
