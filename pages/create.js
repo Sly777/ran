@@ -1,15 +1,9 @@
-import { Helmet } from 'react-helmet';
-import App from '../components/App';
-import Header from '../containers/Header';
 import CreatePost from '../components/CreateForm';
 import withData from '../libraries/withData';
+import DefaultCon from '../containers/Default';
 
 export default withData(props =>
-  <App>
-    <Helmet>
-      <title>Create Post :: RAN! Example</title>
-    </Helmet>
-    <Header pathname={props.url.pathname} />
+  <DefaultCon title="Create Post" {...props}>
     <CreatePost />
-  </App>
+  </DefaultCon>
 );
