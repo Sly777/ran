@@ -58,5 +58,6 @@ export default styled(LinkList)`
   button {
     display: inline-block;
     margin-right: 15px;
+    cursor: pointer;
   }
 `;

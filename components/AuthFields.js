@@ -27,19 +27,22 @@ const AuthFields = props => {
         </div>}
     </div>
   );
+  const authMethod =
+    (selectFields === 'signinFields' && 'Sign In') || 'Sign Up';
   return (
     <div>
-      {selectFields === 'signinFields' && <h1>Sign In</h1>}
-      {selectFields === 'signupFields' && <h1>Sign Up</h1>}
+      <h1>
+        {authMethod}
+      </h1>
       <form>
         {mapFields}
         <br />
         <button
           onClick={handleSubmit}
-          className={!touched && 'buttonDisabled'}
+          style={!touched ? { opacity: 0.5 } : { opacity: 1 }}
           disabled={!touched}
         >
-          Submit
+          {authMethod}
         </button>
       </form>
     </div>
