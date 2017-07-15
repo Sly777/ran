@@ -95,7 +95,7 @@
     "ngrok": "2.2.14",
     "nodemon": "1.11.0",
     "pre-commit": "1.2.2",
-    "prettier": "1.5.2",
+    "prettier": "1.5.3",
     "release": "1.2.3",
     "shelljs": "0.7.8",
     "webpack-bundle-analyzer": "2.8.3"
