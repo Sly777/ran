@@ -1,4 +1,4 @@
-import { AUTH_SIGNIN, AUTH_SIGNOUT } from '../../actions';
+import { AUTH_SIGNIN, AUTH_SIGNOUT } from './authActions';
 
 const initialState = {
   authenticated: false

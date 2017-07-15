@@ -1,7 +1,7 @@
 import { gql, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import persist from '../persist';
-import { signinAction } from '../../actions';
+import { signinAction } from './authActions';
 
 function createUserWrapper(AuthForm) {
   const createUserMutation = gql`

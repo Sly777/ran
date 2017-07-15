@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
 import getReducer from './reducer';
 import createMiddleware from './middleware';
-import { AUTH_SIGNIN, AUTH_SIGNOUT } from '../actions';
 import persist from './persist';
+import { AUTH_SIGNIN, AUTH_SIGNOUT } from './auth/authActions';
 
 let reduxStore = null;
 

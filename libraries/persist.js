@@ -27,7 +27,6 @@ class persist {
   }
 
   static async willSetAccessToken(value) {
-    console.log('willSetAccessToken', value);
     return localForage
       .setItem(persist.ACCESS_TOKEN_KEY, value)
       .catch(err => err);

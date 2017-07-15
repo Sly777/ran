@@ -1,11 +1,11 @@
 import { gql, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import persist from '../persist';
-import { signinAction } from '../../actions';
+import { signinAction } from './authActions';
 
 function signinUserWrapper(AuthForm) {
   const signinUserMutation = gql`
-    mutation Signin($email: String!, $password: String!) {
+    mutation signinUser($email: String!, $password: String!) {
       signinUser(email: { email: $email, password: $password }) {
         token
       }

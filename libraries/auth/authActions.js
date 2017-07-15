@@ -3,8 +3,7 @@ export const AUTH_SIGNOUT = 'AUTH_SIGNOUT';
 const localForage = require('localforage');
 
 export const signinAction = token => {
-  console.log('TO', token);
-  localForage.setItem('accessToken', token).then(console.log('TOKEN', token));
+  localForage.setItem('accessToken', token);
   return { type: AUTH_SIGNIN };
 };
 

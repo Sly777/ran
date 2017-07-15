@@ -1,10 +1,17 @@
-/* eslint-disable */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const AuthFields = props => {
-  const { handleChange, handleSubmit, handleTouch, content, fields, touched, errors } = props;
+  const {
+    selectFields,
+    fields,
+    handleTouch,
+    handleChange,
+    handleSubmit,
+    touched,
+    errors
+  } = props;
   const mapFields = fields.map(field =>
     <div key={field.key}>
       <input
@@ -14,7 +21,7 @@ const AuthFields = props => {
         onChange={handleChange}
         onFocus={handleTouch}
       />
-    {errors &&
+      {errors &&
         <div>
           {errors[field.attr.name]}
         </div>}
@@ -22,19 +29,31 @@ const AuthFields = props => {
   );
   return (
     <div>
+      {selectFields === 'signinFields' && <h1>Sign In</h1>}
+      {selectFields === 'signupFields' && <h1>Sign Up</h1>}
       <form>
         {mapFields}
-        <br/>
-        <button onClick={handleSubmit} className={!touched && "buttonDisabled"} disabled={!touched}>Submit</button>
+        <br />
+        <button
+          onClick={handleSubmit}
+          className={!touched && 'buttonDisabled'}
+          disabled={!touched}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
 };
 
 AuthFields.propTypes = {
+  selectFields: PropTypes.string.isRequired,
+  fields: PropTypes.array.isRequired,
+  handleTouch: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  handleChange: PropTypes.func,
-  errors: PropTypes.object
+  touched: PropTypes.bool.isRequired,
+  errors: PropTypes.object.isRequired
 };
 
 export default styled(AuthFields)`
@@ -50,8 +69,4 @@ export default styled(AuthFields)`
     display: block;
     margin-bottom: 10px;
   }
-  >button {
-      backgroundColor: red !important;
-    }
 `;
-
