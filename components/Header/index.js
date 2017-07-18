@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import LinkList from './LinkList';
+import LinkList from '../LinkList';
+import connect from './index.data';
 
 const Header = ({ className, pathname, authenticated, logout }) =>
   <header className={className}>
@@ -22,6 +23,6 @@ Header.propTypes = {
   logout: PropTypes.func.isRequired
 };
 
-export default styled(Header)`
+export default connect(styled(Header)`
   margin-bottom: 25px;
-`;
+`);

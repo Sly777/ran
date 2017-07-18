@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import App from '../components/App';
-import Header from '../containers/Header';
+import Header from '../components/Header';
 
 const Default = props =>
   <App>

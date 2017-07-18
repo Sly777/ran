@@ -1,26 +1,28 @@
-const validate = values => {
+import { isStringEmpty, isEmail } from '../../libraries/validations';
+
+export default values => {
   const errors = {};
   const touched = true;
-  if (!values.firstName) {
+
+  if (isStringEmpty(values.firstName)) {
     errors.firstName = 'Required';
   }
 
-  if (!values.lastName) {
+  if (isStringEmpty(values.lastName)) {
     errors.lastName = 'Required';
   }
 
-  if (!values.email) {
+  if (isStringEmpty(values.email)) {
     errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+  } else if (!isEmail(values.email)) {
     errors.email = 'Invalid email address';
   }
 
-  if (!values.password) {
+  if (isStringEmpty(values.password)) {
     errors.password = 'Required';
   } else if (values.password.length <= 3) {
     errors.password = 'Must be at least 4 characters';
   }
+
   return { errors, touched };
 };
-
-export default validate;

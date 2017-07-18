@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import authReducer from './auth/authReducer';
+import { reducer as authReducer } from '../components/AuthFields/index.data';
 
 export default function getReducer(client) {
   return combineReducers({
