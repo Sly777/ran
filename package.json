@@ -8,7 +8,7 @@
     "dev:next": "npm run lint && next",
     "start": "NODE_ENV=production node server.js",
     "start:next": "next start",
-    "lint": "eslint --fix '{pages,components,libraries,server,helper_scripts}/**/*.js'",
+    "lint": "eslint --fix '{pages,components,libraries,server,helper_scripts}/**/*.js' '*.js'",
     "analyze": "ANALYZE_BUILD=true npm run build",
     "setup": "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm run build",
