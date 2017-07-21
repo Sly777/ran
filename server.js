@@ -7,6 +7,7 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
 const helmet = require('helmet');
+require('dotenv').config();
 
 const Router = require('./routes').Router;
 const logger = require('./server/logger');
