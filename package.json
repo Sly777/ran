@@ -25,6 +25,7 @@
     "color": "2.0.0",
     "compression": "1.7.0",
     "cors": "2.8.3",
+    "dotenv": "4.0.0",
     "express": "4.15.3",
     "graphql": "0.10.5",
     "helmet": "3.8.0",
