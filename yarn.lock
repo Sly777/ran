@@ -4034,9 +4034,9 @@ netrc@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/netrc/-/netrc-0.1.4.tgz#6be94fcaca8d77ade0a9670dc460914c94472444"
 
-next-url-prettifier@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/next-url-prettifier/-/next-url-prettifier-1.1.4.tgz#c68e3f7d23de245c86b39ee9a95ddd0764ed0f65"
+next-url-prettifier@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/next-url-prettifier/-/next-url-prettifier-1.1.5.tgz#ce27eb29f584bd53aadf091874138ddd93bc8272"
 
 next@3.0.1-beta.8:
   version "3.0.1-beta.8"
