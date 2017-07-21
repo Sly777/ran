@@ -4788,9 +4788,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apollo@1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-1.4.4.tgz#31749237dfa133f47a688e0b7a91a479a7f0d8f3"
+react-apollo@1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-1.4.5.tgz#6f1c41875c861a19a9e827513103703b152b08f7"
   dependencies:
     apollo-client "^1.4.0"
     graphql-anywhere "^3.0.0"
