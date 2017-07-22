@@ -1,6 +1,6 @@
 {
   "name": "ran-boilerplate",
-  "version": "0.3.0",
+  "version": "0.2.6",
   "main": "server.js",
   "scripts": {
     "build": "next build",
