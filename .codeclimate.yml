@@ -22,3 +22,5 @@ ratings:
   - "**.jsx"
 exclude_paths:
 - node_modules/
+- .next/
+- .gitattributes
