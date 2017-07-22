@@ -17,9 +17,8 @@ const initNetworkInterface = graphqlUrl => {
         if (!req.options.headers) {
           req.options.headers = {};
         }
-
         (async () => {
-          const token = await persist.willGetSessionToken();
+          const token = await persist.willGetAccessToken();
           req.options.headers.authorization = token ? `Bearer ${token}` : null;
           next();
         })();

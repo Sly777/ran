@@ -1,9 +1,9 @@
-import CreatePost from '../components/CreateForm';
+import SignUpForm from '../components/SignUpForm';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 
 export default withData(props =>
-  <DefaultCon title="Create Post" {...props}>
-    <CreatePost />
+  <DefaultCon title="Sign Up" {...props}>
+    <SignUpForm />
   </DefaultCon>
 );
