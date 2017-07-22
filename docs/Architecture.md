@@ -1,5 +1,0 @@
-# RAN! Documentation
-
-## Architecture
-
-WIP
