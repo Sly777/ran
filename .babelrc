@@ -3,7 +3,6 @@
     "next/babel"
   ],
   "plugins": [
-    "transform-decorators-legacy",
     ["styled-components", {
       "ssr": true,
       "displayName": true,

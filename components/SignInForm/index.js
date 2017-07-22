@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { autobind } from 'core-decorators';
 import AuthFields from '../AuthFields';
 import validate from '../AuthFields/index.validation';
 import connect from './index.data';
@@ -43,19 +42,17 @@ class SignInForm extends React.Component {
     { key: 2, attr: { name: 'password', type: 'password', label: 'Password' } }
   ];
 
-  @autobind
-  handleTouch() {
+  handleTouch = () => {
     this.setState({ touched: true });
-  }
+  };
 
-  @autobind
-  handleChange(e) {
+  handleChange = e => {
     const fieldValue = e.target.value;
     const fieldName = e.target.name;
     const obj = {};
     obj[fieldName] = fieldValue;
     this.setState(obj);
-  }
+  };
 
   handleSubmit(e, valuesPack) {
     e.preventDefault();
