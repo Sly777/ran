@@ -2063,9 +2063,9 @@ eslint-config-airbnb-base@^11.2.0:
   version "11.2.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.2.0.tgz#19a9dc4481a26f70904545ec040116876018f853"
 
-eslint-config-airbnb@15.0.1:
-  version "15.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-15.0.1.tgz#7b5188e5b7c74b9b2ce639fd5e1daba8fd761aed"
+eslint-config-airbnb@15.0.2:
+  version "15.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-15.0.2.tgz#7b99fa421d0c15aee3310d647644315b02ea24da"
   dependencies:
     eslint-config-airbnb-base "^11.2.0"
 
