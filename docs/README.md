@@ -13,7 +13,9 @@
 
   - [Digital Ocean](Deployment/digital-ocean.md)
 
-- [Architecture](Architecture.md)
+- [Architecture](Architecture)
+
+  - [Environment Variables](Architecture/environment-variables.md)
 
 - [Packages](Packages.md)
 

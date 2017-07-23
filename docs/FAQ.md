@@ -16,7 +16,7 @@
 
 - _Which GraphQL service should I use?_
 
-  I always use [GraphCool](http://graphql.org/) for GraphQL service. It has really easy-to-use UI and support is amazing. Also there is [Scaphold.io](https://scaphold.io). All of them can work with **RAN!**
+  I always use [GraphCool](http://graphql.org/) for GraphQL service. It has really easy-to-use UI and customer support is amazing. Also there is [Scaphold.io](https://scaphold.io). All of them can work with **RAN!**
 
 - _I want to use my own GraphQL server. Is it possible?_
 

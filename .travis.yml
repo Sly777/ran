@@ -10,6 +10,7 @@ after_script: greenkeeper-lockfile-upload
 
 script:
   - yarn run build
+  - yarn run lint
 
 notifications:
   email:

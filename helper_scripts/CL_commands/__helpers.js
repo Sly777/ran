@@ -54,6 +54,28 @@ modules.isUsedOnDir = function isUsedOnDir(startPath, filter) {
   return isFound;
 };
 
+modules.getFilesOnDir = function getFilesOnDir(startPath) {
+  if (!fs.existsSync(startPath)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(startPath);
+  const isFound = [];
+
+  for (let i = 0; i < files.length; i += 1) {
+    const filename = path.join(startPath, files[i]);
+    const stat = fs.lstatSync(filename);
+    if (stat.isDirectory()) {
+      isFound.concat(getFilesOnDir(filename)); // recurse
+    } else {
+      const pagename = files[i].replace('.js', '');
+      if (pagename !== '_document') isFound.push(pagename);
+    }
+  }
+
+  return isFound;
+};
+
 modules.isUsedOnRoutes = function isUsedOnRoutes(url) {
   let isFound = false;
   routes.default.forEach(route => {

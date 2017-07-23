@@ -5,7 +5,7 @@ const initNetworkInterface = graphqlUrl => {
   const networkInterface = createNetworkInterface({
     uri:
       graphqlUrl ||
-        'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
+      'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
     opts: {
       credentials: 'same-origin'
     }
@@ -17,9 +17,8 @@ const initNetworkInterface = graphqlUrl => {
         if (!req.options.headers) {
           req.options.headers = {};
         }
-
         (async () => {
-          const token = await persist.willGetSessionToken();
+          const token = await persist.willGetAccessToken();
           req.options.headers.authorization = token ? `Bearer ${token}` : null;
           next();
         })();

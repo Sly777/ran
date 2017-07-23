@@ -32,6 +32,18 @@ routes.push({
   ]
 });
 
+routes.push({
+  page: 'signin',
+  prettyUrl: () => '/sign_in',
+  prettyUrlPatterns: [{ pattern: '/sign_in', defaultParams: { lang: 'en' } }]
+});
+
+routes.push({
+  page: 'signup',
+  prettyUrl: () => '/sign_up',
+  prettyUrlPatterns: [{ pattern: '/sign_up', defaultParams: { lang: 'en' } }]
+});
+
 // ------------ ROUTES ---------------
 //
 //

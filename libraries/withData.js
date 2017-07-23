@@ -17,7 +17,6 @@ export default Component =>
       const headers = ctx.req ? ctx.req.headers : {};
       const client = apolloClient(headers);
       const store = reduxStore(client, client.initialState);
-
       const props = {
         url: { query: ctx.query, pathname: ctx.pathname },
         ...(await (Component.getInitialProps
