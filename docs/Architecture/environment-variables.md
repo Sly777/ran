@@ -26,3 +26,6 @@ For more info, please [click here to check dotenv repo](https://github.com/motdo
 
 #### Tips
 - **Do not commit the ".env" file to any repository**, .gitignore file has a definition for that. If you commit, It can possibly create security flaw on your application.
+
+### Shared Variables between Client and Server (WIP)
+(WIP)
