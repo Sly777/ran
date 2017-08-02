@@ -17,7 +17,10 @@
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
     "heroku-postbuild": "next build",
-    "release": "release"
+    "release": "release",
+    "graphql:play": "graphql playground",
+    "graphql:update_schema": "graphql get-schema",
+    "graphql:see_graph": "graphql voyager"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.1.7",
@@ -89,6 +92,8 @@
     "eslint-plugin-prettier": "2.1.2",
     "eslint-plugin-react": "7.1.0",
     "figlet": "1.2.0",
+    "graphql-cli": "1.0.0-beta.4",
+    "graphql-cli-voyager": "0.1.2",
     "handlebars": "4.0.10",
     "husky": "0.14.3",
     "inquirer": "3.2.1",
