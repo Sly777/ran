@@ -12,12 +12,22 @@ It helps to create new page easiest way. After run this command, It will ask som
 ### create:route
 _command:_ ```yarn run create:route``` (or ```npm run create:route```)
 
-It helps to create new route for your pages.
+Create new route for your pages
+
+### lint
+_command:_ ```yarn run lint``` (or ```npm run lint```)
+
+Fix & show lint errors (and prettier infos) automatically
+
+### dev
+_command:_ ```yarn run dev``` (or ```npm run dev```)
+
+Run lint and then open the server on your local on development mode
 
 ### analyze
 _command:_ ```yarn run analyze``` (or ```npm run analyze```)
 
-Analyze the packages and files that you used on your app.
+Analyze the packages and files that you used on your app
 
 ## GraphQL Commands
 
@@ -29,7 +39,7 @@ Don't save secure information in ```.graphqlconfig``` file. Use [Environment var
 ### graphql:play
 _command:_ ```yarn run graphql:play``` (or ```npm run graphql:play```)
 
-It opens the browser to play (or work :) on your graphql server.
+It opens the browser to play (or work :) on your graphql server
 
 ![graphql:play](https://media.giphy.com/media/xT39Dh0URQoc8IUOxW/giphy.gif)
 
