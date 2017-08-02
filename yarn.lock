@@ -3171,9 +3171,9 @@ graphql-anywhere@^3.0.0, graphql-anywhere@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-3.1.0.tgz#3ea0d8e8646b5cee68035016a9a7557c15c21e96"
 
-graphql-cli-voyager@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/graphql-cli-voyager/-/graphql-cli-voyager-0.1.1.tgz#3019e56b9d797865a0a9cd6119aa28a25d279907"
+graphql-cli-voyager@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/graphql-cli-voyager/-/graphql-cli-voyager-0.1.2.tgz#8e0c43ca7133a9fdff20ac7ca427cddc4288b79f"
   dependencies:
     express "^4.15.3"
     express-graphql "^0.6.6"
