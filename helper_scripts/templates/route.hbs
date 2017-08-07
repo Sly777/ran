@@ -1,7 +1,1 @@
-routes.push({
-  page: '{{filename}}',
-  prettyUrl: () => '/{{prettyurl}}',
-  prettyUrlPatterns: [
-    { pattern: '/{{prettyurl}}', defaultParams: { lang: 'en' } }
-  ]
-});
+routes.add('{{filename}}', '/{{prettyurl}}');
