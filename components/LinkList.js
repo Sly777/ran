@@ -1,22 +1,21 @@
-import { Link } from 'next-url-prettifier';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Router } from '../routes';
+import { Link } from '../routes';
 
 const LinkList = ({ className, pathname, authenticated, logout }) =>
   <nav className={className}>
     <Link prefetch href="/">
       <a className={pathname === '/' && 'is-active'}>Main Page</a>
     </Link>
-    <Link prefetch route={Router.linkPage('create')}>
+    <Link prefetch route="create">
       <a className={pathname === '/create_post' && 'is-active'}>Create</a>
     </Link>
     {!authenticated &&
-      <Link prefetch route={Router.linkPage('signin')}>
+      <Link prefetch route="signin">
         <a className={pathname === '/sign_in' && 'is-active'}>SignIn</a>
       </Link>}
     {!authenticated &&
-      <Link prefetch route={Router.linkPage('signup')}>
+      <Link prefetch route="signup">
         <a className={pathname === '/sign_up' && 'is-active'}>SignUp</a>
       </Link>}
     {authenticated &&

@@ -1,8 +1,7 @@
 import { gql, graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'next-url-prettifier';
-import { Router } from '../routes';
+import { Link } from '../routes';
 import PostUpvoter from './PostUpvoter';
 
 const POSTS_PER_PAGE = 10;
@@ -24,10 +23,11 @@ let PostList = ({
                   {index + 1}.{' '}
                 </span>
                 <Link
-                  route={Router.linkPage('details', {
+                  route="details"
+                  params={{
                     postId: post.id,
                     postTitle: encodeURIComponent(post.title)
-                  })}
+                  }}
                 >
                   <a>
                     {post.title}

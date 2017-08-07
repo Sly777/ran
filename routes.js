@@ -1,6 +1,4 @@
-const UrlPrettifier = require('next-url-prettifier').default;
-
-const routes = [];
+const routes = require('next-routes')();
 
 //
 // Because of awesome Next.js, You don't need to add routes for all pages.
@@ -15,40 +13,13 @@ const routes = [];
 //
 // ------------ ROUTES ---------------
 
-routes.push({
-  page: 'details',
-  prettyUrl: ({ postId = '', postTitle = '' }) =>
-    `/details/${postId}/${postTitle}`,
-  prettyUrlPatterns: [
-    { pattern: '/details/:postId/:postTitle', defaultParams: { lang: 'en' } }
-  ]
-});
-
-routes.push({
-  page: 'create',
-  prettyUrl: () => '/create_post',
-  prettyUrlPatterns: [
-    { pattern: '/create_post', defaultParams: { lang: 'en' } }
-  ]
-});
-
-routes.push({
-  page: 'signin',
-  prettyUrl: () => '/sign_in',
-  prettyUrlPatterns: [{ pattern: '/sign_in', defaultParams: { lang: 'en' } }]
-});
-
-routes.push({
-  page: 'signup',
-  prettyUrl: () => '/sign_up',
-  prettyUrlPatterns: [{ pattern: '/sign_up', defaultParams: { lang: 'en' } }]
-});
+routes.add('details', '/details/:postId/:postTitle');
+routes.add('create', '/create_post');
+routes.add('signin', '/sign_in');
+routes.add('signup', '/sign_up');
 
 // ------------ ROUTES ---------------
 //
 //
 
-const urlPrettifier = new UrlPrettifier(routes);
-
-exports.default = routes;
-exports.Router = urlPrettifier;
+module.exports = routes;

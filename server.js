@@ -9,7 +9,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv').config();
 
-const Router = require('./routes').Router;
+const router = require('./routes');
 const logger = require('./server/logger');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -75,6 +75,13 @@ const renderAndCache = function renderAndCache(
     });
 };
 
+const routerHandler = router.getRequestHandler(
+  app,
+  ({ req, res, route, query }) => {
+    renderAndCache(req, res, route.page, query);
+  }
+);
+
 app.prepare().then(() => {
   const server = express();
 
@@ -87,17 +94,7 @@ app.prepare().then(() => {
     })
   );
   server.use(helmet());
-
-  Router.forEachPattern((page, pattern, defaultParams) =>
-    server.get(pattern, (req, res) =>
-      renderAndCache(
-        req,
-        res,
-        `/${page}`,
-        Object.assign({}, defaultParams, req.query, req.params)
-      )
-    )
-  );
+  server.use(routerHandler);
 
   server.get('/sw.js', (req, res) =>
     app.serveStatic(req, res, path.resolve('./.next/sw.js'))
