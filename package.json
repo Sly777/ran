@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.1.7",
-    "chalk": "2.0.1",
+    "chalk": "2.1.0",
     "color": "2.0.0",
     "compression": "1.7.0",
     "cors": "2.8.3",
