@@ -11,7 +11,8 @@
     "prettier/react"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "graphql"
   ],
   "globals": {
     "document": true,
@@ -40,6 +41,12 @@
     "import/no-extraneous-dependencies": 0,
     "prettier/prettier": ["error", {
       "singleQuote": true
+    }],
+    "graphql/template-strings": ['error', {
+      // Import default settings for your GraphQL client. Supported values:
+      // 'apollo', 'relay', 'lokka', 'literal'
+      env: 'literal'
+      // no need to specify schema here, it will be automatically determined using .graphqlconfig
     }]
   }
 }
