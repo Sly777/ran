@@ -50,9 +50,9 @@
   version "0.0.34"
   resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.34.tgz#3c3483e606c041378438e951464f00e4e60706d6"
 
-"@types/node@^7.0.31":
-  version "7.0.32"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.32.tgz#6afe6c66520a4c316623a14aef123908d01b4bba"
+"@types/node@^8.0.19":
+  version "8.0.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.19.tgz#e46e2b0243de7d03f15b26b45c59ebb84f657a4e"
 
 abbrev@1:
   version "1.1.0"
@@ -4715,11 +4715,11 @@ next@3.0.1-beta.19:
     write-file-webpack-plugin "4.1.0"
     xss-filters "1.2.7"
 
-ngrok@2.2.15:
-  version "2.2.15"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.15.tgz#8cd575d3d91678a269f90523320bfec1da1cd0d3"
+ngrok@2.2.17:
+  version "2.2.17"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.17.tgz#173747e1d433f362145217a5764500e089806a2d"
   dependencies:
-    "@types/node" "^7.0.31"
+    "@types/node" "^8.0.19"
     async "^2.3.0"
     decompress-zip "^0.3.0"
     lock "^0.1.2"
