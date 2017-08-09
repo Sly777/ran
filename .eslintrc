@@ -11,7 +11,8 @@
     "prettier/react"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "graphql"
   ],
   "globals": {
     "document": true,
@@ -40,6 +41,9 @@
     "import/no-extraneous-dependencies": 0,
     "prettier/prettier": ["error", {
       "singleQuote": true
+    }],
+    "graphql/template-strings": ['error', {
+      env: 'literal'
     }]
   }
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import upvotePostGql from './upvotePost.gql';
 
 let PostUpvoter = ({ upvote, votes, id }) =>
   <button onClick={() => upvote(id, votes + 1)}>
@@ -39,17 +40,7 @@ PostUpvoter = styled(PostUpvoter)`
   }
 `;
 
-const upvotePost = gql`
-  mutation updatePost($id: ID!, $votes: Int) {
-    updatePost(id: $id, votes: $votes) {
-      id
-      __typename
-      votes
-    }
-  }
-`;
-
-export default graphql(upvotePost, {
+export default graphql(upvotePostGql, {
   props: ({ ownProps, mutate }) => ({
     upvote: (id, votes) =>
       mutate({
