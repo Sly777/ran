@@ -4659,9 +4659,9 @@ next-routes@1.0.40:
   dependencies:
     path-to-regexp "^1.7.0"
 
-next@3.0.1-beta.19:
-  version "3.0.1-beta.19"
-  resolved "https://registry.yarnpkg.com/next/-/next-3.0.1-beta.19.tgz#4871f5597b99831913f64eae2e0f287ec80a7a4e"
+next@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/next/-/next-3.0.3.tgz#35128ba8359064ffe8d1d5e5543410319c6d66d3"
   dependencies:
     ansi-html "0.0.7"
     babel-core "6.25.0"
@@ -4708,7 +4708,6 @@ next@3.0.1-beta.19:
     strip-ansi "4.0.0"
     styled-jsx "^1.0.8"
     touch "3.1.0"
-    uglifyjs-webpack-plugin "0.4.6"
     unfetch "3.0.0"
     url "0.11.0"
     uuid "3.1.0"
@@ -5479,11 +5478,11 @@ pump@^1.0.1:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-punycode@1.3.2, punycode@^1.2.4:
+punycode@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
-punycode@^1.4.1:
+punycode@^1.2.4, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
@@ -6983,7 +6982,7 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-uglifyjs-webpack-plugin@0.4.6, uglifyjs-webpack-plugin@^0.4.6:
+uglifyjs-webpack-plugin@^0.4.6:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-0.4.6.tgz#b951f4abb6bd617e66f63eb891498e391763e309"
   dependencies:
