@@ -1,7 +1,7 @@
 import { graphql } from 'react-apollo';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import createPostGql from '../gql/createPost.gql';
+import createPostGql from './createPost.gql';
 
 let CreateForm = ({ createPost }) => {
   function handleSubmit(e) {
@@ -11,6 +11,7 @@ let CreateForm = ({ createPost }) => {
     let url = e.target.elements.url.value;
 
     if (title === '' || url === '') {
+      // eslint-disable-next-line no-alert
       window.alert('Both fields are required.');
       return false;
     }
@@ -52,7 +53,7 @@ CreateForm = styled(CreateForm)`
     font-size: 20px;
   }
 
-  >input {
+  > input {
     display: block;
     margin-bottom: 10px;
   }

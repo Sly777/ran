@@ -1,19 +1,8 @@
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import moment from 'moment';
-
-const postInfoQuery = gql`
-  query getPost($postId: ID!) {
-    Post(id: $postId) {
-      title
-      votes
-      id
-      url
-      createdAt
-    }
-  }
-`;
+import getPostGql from './getPost.gql';
 
 let PostInfo = ({ data: { Post }, className }) => {
   if (!Post) {
@@ -66,7 +55,7 @@ PostInfo = styled(PostInfo)`
   }
 `;
 
-export default graphql(postInfoQuery, {
+export default graphql(getPostGql, {
   options: ({ postId }) => ({
     variables: {
       postId

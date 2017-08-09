@@ -1,8 +1,9 @@
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from '../routes';
-import PostUpvoter from './PostUpvoter';
+import { Link } from '../../routes';
+import PostUpvoter from '../PostUpvoter';
+import allPostsGql from './allPosts.gql';
 
 const POSTS_PER_PAGE = 10;
 
@@ -93,21 +94,7 @@ PostList = styled(PostList)`
   }
 `;
 
-const allPosts = gql`
-  query allPosts($first: Int!, $skip: Int!) {
-    allPosts(orderBy: createdAt_DESC, first: $first, skip: $skip) {
-      id
-      title
-      votes
-      createdAt
-    }
-    _allPostsMeta {
-      count
-    }
-  }
-`;
-
-export default graphql(allPosts, {
+export default graphql(allPostsGql, {
   options: () => ({
     variables: {
       skip: 0,
