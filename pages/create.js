@@ -1,6 +1,6 @@
-import CreatePost from '../components/CreateForm';
+import CreatePost from '../containers/CreatePost';
 import withData from '../libraries/withData';
-import DefaultCon from '../containers/Default';
+import DefaultCon from '../layouts/Default';
 
 export default withData(props =>
   <DefaultCon title="Create Post" {...props}>

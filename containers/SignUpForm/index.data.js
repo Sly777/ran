@@ -1,6 +1,6 @@
 import { graphql } from 'react-apollo';
 import { connect } from 'react-redux';
-import { dispatchers } from '../AuthFields/index.data';
+import { dispatchers } from '../AuthFields/store';
 import createUserGql from './createUser.gql';
 
 function createUserWrapper(AuthForm) {

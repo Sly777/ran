@@ -1,24 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthFields from '../AuthFields';
-import validate from '../AuthFields/index.validation';
-import connect from './index.data';
+import validate from '../AuthFields/validation';
 
-const defaultFunction = function defFunc() {};
-
-class SignUpForm extends React.Component {
-  static defaultProps = {
-    createUser: defaultFunction,
-    signinDispatcher: defaultFunction,
-    signinUser: defaultFunction,
-    signinUserDispatcher: defaultFunction
-  };
-
+export default class SignInForm extends React.Component {
   static propTypes = {
-    createUser: PropTypes.func,
-    signinDispatcher: PropTypes.func,
-    signinUser: PropTypes.func,
-    signinUserDispatcher: PropTypes.func
+    mutations: PropTypes.shape({
+      signInUser: PropTypes.func.isRequired
+    }).isRequired,
+    actions: PropTypes.shape({
+      signInUser: PropTypes.func.isRequired
+    }).isRequired
   };
 
   state = {
@@ -38,10 +30,8 @@ class SignUpForm extends React.Component {
   }
 
   formFields = [
-    { key: 1, attr: { name: 'firstName', type: 'text', label: 'First Name' } },
-    { key: 2, attr: { name: 'lastName', type: 'text', label: 'Last Name' } },
-    { key: 3, attr: { name: 'email', type: 'email', label: 'Email' } },
-    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } }
+    { key: 1, attr: { name: 'email', type: 'email', label: 'Email' } },
+    { key: 2, attr: { name: 'password', type: 'password', label: 'Password' } }
   ];
 
   handleTouch = () => {
@@ -67,15 +57,11 @@ class SignUpForm extends React.Component {
       this.setState({ errors: handleValidate.errors });
     }
 
-    this.props
-      .createUser(valuesPack)
+    this.props.mutations
+      .signInUser(valuesPack)
       .then(response => {
         if (response.data) {
-          this.props.signinDispatcher(response.data.signinUser.token);
-        } else {
-          this.setState({
-            errors: response.data.createUser.errors
-          });
+          this.props.actions.signInUser(response.data.signinUser.token);
         }
       })
       .catch(err => {
@@ -102,10 +88,10 @@ class SignUpForm extends React.Component {
           }}
           handleChange={this.handleChange}
           fields={fields}
-          selectFields="signUpFields"
           errors={this.state.errors}
           touched={this.state.touched}
           handleTouch={this.handleTouch}
+          selectFields="signInFields"
         />
         <br />
         <div>
@@ -116,5 +102,3 @@ class SignUpForm extends React.Component {
     );
   }
 }
-
-export default connect(SignUpForm);

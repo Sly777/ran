@@ -1,6 +1,6 @@
-import PostInfo from '../components/PostInfo';
+import PostInfo from '../containers/PostInfo';
 import withData from '../libraries/withData';
-import DefaultCon from '../containers/Default';
+import DefaultCon from '../layouts/Default';
 
 export default withData(props =>
   <DefaultCon title={decodeURIComponent(props.url.query.postTitle)} {...props}>
