@@ -2,6 +2,7 @@ import { graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import { dispatchers } from '../AuthFields/index.data';
 import createUserGql from './createUser.gql';
+import { Router } from '../../routes';
 
 function createUserWrapper(AuthForm) {
   const createUserWithData = graphql(createUserGql, {
@@ -16,6 +17,7 @@ function createUserWrapper(AuthForm) {
   const mapDispatchToProps = dispatch => ({
     signIn(token) {
       dispatch(dispatchers.signIn(token));
+      Router.pushRoute('/');
     }
   });
 

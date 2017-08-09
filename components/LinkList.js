@@ -7,9 +7,10 @@ const LinkList = ({ className, pathname, authenticated, logout }) =>
     <Link prefetch href="/">
       <a className={pathname === '/' && 'is-active'}>Main Page</a>
     </Link>
-    <Link prefetch route="create">
-      <a className={pathname === '/create_post' && 'is-active'}>Create</a>
-    </Link>
+    {authenticated &&
+      <Link prefetch route="create">
+        <a className={pathname === '/create_post' && 'is-active'}>Create</a>
+      </Link>}
     {!authenticated &&
       <Link prefetch route="signin">
         <a className={pathname === '/sign_in' && 'is-active'}>SignIn</a>

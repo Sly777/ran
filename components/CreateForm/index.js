@@ -2,6 +2,7 @@ import { graphql } from 'react-apollo';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import createPostGql from './createPost.gql';
+import { Router } from '../../routes';
 
 let CreateForm = ({ createPost }) => {
   function handleSubmit(e) {
@@ -27,7 +28,7 @@ let CreateForm = ({ createPost }) => {
     e.target.elements.title.value = '';
     e.target.elements.url.value = '';
 
-    document.location.pathname = '/';
+    Router.pushRoute('/');
   }
 
   return (
