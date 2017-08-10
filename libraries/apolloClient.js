@@ -1,11 +1,9 @@
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import persist from './persist';
 
-const initNetworkInterface = graphqlUrl => {
+const initNetworkInterface = token => {
   const networkInterface = createNetworkInterface({
-    uri:
-      graphqlUrl ||
-      'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
+    uri: 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
     opts: {
       credentials: 'same-origin'
     }
@@ -18,7 +16,8 @@ const initNetworkInterface = graphqlUrl => {
           req.options.headers = {};
         }
         (async () => {
-          const token = await persist.willGetAccessToken();
+          // eslint-disable-next-line no-param-reassign
+          token = token || (await persist.willGetAccessToken());
           req.options.headers.authorization = token ? `Bearer ${token}` : null;
           next();
         })();
@@ -31,20 +30,20 @@ const initNetworkInterface = graphqlUrl => {
 
 let apolloClient = null;
 
-const createClient = headers =>
+const createClient = (headers, token) =>
   new ApolloClient({
     ssrMode: !process.browser,
     ssrForceFetchDelay: 100,
     headers,
-    networkInterface: initNetworkInterface()
+    networkInterface: initNetworkInterface(token)
   });
 
-export default (headers, graphqlUrl) => {
+export default (headers, token) => {
   if (!process.browser) {
-    return createClient(headers, graphqlUrl);
+    return createClient(headers, token);
   }
   if (!apolloClient) {
-    apolloClient = createClient(headers, graphqlUrl);
+    apolloClient = createClient(headers, token);
   }
   return apolloClient;
 };

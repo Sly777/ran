@@ -4,21 +4,20 @@ import AuthFields from '../AuthFields';
 import validate from '../AuthFields/index.validation';
 import connect from './index.data';
 
-const defaultFunction = function defFunc() {};
+const defaultFunction = () => {};
 
 class SignUpForm extends React.Component {
   static defaultProps = {
     createUser: defaultFunction,
-    signinDispatcher: defaultFunction,
-    signinUser: defaultFunction,
-    signinUserDispatcher: defaultFunction
+    signinDispatcher(token) {
+      this.props.signIn(token);
+    }
   };
 
   static propTypes = {
+    signIn: PropTypes.func.isRequired,
     createUser: PropTypes.func,
-    signinDispatcher: PropTypes.func,
-    signinUser: PropTypes.func,
-    signinUserDispatcher: PropTypes.func
+    signinDispatcher: PropTypes.func
   };
 
   state = {
@@ -71,7 +70,10 @@ class SignUpForm extends React.Component {
       .createUser(valuesPack)
       .then(response => {
         if (response.data) {
-          this.props.signinDispatcher(response.data.signinUser.token);
+          this.props.signinDispatcher.call(
+            this,
+            response.data.signinUser.token
+          );
         } else {
           this.setState({
             errors: response.data.createUser.errors
