@@ -6,13 +6,12 @@ import connect from './data';
 
 const PostList = ({
   data: { allPosts, loading, _allPostsMeta },
-  loadMorePosts,
-  className
+  loadMorePosts
 }) => {
   if (allPosts && allPosts.length) {
     const areMorePosts = allPosts.length < _allPostsMeta.count;
     return (
-      <Section className={className}>
+      <Section>
         <ul>
           {allPosts.map((post, index) =>
             <li key={post.id}>
@@ -49,8 +48,7 @@ const PostList = ({
 
 PostList.propTypes = {
   data: PropTypes.object.isRequired,
-  loadMorePosts: PropTypes.func.isRequired,
-  className: PropTypes.string.isRequired
+  loadMorePosts: PropTypes.func.isRequired
 };
 
 export default connect(PostList);

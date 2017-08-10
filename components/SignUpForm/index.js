@@ -7,7 +7,7 @@ import connect from './data';
 class SignUpForm extends React.Component {
   static propTypes = {
     mutations: PropTypes.shape({
-      signupUser: PropTypes.func.isRequired
+      signUp: PropTypes.func.isRequired
     }).isRequired,
     actions: PropTypes.shape({
       signIn: PropTypes.func.isRequired
@@ -68,7 +68,7 @@ class SignUpForm extends React.Component {
     }
 
     this.props.mutations
-      .signupUser(valuesPack)
+      .signUp(valuesPack)
       .then(response => {
         if (response.data.signinUser) {
           this.props.actions.signIn(response.data.signinUser.token);

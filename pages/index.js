@@ -1,9 +1,9 @@
-import PostList from '../containers/PostList';
+import PostList from '../components/PostList';
 import withData from '../libraries/withData';
-import Layout from '../containers/Layout';
+import DefaultCon from '../containers/Default';
 
 export default withData(props =>
-  <Layout {...props}>
+  <DefaultCon {...props}>
     <PostList />
-  </Layout>
+  </DefaultCon>
 );

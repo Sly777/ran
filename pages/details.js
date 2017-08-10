@@ -1,12 +1,12 @@
-import PostInfo from '../containers/PostInfo';
+import PostInfo from '../components/PostInfo';
 import withData from '../libraries/withData';
-import Layout from '../containers/Layout';
+import DefaultCon from '../containers/Default';
 
 export default withData(props =>
-  <Layout title={decodeURIComponent(props.url.query.postTitle)} {...props}>
+  <DefaultCon title={decodeURIComponent(props.url.query.postTitle)} {...props}>
     <PostInfo
       postId={props.url.query.postId}
       postTitle={props.url.query.postTitle}
     />
-  </Layout>
+  </DefaultCon>
 );

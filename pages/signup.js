@@ -1,9 +1,9 @@
-import SignUpForm from '../containers/SignUpForm';
+import SignUpForm from '../components/SignUpForm';
 import withData from '../libraries/withData';
-import Layout from '../containers/Layout';
+import DefaultCon from '../containers/Default';
 
 export default withData(props =>
-  <Layout title="Sign Up" {...props}>
+  <DefaultCon title="Sign Up" {...props}>
     <SignUpForm />
-  </Layout>
+  </DefaultCon>
 );

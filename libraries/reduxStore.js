@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 import getReducer from './reducer';
 import createMiddleware from './middleware';
 import persist from './persist';
-import { dispatchers } from '../containers/AuthFields/store';
+import { dispatchers } from '../components/AuthFields/store';
 
 let reduxStore = null;
 
