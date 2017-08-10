@@ -2,8 +2,10 @@ import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'isomorphic-fetch';
+import cookies from 'next-cookies';
 import apolloClient from './apolloClient';
 import reduxStore from './reduxStore';
+import persist from './persist';
 
 export default Component =>
   class extends React.Component {
@@ -15,8 +17,10 @@ export default Component =>
 
     static async getInitialProps(ctx) {
       const headers = ctx.req ? ctx.req.headers : {};
-      const client = apolloClient(headers);
-      const store = reduxStore(client, client.initialState);
+      const token = cookies(ctx)[persist.ACCESS_TOKEN_KEY];
+
+      const client = apolloClient(headers, token);
+      const store = reduxStore(client, client.initialState, token);
       const props = {
         url: { query: ctx.query, pathname: ctx.pathname },
         ...(await (Component.getInitialProps

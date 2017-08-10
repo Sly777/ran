@@ -1,14 +1,14 @@
 import persist from '../../libraries/persist';
 
 // Constants
-export const AUTH_SIGNIN = 'AUTH_SIGNIN';
-export const AUTH_SIGNOUT = 'AUTH_SIGNOUT';
-export const AUTH_SERVERERROR = 'AUTH_SERVERERROR';
+export const AUTH_SIGNIN = 'AUTH/SIGNIN';
+export const AUTH_SIGNOUT = 'AUTH/SIGNOUT';
 
 // Initial State
 const initialState = {
   authenticated: false,
   token: null,
+  // TODO: maybe remove error, cause there no actions to set it?
   error: null
 };
 
@@ -24,9 +24,6 @@ const reducer = (state = initialState, action) => {
       };
     case AUTH_SIGNOUT:
       return { ...state, authenticated: false, token: null, error: null };
-    // TODO: not used? can remove?
-    case AUTH_SERVERERROR:
-      return { ...state, authenticated: false, error: action.error };
     default:
       return state;
   }

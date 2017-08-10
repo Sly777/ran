@@ -1,39 +1,20 @@
-const localForage = require('localforage');
+const cookies = require('js-cookie');
 
 class persist {
-  static get SESSION_TOKEN_KEY() {
-    return 'sessionToken';
-  }
   static get ACCESS_TOKEN_KEY() {
     return 'accessToken';
   }
 
-  static async willGetSessionToken() {
-    return localForage.getItem(persist.SESSION_TOKEN_KEY).catch(err => err);
-  }
-
-  static async willSetSessionToken(value) {
-    return localForage
-      .setItem(persist.SESSION_TOKEN_KEY, value)
-      .catch(err => err);
-  }
-
-  static async willRemoveSessionToken() {
-    return localForage.removeItem(persist.SESSION_TOKEN_KEY).catch(err => err);
-  }
-
   static async willGetAccessToken() {
-    return localForage.getItem(persist.ACCESS_TOKEN_KEY).catch(err => err);
+    return cookies.get(persist.ACCESS_TOKEN_KEY);
   }
 
   static async willSetAccessToken(value) {
-    return localForage
-      .setItem(persist.ACCESS_TOKEN_KEY, value)
-      .catch(err => err);
+    return cookies.set(persist.ACCESS_TOKEN_KEY, value);
   }
 
   static async willRemoveAccessToken() {
-    return localForage.removeItem(persist.ACCESS_TOKEN_KEY).catch(err => err);
+    return cookies.remove(persist.ACCESS_TOKEN_KEY);
   }
 }
 
