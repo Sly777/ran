@@ -3,16 +3,19 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "airbnb",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:jest/recommended"
   ],
   "plugins": [
     "prettier",
-    "graphql"
+    "graphql",
+    "jest"
   ],
   "globals": {
     "document": true,

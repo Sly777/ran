@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkList /> should render with default props 1`] = `
+<nav>
+  <LinkRoutes
+    href="/"
+    passHref={true}
+    prefetch={true}
+  >
+    <styled.a
+      active={false}
+    >
+      Main Page
+    </styled.a>
+  </LinkRoutes>
+  <LinkRoutes
+    passHref={true}
+    prefetch={true}
+    route="create"
+  >
+    <styled.a
+      active={false}
+    >
+      Create
+    </styled.a>
+  </LinkRoutes>
+  <LinkRoutes
+    passHref={true}
+    prefetch={true}
+    route="signin"
+  >
+    <styled.a
+      active={false}
+    >
+      SignIn
+    </styled.a>
+  </LinkRoutes>
+  <LinkRoutes
+    passHref={true}
+    prefetch={true}
+    route="signup"
+  >
+    <styled.a
+      active={false}
+    >
+      SignUp
+    </styled.a>
+  </LinkRoutes>
+  <a
+    href="https://github.com/Sly777/ran"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    RAN! @ Github
+  </a>
+</nav>
+`;
