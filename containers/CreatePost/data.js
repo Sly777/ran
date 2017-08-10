@@ -21,4 +21,4 @@ export const withMutation = graphql(createPostGql, {
   })
 });
 
-export default withMutation;
+export default comp => withMutation(comp);

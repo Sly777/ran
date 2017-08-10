@@ -1,15 +1,5 @@
 import { applyMiddleware, compose } from 'redux';
 
-// TODO: had a hard time using remote-devtools
-// import { composeWithDevTools } from 'remote-redux-devtools';
-//
-// export default function createMiddleware(clientMiddleware) {
-//   const middleware = applyMiddleware(clientMiddleware);
-//   const composeEnhancers = composeWithDevTools({});
-//
-//   return composeEnhancers(middleware);
-// }
-
 export default function createMiddleware(clientMiddleware) {
   const middleware = applyMiddleware(clientMiddleware);
   const composeEnhancers =

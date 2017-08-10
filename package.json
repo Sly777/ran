@@ -48,7 +48,6 @@
     "react-helmet": "5.1.3",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
-    "remote-redux-devtools": "0.5.12",
     "styled-components": "2.1.2"
   },
   "description": "React . Apollo (GraphQL) . Next.js Boilerplate",

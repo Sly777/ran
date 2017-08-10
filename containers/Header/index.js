@@ -1,15 +1,27 @@
-import { connect } from 'react-redux';
-import { dispatchers } from '../AuthFields/store';
-import Feature from './feature';
+import PropTypes from 'prop-types';
+import LinkList from '../../components/LinkList';
+import { StyledHeader } from './styles';
+import connect from './data';
 
-const mapStateToProps = state => ({
-  authenticated: state.auth.authenticated
-});
+const Header = ({ pathname, authenticated, actions: { logout } }) =>
+  <StyledHeader>
+    <LinkList
+      pathname={pathname}
+      authenticated={authenticated}
+      logout={logout}
+    />
+  </StyledHeader>;
 
-const mapDispatchToProps = dispatch => ({
-  actions: {
-    logout: () => dispatch(dispatchers.signOut())
-  }
-});
+Header.defaultProps = {
+  authenticated: false
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Feature);
+Header.propTypes = {
+  pathname: PropTypes.string.isRequired,
+  authenticated: PropTypes.bool,
+  actions: PropTypes.shape({
+    logout: PropTypes.func.isRequired
+  }).isRequired
+};
+
+export default connect(Header);

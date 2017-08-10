@@ -14,4 +14,4 @@ const withData = graphql(getPostGql, {
   })
 });
 
-export default withData;
+export default comp => withData(comp);
