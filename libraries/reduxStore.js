@@ -6,20 +6,30 @@ import { dispatchers } from '../components/AuthFields/index.data';
 
 let reduxStore = null;
 
-export default (apolloClient, initialState) => {
+export default (apolloClient, initialState, token) => {
   let store;
   if (!process.browser || !reduxStore) {
     const middleware = createMiddleware(apolloClient.middleware());
     store = createStore(getReducer(apolloClient), initialState, middleware);
 
-    (async () => {
-      const token = await Promise.resolve(persist.willGetAccessToken());
-      if (token) {
-        dispatchers.signIn(token);
-      } else if (!token) {
-        dispatchers.signOut();
-      }
-    })();
+    let tokenInStore = store.getState().auth.token;
+
+    if (!tokenInStore) {
+      (async () => {
+        tokenInStore =
+          token || (await Promise.resolve(persist.willGetAccessToken()));
+
+        if (typeof token === 'string' && !token.includes('Error')) {
+          if (token.length) {
+            store.dispatch(dispatchers.signIn(token));
+          } else {
+            store.dispatch(dispatchers.signOut());
+          }
+        } else {
+          store.dispatch(dispatchers.signOut());
+        }
+      })();
+    }
 
     if (!process.browser) {
       return store;
