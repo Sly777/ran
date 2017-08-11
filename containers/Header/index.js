@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import LinkList from '../../components/LinkList';
-import { Header as StyledHeader } from './styles';
+import * as S from './styles';
 import connect from './data';
 
 const Header = ({ pathname, authenticated, actions: { logout } }) =>
-  <StyledHeader>
+  <S.Header>
     <LinkList
       pathname={pathname}
       authenticated={authenticated}
       logout={logout}
     />
-  </StyledHeader>;
+  </S.Header>;
 
 Header.defaultProps = {
   authenticated: false

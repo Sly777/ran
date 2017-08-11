@@ -1,6 +1,6 @@
-import { A, Button } from '~/components/Theme';
+import * as T from '~/components/Theme';
 
-export const StyledA = A.extend`
+export const A = T.A.extend`
   font-size: 14px;
   margin-right: 15px;
   text-decoration: none;
@@ -8,7 +8,7 @@ export const StyledA = A.extend`
   text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
 `;
 
-export const LogOutButton = Button.extend`
+export const LogOutButton = T.Button.extend`
   display: inline-block;
   margin-right: 15px;
   cursor: pointer;
