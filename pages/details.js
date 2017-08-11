@@ -1,4 +1,4 @@
-import PostInfo from '../containers/PostInfo';
+import PostInfo from '../components/PostInfo';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 

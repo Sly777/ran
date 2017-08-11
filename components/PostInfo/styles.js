@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { A } from '~/components/Theme';
+import { A } from '../Theme';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Section = styled.section`

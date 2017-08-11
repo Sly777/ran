@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AuthFields from '~/components/AuthFields';
-import validate from '~/components/AuthFields/validation';
+import AuthFields from '../AuthFields';
+import validate from '../AuthFields/validation';
 import connect from './data';
 
-class SignInForm extends React.Component {
+class SignUpForm extends React.Component {
   static propTypes = {
     mutations: PropTypes.shape({
-      signIn: PropTypes.func.isRequired
+      signUp: PropTypes.func.isRequired
     }).isRequired,
     actions: PropTypes.shape({
       signIn: PropTypes.func.isRequired
@@ -31,8 +31,10 @@ class SignInForm extends React.Component {
   }
 
   formFields = [
-    { key: 1, attr: { name: 'email', type: 'email', label: 'Email' } },
-    { key: 2, attr: { name: 'password', type: 'password', label: 'Password' } }
+    { key: 1, attr: { name: 'firstName', type: 'text', label: 'First Name' } },
+    { key: 2, attr: { name: 'lastName', type: 'text', label: 'Last Name' } },
+    { key: 3, attr: { name: 'email', type: 'email', label: 'Email' } },
+    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } }
   ];
 
   handleTouch = () => {
@@ -66,10 +68,14 @@ class SignInForm extends React.Component {
     }
 
     this.props.mutations
-      .signIn(valuesPack)
+      .signUp(valuesPack)
       .then(response => {
-        if (response.data) {
+        if (response.data.signinUser) {
           this.props.actions.signIn(response.data.signinUser.token);
+        } else {
+          this.setState({
+            errors: response.data.createUser.errors
+          });
         }
       })
       .catch(err => {
@@ -96,10 +102,10 @@ class SignInForm extends React.Component {
           }}
           handleChange={this.handleChange}
           fields={fields}
+          selectFields="signUpFields"
           errors={this.state.errors}
           touched={this.state.touched}
           handleTouch={this.handleTouch}
-          selectFields="signinFields"
         />
         <br />
         <div>
@@ -111,4 +117,4 @@ class SignInForm extends React.Component {
   }
 }
 
-export default connect(SignInForm);
+export default connect(SignUpForm);

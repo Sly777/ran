@@ -1,4 +1,4 @@
-import CreatePost from '../containers/CreatePost';
+import CreatePost from '../components/CreatePost';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 

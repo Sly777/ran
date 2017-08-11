@@ -1,4 +1,4 @@
-import persist from '../persist';
+import persist from '../../libraries/persist';
 
 // Constants
 export const AUTH_SIGNIN = 'AUTH/SIGNIN';

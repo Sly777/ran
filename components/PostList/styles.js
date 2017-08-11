@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as T from '~/components/Theme';
+import * as T from '../Theme';
 
 export const Main = styled.section`padding-bottom: 20px;`;
 
@@ -32,7 +32,7 @@ export const ItemList = styled.ul`
 `;
 
 export const ShowMore = T.Button.extend`
-  button:before {
+  &:before {
     align-self: center;
     border-style: solid;
     border-width: 6px 4px 0 4px;

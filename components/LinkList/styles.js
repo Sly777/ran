@@ -1,4 +1,4 @@
-import * as T from '~/components/Theme';
+import * as T from '../Theme';
 
 export const A = T.A.extend`
   font-size: 14px;

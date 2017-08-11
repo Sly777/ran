@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '~/components/Theme';
+import { Button } from '../Theme';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Form = styled.form`

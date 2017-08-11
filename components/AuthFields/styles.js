@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as T from '~/components/Theme';
+import * as T from '../Theme';
 
 export const Main = styled.div`
   border-bottom: 1px solid #ececec;

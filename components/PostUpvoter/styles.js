@@ -1,4 +1,4 @@
-import * as T from '~/components/Theme';
+import * as T from '../Theme';
 
 // eslint-disable-next-line import/prefer-default-export
 export const UpvoteButton = T.Button.extend`

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
-import { dispatchers } from '~/libraries/stores/auth';
+import { dispatchers } from '../AuthFields/store';
 import signInGql from './signinUser.gql';
 
 const withMutation = graphql(signInGql, {

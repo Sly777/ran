@@ -1,4 +1,4 @@
-import SignInForm from '../containers/SignInForm';
+import SignInForm from '../components/SignInForm';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 

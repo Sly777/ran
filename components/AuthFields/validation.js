@@ -1,4 +1,4 @@
-import { isStringEmpty, isEmail } from '~/libraries/validations';
+import { isStringEmpty, isEmail } from '../../libraries/validations';
 
 export default values => {
   const errorsBuffer = {};

@@ -3,27 +3,19 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
-    "jest": true
+    "es6": true
   },
   "extends": [
     "airbnb",
     "prettier",
     "prettier/react",
-    "plugin:jest/recommended",
     "plugin:import/warnings"
   ],
   "plugins": [
     "prettier",
     "graphql",
-    "jest",
     "import"
   ],
-  "settings": {
-    "import/resolver": {
-      "babel-plugin-root-import": {}
-    }
-  },
   "globals": {
     "document": true,
     "window": true,

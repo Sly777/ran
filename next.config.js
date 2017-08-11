@@ -8,18 +8,6 @@ module.exports = {
 
     config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/));
 
-    if (dev) {
-      config.module.rules.push({
-        test: /\.(jsx?|gql|graphql)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-        enforce: 'pre',
-        options: {
-          fix: true
-        }
-      });
-    }
-
     if (process.env.ANALYZE_BUILD) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
