@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { dispatchers } from '../AuthFields/store';
+import { dispatchers } from '~/libraries/stores/auth';
 
 const mapStateToProps = state => ({
   authenticated: state.auth.authenticated

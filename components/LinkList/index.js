@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
-import { A, LogOutButton } from './styles';
+import { StyledA, LogOutButton } from './styles';
 
 const LinkList = ({ pathname, authenticated, logout }) =>
   <nav>
     <Link prefetch href="/" passHref>
-      <A active={pathname === '/'}>Main Page</A>
+      <StyledA active={pathname === '/'}>Main Page</StyledA>
     </Link>
     <Link prefetch route="create" passHref>
-      <A active={pathname === '/create_post'}>Create</A>
+      <StyledA active={pathname === '/create_post'}>Create</StyledA>
     </Link>
     {!authenticated &&
       <Link prefetch route="signin" passHref>
-        <A active={pathname === '/sign_in'}>SignIn</A>
+        <StyledA active={pathname === '/sign_in'}>SignIn</StyledA>
       </Link>}
     {!authenticated &&
       <Link prefetch route="signup" passHref>
-        <A active={pathname === '/sign_up'}>SignUp</A>
+        <StyledA active={pathname === '/sign_up'}>SignUp</StyledA>
       </Link>}
     {authenticated &&
       <LogOutButton
@@ -27,13 +27,13 @@ const LinkList = ({ pathname, authenticated, logout }) =>
       >
         LogOut
       </LogOutButton>}
-    <a
+    <StyledA
       href="https://github.com/Sly777/ran"
       rel="noopener noreferrer"
       target="_blank"
     >
       RAN! @ Github
-    </a>
+    </StyledA>
   </nav>;
 
 LinkList.propTypes = {

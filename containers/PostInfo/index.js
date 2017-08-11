@@ -1,14 +1,14 @@
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import { Section } from './styles';
+import * as S from './styles';
 import connect from './data';
 
 const PostInfo = ({ loading, Post, error }) => {
   if (loading) {
     return (
-      <Section>
+      <S.Section>
         <h1>Loading...</h1>
-      </Section>
+      </S.Section>
     );
   }
 
@@ -19,7 +19,7 @@ const PostInfo = ({ loading, Post, error }) => {
   }
 
   return (
-    <Section>
+    <S.Section>
       <h1>
         {Post.title}
       </h1>
@@ -34,11 +34,11 @@ const PostInfo = ({ loading, Post, error }) => {
         </span>
       </div>
       <p>
-        <a target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
+        <S.A target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
           {Post.url}
-        </a>
+        </S.A>
       </p>
-    </Section>
+    </S.Section>
   );
 };
 

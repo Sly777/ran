@@ -1,4 +1,4 @@
-import SignUpForm from '../components/SignUpForm';
+import SignUpForm from '../containers/SignUpForm';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 

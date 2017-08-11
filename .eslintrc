@@ -10,13 +10,20 @@
     "airbnb",
     "prettier",
     "prettier/react",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:import/warnings"
   ],
   "plugins": [
     "prettier",
     "graphql",
-    "jest"
+    "jest",
+    "import"
   ],
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {}
+    }
+  },
   "globals": {
     "document": true,
     "window": true,

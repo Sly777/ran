@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
 import PostUpvoter from '../PostUpvoter';
-import { Section } from './styles';
+import * as S from './styles';
 import connect from './data';
 
 const PostList = ({
@@ -11,39 +11,40 @@ const PostList = ({
   if (allPosts && allPosts.length) {
     const areMorePosts = allPosts.length < _allPostsMeta.count;
     return (
-      <Section>
-        <ul>
+      <S.Main>
+        <S.ItemList>
           {allPosts.map((post, index) =>
-            <li key={post.id}>
+            <S.Item key={post.id}>
               <div>
-                <span>
+                <S.Index>
                   {index + 1}.{' '}
-                </span>
+                </S.Index>
                 <Link
                   route="details"
                   params={{
                     postId: post.id,
                     postTitle: encodeURIComponent(post.title)
                   }}
+                  passHref
                 >
-                  <a>
+                  <S.Title>
                     {post.title}
-                  </a>
+                  </S.Title>
                 </Link>
                 <PostUpvoter id={post.id} votes={post.votes} />
               </div>
-            </li>
+            </S.Item>
           )}
-        </ul>
+        </S.ItemList>
         {areMorePosts
-          ? <button onClick={() => loadMorePosts()}>
+          ? <S.ShowMore onClick={() => loadMorePosts()}>
               {loading ? 'Loading...' : 'Show More'}
-            </button>
+            </S.ShowMore>
           : ''}
-      </Section>
+      </S.Main>
     );
   }
-  return <div>Loading</div>;
+  return <S.Loading>Loading</S.Loading>;
 };
 
 PostList.propTypes = {

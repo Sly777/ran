@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form } from './styles';
+import * as S from './styles';
 import { Router } from '../../routes';
 import connect from './data';
 
@@ -38,12 +38,12 @@ class CreateForm extends React.Component {
   };
 
   render = () =>
-    <Form onSubmit={this.handleSubmit}>
+    <S.Form onSubmit={this.handleSubmit}>
       <h1>Add new post</h1>
       <input placeholder="title" name="title" />
       <input placeholder="url" name="url" />
-      <button type="submit">Submit</button>
-    </Form>;
+      <S.SubmitButton type="submit">Submit</S.SubmitButton>
+    </S.Form>;
 }
 
 export default connect(CreateForm);

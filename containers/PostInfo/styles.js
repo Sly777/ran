@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { A } from '~/components/Theme';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Section = styled.section`
@@ -12,3 +13,5 @@ export const Section = styled.section`
     font-size: 17px;
   }
 `;
+
+export { A };

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import { A, Button } from '~/components/Theme';
 
-export const A = styled.a`
+export const StyledA = A.extend`
   font-size: 14px;
   margin-right: 15px;
   text-decoration: none;
@@ -8,7 +8,7 @@ export const A = styled.a`
   text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
 `;
 
-export const LogOutButton = styled.button`
+export const LogOutButton = Button.extend`
   display: inline-block;
   margin-right: 15px;
   cursor: pointer;

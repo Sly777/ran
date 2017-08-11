@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import color from 'color';
 import themeList from '../libraries/theme';
-import ThemedApp from './ThemedApp';
+import { App as ThemedApp } from '../components/Theme';
 
 let offlineInstalled = false;
 
