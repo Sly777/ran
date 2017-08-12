@@ -1,13 +1,15 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const { IgnorePlugin } = require('webpack');
-const OfflinePlugin = require('offline-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const { IgnorePlugin } = require('webpack')
+const OfflinePlugin = require('offline-plugin')
 
 module.exports = {
   webpack: (config, { dev }) => {
-    const prod = !dev;
+    const prod = !dev
 
-    config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/));
+    config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/))
 
+    // run "eslint --fix"
+    // FIXME: not fixing gql and graphql files
     if (dev) {
       config.module.rules.push({
         test: /\.(jsx?|gql|graphql)$/,
@@ -17,7 +19,7 @@ module.exports = {
         options: {
           fix: true
         }
-      });
+      })
     }
 
     if (process.env.ANALYZE_BUILD) {
@@ -27,7 +29,7 @@ module.exports = {
           analyzerPort: 8888,
           openAnalyzer: true
         })
-      );
+      )
     }
 
     if (prod && process.env.OFFLINE_SUPPORT) {
@@ -46,21 +48,21 @@ module.exports = {
               asset === 'BUILD_ID' ||
               asset.indexOf('dist/') === 0
             ) {
-              return null;
+              return null
             }
 
             if (asset[0] === '/') {
-              return asset;
+              return asset
             }
 
             if (asset.indexOf('bundles/pages/') === 0) {
               return `/_next/-/${asset
                 .replace('bundles/pages', 'page')
                 .replace('index.js', '')
-                .replace(/\.js$/, '')}`;
+                .replace(/\.js$/, '')}`
             }
 
-            return `/_next/-/${asset}`;
+            return `/_next/-/${asset}`
           },
           autoUpdate: 1000 * 60 * 5,
           __tests: dev ? { ignoreRuntime: true } : {},
@@ -73,9 +75,9 @@ module.exports = {
             events: true
           }
         })
-      );
+      )
     }
 
-    return config;
+    return config
   }
-};
+}

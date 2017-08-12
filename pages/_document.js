@@ -1,18 +1,18 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-import Helmet from 'react-helmet';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Head, Main, NextScript } from 'next/document'
+import Helmet from 'react-helmet'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
   static async getInitialProps(...args) {
-    const documentProps = await super.getInitialProps(...args);
+    const documentProps = await super.getInitialProps(...args)
     // see https://github.com/nfl/react-helmet#server-usage for more information
     // 'head' was occupied by 'renderPage().head', we cannot use it
-    return { ...documentProps, helmet: Helmet.rewind() };
+    return { ...documentProps, helmet: Helmet.rewind() }
   }
 
   // should render on <html>
   helmetHtmlAttrComponents() {
-    return this.props.helmet.htmlAttributes.toComponent();
+    return this.props.helmet.htmlAttributes.toComponent()
   }
 
   // should render on <head>
@@ -24,15 +24,15 @@ export default class MyDocument extends Document {
         el =>
           el.length > 0 ||
           !(Object.keys(el).length === 0 && el.constructor === Object)
-      );
+      )
 
-    return keys.length ? keys : [];
+    return keys.length ? keys : []
   }
 
   render() {
-    const sheet = new ServerStyleSheet();
-    const main = sheet.collectStyles(<Main />);
-    const styleTags = sheet.getStyleElement();
+    const sheet = new ServerStyleSheet()
+    const main = sheet.collectStyles(<Main />)
+    const styleTags = sheet.getStyleElement()
     return (
       <html lang="en" {...this.helmetHtmlAttrComponents()}>
         <Head>
@@ -49,6 +49,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }

@@ -1,9 +1,9 @@
-import CreatePost from '../containers/CreatePost';
-import withData from '../libraries/withData';
-import DefaultCon from '../containers/Default';
+import CreatePost from '~/containers/CreatePost'
+import withData from '~/lib/withData'
+import Layout from '~/containers/Layout'
 
 export default withData(props =>
-  <DefaultCon title="Create Post" {...props}>
+  <Layout title="Create Post" {...props}>
     <CreatePost />
-  </DefaultCon>
-);
+  </Layout>
+)

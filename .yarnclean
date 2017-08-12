@@ -40,3 +40,6 @@ Gruntfile.js
 # misc
 *.gz
 *.md
+
+# fix issue with yarn cleaning assets, https://github.com/gotwarlost/istanbul/issues/743
+!istanbul-reports/lib/html/assets

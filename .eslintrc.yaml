@@ -1,0 +1,39 @@
+---
+parser: babel-eslint
+env:
+  browser: true
+  node: true
+  es6: true
+  jest: true
+extends:
+- standard
+- standard-jsx
+- prettier
+- prettier/react
+- plugin:jest/recommended
+- plugin:import/errors
+plugins:
+- graphql
+- jest
+- import
+settings:
+  import/resolver:
+    babel-plugin-root-import: {}
+globals:
+  ANALYTICS_TRACKING_ID: false
+  AUTH0_CLIENT_ID: false
+  AUTH0_DOMAIN: false
+  GRAPHQL_ENDPOINT: false
+  NEWSLETTER_FORM_ACTION: false
+  NEWSLETTER_FORM_INPUT_NAME: false
+  ON_PRODUCTION: true
+rules:
+  semi:
+  - error
+  - never
+  quotes:
+  - error
+  - single
+  graphql/template-strings:
+  - error
+  - env: literal

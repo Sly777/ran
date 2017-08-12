@@ -1,9 +1,9 @@
-import SignInForm from '../containers/SignInForm';
-import withData from '../libraries/withData';
-import DefaultCon from '../containers/Default';
+import SignInForm from '~/containers/SignInForm'
+import withData from '~/lib/withData'
+import Layout from '~/containers/Layout'
 
 export default withData(props =>
-  <DefaultCon title="Sign In" {...props}>
+  <Layout title="Sign In" {...props}>
     <SignInForm />
-  </DefaultCon>
-);
+  </Layout>
+)
