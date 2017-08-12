@@ -6,18 +6,6 @@ import { defaultProps } from './__mocks__/index.mock';
 import LinkList from '../';
 import { themeDecorator } from './utils';
 
-// NOTE: dont work
-// const shallowWithMainTheme = (child, options) => {
-//   const mainThemeDecorator = themeDecorator('main');
-//   const wrapper = shallow(mainThemeDecorator(child), options);
-//   const instance = wrapper.root.instance();
-//   return wrapper.shallow({ context: instance.getChildContext() });
-// };
-// const shallowWithMainTheme = (child, options) => {
-//   const mainThemeDecorator = themeDecorator('main');
-//   return shallow(mainThemeDecorator(child), options);
-// };
-
 const mountWithMainTheme = (child, options) => {
   const mainThemeDecorator = themeDecorator('main');
   return mount(mainThemeDecorator(child), options);

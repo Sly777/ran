@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots LinkList authenticated 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "justifyContent": "center",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+      }
+    }
+  >
+    <nav>
+      <a
+        className="sc-EHOje iPcnfv"
+        href="/"
+        onClick={[Function]}
+      >
+        Main Page
+      </a>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="/create_post"
+        onClick={[Function]}
+      >
+        Create
+      </a>
+      <button
+        className="sc-bZQynM gwOAOe"
+        href="#"
+        onClick={[Function]}
+        role="link"
+      >
+        LogOut
+      </button>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="https://github.com/Sly777/ran"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        RAN! @ Github
+      </a>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots LinkList nonauthenticated 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "justifyContent": "center",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+      }
+    }
+  >
+    <nav>
+      <a
+        className="sc-EHOje iPcnfv"
+        href="/"
+        onClick={[Function]}
+      >
+        Main Page
+      </a>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="/create_post"
+        onClick={[Function]}
+      >
+        Create
+      </a>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="/sign_in"
+        onClick={[Function]}
+      >
+        SignIn
+      </a>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="/sign_up"
+        onClick={[Function]}
+      >
+        SignUp
+      </a>
+      <a
+        className="sc-EHOje gxbhVj"
+        href="https://github.com/Sly777/ran"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        RAN! @ Github
+      </a>
+    </nav>
+  </div>
+</div>
+`;
