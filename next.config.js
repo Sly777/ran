@@ -8,8 +8,7 @@ module.exports = {
 
     config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/))
 
-    // run "eslint --fix"
-    // FIXME: not fixing gql and graphql files
+    // FIXME: not fixing gql and graphql files, but fixing js files
     if (dev) {
       config.module.rules.push({
         test: /\.(jsx?|gql|graphql)$/,

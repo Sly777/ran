@@ -43,8 +43,9 @@
     "start:next": "next start",
     "lint": "eslint --fix --ext .gql --ext .graphql --ext .js pages app server helper_scripts",
     "lint:watch": "esw -w --fix --ext .gql --ext .graphql --ext .js pages app server helper_scripts",
-    "lint:css": "stylelint '**/*.js'",
+    "lint:css": "stylelint './**/*.js'",
     "format": "prettier-eslint --write **/*.js",
+    "format:css": "styled-components-stylefmt -r '**/*.js'",
     "analyze": "ANALYZE_BUILD=true yarn run build",
     "setup": "node ./helper_scripts/CL_commands/setup.js && yarn run setup:after",
     "setup:after": "yarn run build",
@@ -138,6 +139,7 @@
     "react-test-renderer": "15.6.1",
     "release": "1.3.3",
     "shelljs": "0.7.8",
+    "styled-components-stylefmt": "^0.1.2",
     "webpack-bundle-analyzer": "2.9.0"
   }
 }
