@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Router } from '~/routes';
 import * as S from './styles';
-import { Router } from '../../routes';
 import connect from './data';
 
 class CreateForm extends React.Component {

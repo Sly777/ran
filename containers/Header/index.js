@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import LinkList from '../../components/LinkList';
+import LinkList from '~/components/LinkList';
 import * as S from './styles';
 import connect from './data';
 

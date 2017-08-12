@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
-import getTheme from '../libraries/themes';
-import installOfflinePlugin from '../libraries/installOfflinePlugin';
-import { App as ThemedApp } from '../components/Theme';
+import getTheme from '~/libraries/themes';
+import installOfflinePlugin from '~/libraries/installOfflinePlugin';
+import { App as ThemedApp } from '~/components/Theme';
 
 const App = ({ children, theme }) => {
   installOfflinePlugin();

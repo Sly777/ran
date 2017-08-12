@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { Link } from '../../routes';
-import PostUpvoter from '../PostUpvoter';
+import { Link } from '~/routes';
+import PostUpvoter from '~/containers/PostUpvoter';
 import * as S from './styles';
 import connect from './data';
 
