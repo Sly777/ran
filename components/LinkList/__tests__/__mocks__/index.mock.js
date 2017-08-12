@@ -1,5 +1,5 @@
 export const defaultProps = {
-  pathname: 'signin',
+  pathname: '/',
   authenticated: false,
   logout: () => {}
 }

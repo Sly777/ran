@@ -1,11 +1,4 @@
-import { mergeObjects } from './helpers';
-
-const themeList = {};
-
-themeList.extend = (themename, newsetting) =>
-  mergeObjects(themeList[themename], newsetting);
-
-themeList.main = {
+export default {
   font: {
     sizes: {
       normal: '14px',
@@ -43,27 +36,3 @@ themeList.main = {
     textAlt: '#ffffff'
   }
 };
-
-themeList.inverted = themeList.extend('main', {
-  colors: {
-    background: '#000000',
-    text: '#ffffff'
-  }
-});
-
-themeList.eightbit = themeList.extend('inverted', {
-  colors: {
-    main: '#40337f',
-    success: '#1bcb01',
-    error: '#722640',
-    background: '#000000',
-    text: '#ffffff'
-  },
-  font: {
-    family: {
-      normal: 'Consolas, monaco, monospace'
-    }
-  }
-});
-
-export default themeList;
