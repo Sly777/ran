@@ -1,23 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthFields from '../AuthFields';
-import validate from '../AuthFields/index.validation';
-import connect from './index.data';
-
-const defaultFunction = () => {};
+import validate from '../AuthFields/validation';
+import connect from './data';
 
 class SignUpForm extends React.Component {
-  static defaultProps = {
-    createUser: defaultFunction,
-    signinDispatcher(token) {
-      this.props.signIn(token);
-    }
-  };
-
   static propTypes = {
-    signIn: PropTypes.func.isRequired,
-    createUser: PropTypes.func,
-    signinDispatcher: PropTypes.func
+    mutations: PropTypes.shape({
+      signUp: PropTypes.func.isRequired
+    }).isRequired,
+    actions: PropTypes.shape({
+      signIn: PropTypes.func.isRequired
+    }).isRequired
   };
 
   state = {
@@ -57,23 +51,27 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e, valuesPack) {
     e.preventDefault();
+
+    // reset state
+    this.setState({
+      errors: {},
+      serverErrors: {}
+    });
+
     const handleValidate = validate(valuesPack);
 
     if (handleValidate.touched) {
       this.setState({ touched: handleValidate.touched });
     }
     if (handleValidate.errors) {
-      this.setState({ errors: handleValidate.errors });
+      return this.setState({ errors: handleValidate.errors });
     }
 
-    this.props
-      .createUser(valuesPack)
+    this.props.mutations
+      .signUp(valuesPack)
       .then(response => {
-        if (response.data) {
-          this.props.signinDispatcher.call(
-            this,
-            response.data.signinUser.token
-          );
+        if (response.data.signinUser) {
+          this.props.actions.signIn(response.data.signinUser.token);
         } else {
           this.setState({
             errors: response.data.createUser.errors

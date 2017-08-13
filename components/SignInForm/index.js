@@ -1,24 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthFields from '../AuthFields';
-import validate from '../AuthFields/index.validation';
-import connect from './index.data';
-
-const defaultFunction = function defFunc() {};
+import validate from '../AuthFields/validation';
+import connect from './data';
 
 class SignInForm extends React.Component {
-  static defaultProps = {
-    createUser: defaultFunction,
-    signinDispatcher: defaultFunction,
-    signinUser: defaultFunction,
-    signinUserDispatcher: defaultFunction
-  };
-
   static propTypes = {
-    createUser: PropTypes.func,
-    signinDispatcher: PropTypes.func,
-    signinUser: PropTypes.func,
-    signinUserDispatcher: PropTypes.func
+    mutations: PropTypes.shape({
+      signIn: PropTypes.func.isRequired
+    }).isRequired,
+    actions: PropTypes.shape({
+      signIn: PropTypes.func.isRequired
+    }).isRequired
   };
 
   state = {
@@ -56,20 +49,27 @@ class SignInForm extends React.Component {
 
   handleSubmit(e, valuesPack) {
     e.preventDefault();
+
+    // reset state
+    this.setState({
+      errors: {},
+      serverErrors: {}
+    });
+
     const handleValidate = validate(valuesPack);
 
     if (handleValidate.touched) {
       this.setState({ touched: handleValidate.touched });
     }
     if (handleValidate.errors) {
-      this.setState({ errors: handleValidate.errors });
+      return this.setState({ errors: handleValidate.errors });
     }
 
-    this.props
-      .signinUser(valuesPack)
+    this.props.mutations
+      .signIn(valuesPack)
       .then(response => {
         if (response.data) {
-          this.props.signinUserDispatcher(response.data.signinUser.token);
+          this.props.actions.signIn(response.data.signinUser.token);
         }
       })
       .catch(err => {

@@ -1,5 +1,5 @@
-import withData from '../libraries/withData';
 import SignInForm from '../components/SignInForm';
+import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
 
 export default withData(props =>

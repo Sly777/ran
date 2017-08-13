@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import LinkList from '../LinkList';
-import connect from './index.data';
+import LinkList from '../../components/LinkList';
+import * as S from './styles';
+import connect from './data';
 
-const Header = ({ className, pathname, authenticated, logout }) =>
-  <header className={className}>
+const Header = ({ pathname, authenticated, actions: { logout } }) =>
+  <S.Header>
     <LinkList
       pathname={pathname}
       authenticated={authenticated}
       logout={logout}
     />
-  </header>;
+  </S.Header>;
 
 Header.defaultProps = {
   authenticated: false
@@ -18,11 +18,10 @@ Header.defaultProps = {
 
 Header.propTypes = {
   pathname: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  authenticated: PropTypes.bool.isRequired,
-  logout: PropTypes.func.isRequired
+  authenticated: PropTypes.bool,
+  actions: PropTypes.shape({
+    logout: PropTypes.func.isRequired
+  }).isRequired
 };
 
-export default connect(styled(Header)`
-  margin-bottom: 25px;
-`);
+export default connect(Header);
