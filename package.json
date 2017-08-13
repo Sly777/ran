@@ -64,7 +64,7 @@
     "test:watch": "yarn run test -- --watch",
     "test:update": "yarn run test -- --u",
     "test:debug": "node --inspect ./node_modules/.bin/jest --runInBand --env jest-environment-node-debug",
-    "storybook": "start-storybook -p 6006 -c app/.storybook -s app/static",
+    "storybook": "start-storybook -p 6006 -c app/.storybook -s static",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -131,6 +131,7 @@
     "inquirer": "3.2.1",
     "jest": "20.0.4",
     "jest-environment-node-debug": "2.0.0",
+    "jest-styled-components": "^4.4.0",
     "lint-staged": "4.0.3",
     "ngrok": "2.2.17",
     "nodemon": "1.11.0",

@@ -4,9 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 
-import './__mocks__/router.mock'
+import { themeDecorator } from '~/__utils__/index'
 import LinkList from '../'
-import { themeDecorator } from './utils'
 
 storiesOf('LinkList', module)
   .addDecorator(storyFn => {

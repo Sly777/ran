@@ -3,6 +3,9 @@
 import { configure, addDecorator } from "@storybook/react";
 import centered from "@storybook/addon-centered";
 
+// TODO: make this import global
+import "~/__mocks__/next-router";
+
 // settings
 addDecorator(centered);
 

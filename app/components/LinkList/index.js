@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Link } from '../../routes'
+import { Link } from '~/routes'
 import * as S from './styles'
 
 const LinkList = ({ pathname, authenticated, logout }) =>
