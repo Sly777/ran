@@ -45,6 +45,7 @@
     "lint": "eslint --fix --ext .gql --ext .graphql --ext .js pages app server helper_scripts",
     "lint:watch": "esw -w --fix --ext .gql --ext .graphql --ext .js pages app server helper_scripts",
     "lint:css": "stylelint '**/*.js'",
+    "lint:all": "yarn run lint && yarn run lint:css",
     "format": "prettier-eslint --write **/*.js",
     "format:css": "styled-components-stylefmt -r '**/*.js'",
     "analyze": "ANALYZE_BUILD=true yarn run build",
