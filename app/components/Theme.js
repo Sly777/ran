@@ -5,7 +5,7 @@ export const App = styled.div`
   color: ${props => props.theme.colors.text};
 `
 
-export const A = styled.a`color: ${props => props.theme.colors.main}};`
+export const A = styled.a`color: ${props => props.theme.colors.main};`
 
 export const P = styled.p`
   font-size: ${props => props.theme.font.sizes.normal};
@@ -25,8 +25,8 @@ export const Button = styled.button`
   display: flex;
   padding: ${props => props.theme.spacing.smaller};
   &:active {
-    background-color: ${props =>
-      props.theme.helper(props.theme.colors.main).darken(0.2).string()};
+    background-color: ${({ theme }) =>
+      theme.helper(theme.colors.main).darken(0.2).string()};
     transition: background-color .3s;
   }
   &:focus {
