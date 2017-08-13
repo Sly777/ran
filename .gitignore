@@ -1,6 +1,5 @@
 .idea/
 .next/
-config.js
 .env
 coverage/
 
