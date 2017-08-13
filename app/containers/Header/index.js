@@ -1,27 +1,15 @@
-import PropTypes from 'prop-types'
-import LinkList from '~/components/LinkList'
-import * as S from './styles'
-import connect from './data'
+import { connect } from 'react-redux'
+import { dispatchers } from '~/stores/auth'
+import Feature from './feature'
 
-const Header = ({ pathname, authenticated, actions: { logout } }) =>
-  <S.Header>
-    <LinkList
-      pathname={pathname}
-      authenticated={authenticated}
-      logout={logout}
-    />
-  </S.Header>
+const mapStateToProps = state => ({
+  authenticated: state.auth.authenticated
+})
 
-Header.defaultProps = {
-  authenticated: false
-}
+const mapDispatchToProps = dispatch => ({
+  actions: {
+    logout: () => dispatch(dispatchers.signOut())
+  }
+})
 
-Header.propTypes = {
-  pathname: PropTypes.string.isRequired,
-  authenticated: PropTypes.bool,
-  actions: PropTypes.shape({
-    logout: PropTypes.func.isRequired
-  }).isRequired
-}
-
-export default connect(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Feature)

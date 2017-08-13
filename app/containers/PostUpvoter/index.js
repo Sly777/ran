@@ -1,21 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import connect from './data'
-import { UpvoteButton } from './styles'
+import { graphql } from 'react-apollo'
+import upvotePostGql from './upvotePost.gql'
+import Feature from './feature'
 
-const PostUpvoter = ({ upvote, votes, id }) =>
-  <UpvoteButton onClick={() => upvote(id, votes + 1)}>
-    {votes}
-  </UpvoteButton>
+const withMutation = graphql(upvotePostGql, {
+  props: ({ ownProps, mutate }) => ({
+    upvote: (id, votes) =>
+      mutate({
+        variables: { id, votes },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          updatePost: {
+            __typename: 'Post',
+            id: ownProps.id,
+            votes: ownProps.votes + 1
+          }
+        }
+      })
+  })
+})
 
-PostUpvoter.propTypes = {
-  upvote: PropTypes.func.isRequired,
-  votes: PropTypes.number,
-  id: PropTypes.string.isRequired
-}
-
-PostUpvoter.defaultProps = {
-  votes: []
-}
-
-export default connect(PostUpvoter)
+export default withMutation(Feature)
