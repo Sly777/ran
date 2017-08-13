@@ -10,6 +10,7 @@ export const Form = styled.form`
   > h1 {
     font-size: 20px;
   }
+
   > input {
     display: block;
     margin-bottom: 10px;

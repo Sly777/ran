@@ -1,5 +1,9 @@
 {
   "processors": ["stylelint-processor-styled-components"],
   "extends": "stylelint-config-standard",
-  "syntax": "scss"
+  "syntax": "scss",
+  "rules": {
+    "block-opening-brace-space-after": "never-single-line",
+    "block-closing-brace-space-before": "never-single-line"
+  }
 }

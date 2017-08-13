@@ -24,11 +24,13 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.colors.textAlt};
   display: flex;
   padding: ${({ theme }) => theme.spacing.smaller};
+
   &:active {
     background-color: ${({ theme }) =>
       theme.helper(theme.colors.main).darken(0.2).string()};
-    transition: background-color .3s;
+    transition: background-color 0.3s;
   }
+
   &:focus {
     outline: none;
   }
