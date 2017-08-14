@@ -1,6 +1,6 @@
 # RAN! Documentation
 
-## Commands (WIP)
+## Commands
 
 ### create:page
 _command:_ ```yarn run create:page``` (or ```npm run create:page```)
@@ -19,15 +19,31 @@ _command:_ ```yarn run lint``` (or ```npm run lint```)
 
 Fix & show lint errors (and prettier infos) automatically
 
+### lint:watch
+_command:_ ```yarn run lint:watch``` (or ```npm run lint:watch```)
+
+Watch the changes of graphQL files to show errors and warnings on eslint
+**Info:** Basically, There is watcher for js files if you run ```dev``` command. This one is additional command for graphql files.
+
 ### dev
 _command:_ ```yarn run dev``` (or ```npm run dev```)
 
 Run lint and then open the server on your local on development mode
 
+### dev:next
+_command:_ ```yarn run dev:next``` (or ```npm run dev:next```)
+
+Run lint and then open the server on your local on development mode with **Next.js command**
+
 ### analyze
 _command:_ ```yarn run analyze``` (or ```npm run analyze```)
 
 Analyze the packages and files that you used on your app
+
+### build
+_command:_ ```yarn run build``` (or ```npm run build```)
+
+Build the application for Production
 
 ## GraphQL Commands
 
