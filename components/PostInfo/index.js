@@ -1,7 +1,7 @@
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { Section, A } from './styles';
-import connect from './data';
+import connect from './store';
 
 const PostInfo = ({ loading, Post, error }) => {
   if (loading) {

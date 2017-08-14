@@ -10,7 +10,7 @@ import {
   ShowMore,
   Loading
 } from './styles';
-import connect from './data';
+import connect from './store';
 
 const PostList = ({
   data: { allPosts, loading, _allPostsMeta },

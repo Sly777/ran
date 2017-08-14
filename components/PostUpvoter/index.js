@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import connect from './data';
+import connect from './store';
 import { UpvoteButton } from './styles';
 
 const PostUpvoter = ({ upvote, votes, id }) =>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import LinkList from '../../components/LinkList';
 import { Header as StyledHeader } from './styles';
-import connect from './data';
+import connect from './store';
 
 const Header = ({ pathname, authenticated, actions: { logout } }) =>
   <StyledHeader>

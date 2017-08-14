@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AuthFields from '../AuthFields';
 import validate from '../AuthFields/validation';
-import connect from './data';
+import connect from './store';
 
 class SignUpForm extends React.Component {
   static propTypes = {

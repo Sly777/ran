@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, SubmitButton } from './styles';
 import { Router } from '../../routes';
-import connect from './data';
+import connect from './store';
 
 class CreateForm extends React.Component {
   static propTypes = {
