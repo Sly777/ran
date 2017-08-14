@@ -37,6 +37,17 @@ cd RAN
 
 And that's all!
 
+#### Beta Version (Unstable)
+
+Also, There is a ```beta``` version for new features & fixes that we are testing before release. To access beta;
+
+```bash
+git clone --depth=1 -b beta https://github.com/Sly777/ran.git RAN_beta
+cd RAN_beta
+```
+
+It can be unstable, so that's why please use stable version if you are working on the project that is in production.
+
 ## Example
 
 [Click here](https://ran-boilerplate.herokuapp.com/) to see example project to understand how RAN! works on production. I used [graph.cool](https://graph.cool/) service for GraphQL in the example.

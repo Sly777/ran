@@ -44,8 +44,8 @@
     "prettier/prettier": ["error", {
       "singleQuote": true
     }],
-    "graphql/template-strings": ['error', {
-      env: 'literal'
+    "graphql/template-strings": ["error", {
+      "env": "literal"
     }]
   }
 }
