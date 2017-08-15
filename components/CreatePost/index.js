@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Filter from 'bad-words';
 import { Form, SubmitButton } from './styles';
 import { Router } from '../../routes';
 import connect from './store';
+import words from '../../libraries/badWords';
+
+const filter = new Filter({ placeHolder: ' ' });
+filter.addWords(words);
 
 class CreateForm extends React.Component {
   static propTypes = {
@@ -14,8 +19,17 @@ class CreateForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const title = e.target.elements.title.value;
+    let title = e.target.elements.title.value;
     let url = e.target.elements.url.value;
+
+    if (title && title !== '') {
+      title = filter.clean(title).trim();
+      e.target.elements.title.value = title;
+    }
+    if (url && url !== '') {
+      url = filter.clean(url).trim();
+      e.target.elements.url.value = url;
+    }
 
     if (title === '' || url === '') {
       // eslint-disable-next-line no-alert
