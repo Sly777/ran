@@ -55,6 +55,7 @@
     "graphql:see_graph": "graphql voyager"
   },
   "dependencies": {
+    "babel-plugin-inline-import-graphql-ast": "2.0.0",
     "babel-plugin-styled-components": "1.1.7",
     "chalk": "2.1.0",
     "color": "2.0.0",
@@ -80,11 +81,11 @@
     "react-helmet": "5.1.3",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
-    "styled-components": "2.1.2"
+    "styled-components": "2.1.2",
+    "webpack-bundle-analyzer": "2.9.0"
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
-    "babel-plugin-inline-import-graphql-ast": "2.0.0",
     "cli-clear": "1.0.4",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.1.0",
@@ -108,7 +109,6 @@
     "pre-commit": "1.2.2",
     "prettier": "1.5.3",
     "release": "1.4.0",
-    "shelljs": "0.7.8",
-    "webpack-bundle-analyzer": "2.9.0"
+    "shelljs": "0.7.8"
   }
 }
