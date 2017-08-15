@@ -1,0 +1,7 @@
+mutation updatePost($id: ID!, $votes: Int) {
+  updatePost(id: $id, votes: $votes) {
+    id
+    __typename
+    votes
+  }
+}
