@@ -1,122 +1,63 @@
-import { graphql } from 'react-apollo';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Link } from '../../routes';
 import PostUpvoter from '../PostUpvoter';
-import allPostsGql from './allPosts.gql';
+import {
+  Main,
+  ItemList,
+  Item,
+  Index,
+  Title,
+  ShowMore,
+  Loading
+} from './styles';
+import connect from './store';
 
-const POSTS_PER_PAGE = 10;
-
-let PostList = ({
+const PostList = ({
   data: { allPosts, loading, _allPostsMeta },
-  loadMorePosts,
-  className
+  loadMorePosts
 }) => {
   if (allPosts && allPosts.length) {
     const areMorePosts = allPosts.length < _allPostsMeta.count;
     return (
-      <section className={className}>
-        <ul>
+      <Main>
+        <ItemList>
           {allPosts.map((post, index) =>
-            <li key={post.id}>
+            <Item key={post.id}>
               <div>
-                <span>
+                <Index>
                   {index + 1}.{' '}
-                </span>
+                </Index>
                 <Link
                   route="details"
                   params={{
                     postId: post.id,
                     postTitle: encodeURIComponent(post.title)
                   }}
+                  passHref
                 >
-                  <a>
+                  <Title>
                     {post.title}
-                  </a>
+                  </Title>
                 </Link>
                 <PostUpvoter id={post.id} votes={post.votes} />
               </div>
-            </li>
+            </Item>
           )}
-        </ul>
+        </ItemList>
         {areMorePosts
-          ? <button onClick={() => loadMorePosts()}>
+          ? <ShowMore onClick={() => loadMorePosts()}>
               {loading ? 'Loading...' : 'Show More'}
-            </button>
+            </ShowMore>
           : ''}
-      </section>
+      </Main>
     );
   }
-  return <div>Loading</div>;
+  return <Loading>Loading</Loading>;
 };
 
 PostList.propTypes = {
   data: PropTypes.object.isRequired,
-  loadMorePosts: PropTypes.func.isRequired,
-  className: PropTypes.string.isRequired
+  loadMorePosts: PropTypes.func.isRequired
 };
 
-PostList = styled(PostList)`
-  padding-bottom: 20px;
-
-  li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  div {
-    align-items: center;
-    display: flex;
-  }
-  a {
-    font-size: 14px;
-    margin-right: 10px;
-    text-decoration: none;
-    padding-bottom: 0;
-    border: 0;
-  }
-  span {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  button:before {
-    align-self: center;
-    border-style: solid;
-    border-width: 6px 4px 0 4px;
-    border-color: #ffffff transparent transparent transparent;
-    content: "";
-    height: 0;
-    margin-right: 5px;
-    width: 0;
-  }
-`;
-
-export default graphql(allPostsGql, {
-  options: () => ({
-    variables: {
-      skip: 0,
-      first: POSTS_PER_PAGE
-    }
-  }),
-  props: ({ data }) => ({
-    data,
-    loadMorePosts: () =>
-      data.fetchMore({
-        variables: {
-          skip: data.allPosts.length
-        },
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) {
-            return previousResult;
-          }
-          return Object.assign({}, previousResult, {
-            // Append the new posts results to the old one
-            allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts]
-          });
-        }
-      })
-  })
-})(PostList);
+export default connect(PostList);

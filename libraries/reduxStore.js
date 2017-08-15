@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
+import { dispatchers } from '../components/AuthFields/store';
 import getReducer from './reducer';
 import createMiddleware from './middleware';
 import persist from './persist';
-import { dispatchers } from '../components/AuthFields/index.data';
 
 let reduxStore = null;
 

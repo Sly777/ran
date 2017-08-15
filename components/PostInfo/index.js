@@ -1,20 +1,25 @@
-import { graphql } from 'react-apollo';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import moment from 'moment';
-import getPostGql from './getPost.gql';
+import PropTypes from 'prop-types';
+import { Section, A } from './styles';
+import connect from './store';
 
-let PostInfo = ({ data: { Post }, className }) => {
-  if (!Post) {
+const PostInfo = ({ loading, Post, error }) => {
+  if (loading) {
     return (
-      <section className={className}>
+      <Section>
         <h1>Loading...</h1>
-      </section>
+      </Section>
     );
   }
 
+  if (error) {
+    console.log(error); // eslint-disable-line no-console
+    window.alert('Load error, check console'); // eslint-disable-line no-alert
+    return;
+  }
+
   return (
-    <section className={className}>
+    <Section>
       <h1>
         {Post.title}
       </h1>
@@ -29,39 +34,25 @@ let PostInfo = ({ data: { Post }, className }) => {
         </span>
       </div>
       <p>
-        <a target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
+        <A target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
           {Post.url}
-        </a>
+        </A>
       </p>
-    </section>
+    </Section>
   );
 };
 
 PostInfo.propTypes = {
-  data: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
+  Post: PropTypes.object,
+  error: PropTypes.object,
   postId: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired
+  postTitle: PropTypes.string.isRequired
 };
 
-PostInfo = styled(PostInfo)`
-  padding-bottom: 20px;
+PostInfo.defaultProps = {
+  Post: null,
+  error: null
+};
 
-  > h1 {
-    margin-top: 0;
-  }
-
-  > p {
-    font-size: 17px;
-  }
-`;
-
-export default graphql(getPostGql, {
-  options: ({ postId }) => ({
-    variables: {
-      postId
-    }
-  }),
-  props: ({ data }) => ({
-    data
-  })
-})(PostInfo);
+export default connect(PostInfo);

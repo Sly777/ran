@@ -1,9 +1,9 @@
 import persist from '../../libraries/persist';
 
-// Actions Naming
-export const AUTH_SIGNIN = 'AUTH_SIGNIN';
-export const AUTH_SIGNOUT = 'AUTH_SIGNOUT';
-export const AUTH_SERVERERROR = 'AUTH_SERVERERROR';
+// Constants
+export const AUTH_SIGNIN = 'AUTH/SIGNIN';
+export const AUTH_SIGNOUT = 'AUTH/SIGNOUT';
+export const AUTH_SERVERERROR = 'AUTH/SERVERERROR';
 
 // Initial State
 const initialState = {
@@ -31,23 +31,23 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-// Actions
-const actions = {};
+// Action creators
+const actionCreators = {};
 
-actions.signIn = token => ({ type: AUTH_SIGNIN, token });
-actions.signOut = () => ({ type: AUTH_SIGNOUT });
+actionCreators.signIn = token => ({ type: AUTH_SIGNIN, token });
+actionCreators.signOut = () => ({ type: AUTH_SIGNOUT });
 
 // Discpatchers
 const dispatchers = {};
 
 dispatchers.signIn = token => {
   persist.willSetAccessToken(token);
-  return actions.signIn(token);
+  return actionCreators.signIn(token);
 };
 
 dispatchers.signOut = () => {
   persist.willRemoveAccessToken();
-  return actions.signOut();
+  return actionCreators.signOut();
 };
 
-export { actions, reducer, dispatchers };
+export { actionCreators, reducer, dispatchers };

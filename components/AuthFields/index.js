@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Main, SubmitButton } from './styles';
 
 const AuthFields = props => {
   const {
@@ -30,22 +30,22 @@ const AuthFields = props => {
   const authMethod =
     (selectFields === 'signinFields' && 'Sign In') || 'Sign Up';
   return (
-    <div>
+    <Main>
       <h1>
         {authMethod}
       </h1>
       <form>
         {mapFields}
         <br />
-        <button
+        <SubmitButton
           onClick={handleSubmit}
-          style={!touched ? { opacity: 0.5 } : { opacity: 1 }}
+          touched={touched}
           disabled={!touched}
         >
           {authMethod}
-        </button>
+        </SubmitButton>
       </form>
-    </div>
+    </Main>
   );
 };
 
@@ -59,17 +59,4 @@ AuthFields.propTypes = {
   errors: PropTypes.object.isRequired
 };
 
-export default styled(AuthFields)`
-  border-bottom: 1px solid #ececec;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-
-  > h1 {
-    font-size: 20px;
-  }
-
-  >input {
-    display: block;
-    margin-bottom: 10px;
-  }
-`;
+export default AuthFields;
