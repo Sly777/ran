@@ -30,10 +30,11 @@
 ```bash
 git clone --depth=1 https://github.com/Sly777/ran.git RAN
 cd RAN
+yarn install && yarn run setup
 ```
 
-- Then run ```yarn install && yarn run setup``` to prepare the project. (or ```npm install && npm run setup```)
-- After it's finished, run ```yarn run dev``` (or ```npm run dev```)
+- If you are not using Yarn, just run ```npm install && npm run setup``` instead ```yarn install && yarn run setup``` 
+- After everything is finished, run ```yarn run dev``` (or ```npm run dev```)
 
 And that's all!
 
