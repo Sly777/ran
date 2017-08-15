@@ -45,6 +45,7 @@ Also, There is a ```beta``` version for new features & fixes that we are testing
 ```bash
 git clone --depth=1 -b beta https://github.com/Sly777/ran.git RAN_beta
 cd RAN_beta
+yarn install && yarn run setup
 ```
 
 It can be unstable, so that's why please use stable version if you are working on the project that is in production.
