@@ -8,6 +8,7 @@ export default () => {};
 
 const trackPageview = (path = document.location.pathname) => {
   if (path !== lastTrackedPath) {
+    ReactGA.set({ page: path });
     ReactGA.pageview(path);
     lastTrackedPath = path;
   }
