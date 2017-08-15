@@ -1,4 +1,4 @@
-mutation createUser(
+mutation signupUser(
   $firstName: String!
   $lastName: String!
   $email: String!
