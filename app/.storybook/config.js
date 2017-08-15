@@ -1,16 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-
 import { configure, addDecorator } from "@storybook/react";
 import centered from "@storybook/addon-centered";
 
-// TODO: make this import global
-import "~/__mocks__/next-router";
+import "~/__utils__/setup";
 
 // settings
 addDecorator(centered);
 
 // load
-const req = require.context("../components", true, /\.stories\.js$/);
+const req = require.context("../", true, /stories.jsx?$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

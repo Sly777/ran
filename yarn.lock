@@ -133,15 +133,15 @@
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-"@storybook/react@3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.2.3.tgz#4e5aff80b61328288dcf9e3a6b2a2890eab880be"
+"@storybook/react@^3.2.4":
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.2.4.tgz#096a6afcc29bdd102868c494f4f99a3fec7f34ca"
   dependencies:
     "@storybook/addon-actions" "^3.2.0"
     "@storybook/addon-links" "^3.2.0"
     "@storybook/addons" "^3.2.0"
     "@storybook/channel-postmessage" "^3.2.0"
-    "@storybook/ui" "^3.2.3"
+    "@storybook/ui" "^3.2.4"
     airbnb-js-shims "^1.1.1"
     autoprefixer "^7.1.1"
     babel-core "^6.25.0"
@@ -187,9 +187,9 @@
     webpack-dev-middleware "^1.10.2"
     webpack-hot-middleware "^2.18.0"
 
-"@storybook/ui@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.2.3.tgz#9579c191a1695d3d5aaabcef93a7a5456d8f19af"
+"@storybook/ui@^3.2.4":
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.2.4.tgz#a52b10a5f9daaf22570af457ec7c79210b0abcc3"
   dependencies:
     "@storybook/react-fuzzy" "^0.4.0"
     babel-runtime "^6.23.0"
@@ -199,6 +199,7 @@
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
     keycode "^2.1.8"
+    lodash.debounce "4.0.8"
     lodash.pick "^4.4.0"
     lodash.sortby "^4.7.0"
     mantra-core "^1.7.0"
@@ -5934,7 +5935,7 @@ lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
 
-lodash.debounce@^4.0.8:
+lodash.debounce@4.0.8, lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 

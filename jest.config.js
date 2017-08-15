@@ -2,9 +2,8 @@ module.exports = {
   coverageDirectory: './coverage/',
   collectCoverage: true,
   moduleFileExtensions: ['js', 'json'],
-  // moduleNameMapper: {
-  //   'next/router': '<rootDir>/app/__mocks__/next-router.js'
-  // },
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  setupTestFrameworkScriptFile: '<rootDir>/app/__utils__/setup.js',
   testRegex: '\\.test\\.js$',
   testPathIgnorePatterns: [
     '<rootDir>/(build|docs|node_modules)/',

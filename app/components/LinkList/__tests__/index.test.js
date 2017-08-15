@@ -1,17 +1,13 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-// TODO: make this import global
-import 'jest-styled-components'
-import '~/__mocks__/next-router'
-
-import { themeDecorator } from '~/__utils__/index'
+import { themeDecorator } from '~/__utils__/theme'
 import { defaultProps } from './__mocks__/props.mock'
 import LinkList from '../'
 
 const mountWithMainTheme = (child, options) => {
-  const mainThemeDecorator = themeDecorator('main')
-  return mount(mainThemeDecorator(child), options)
+  const decorate = themeDecorator('main')
+  return mount(decorate(child), options)
 }
 
 describe('<LinkList />', () => {

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 
-import { themeDecorator } from '~/__utils__/index'
+import { themeDecorator } from '~/__utils__/theme'
 import LinkList from '../'
 
 storiesOf('LinkList', module)
@@ -12,8 +12,8 @@ storiesOf('LinkList', module)
     const themes = ['main', 'eightbit', 'inverted']
     const defaultTheme = themes[0]
     const name = select('Theme', themes, defaultTheme)
-
-    return themeDecorator(name)(storyFn())
+    const decorate = themeDecorator(name)
+    return decorate(storyFn())
   })
   .addDecorator(withKnobs)
   .add('authenticated', () =>
