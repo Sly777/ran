@@ -1,12 +1,9 @@
 import CreatePost from '../components/CreatePost';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
-import GaWrapper from '../libraries/googleAnalytics';
 
 export default withData(props =>
-  GaWrapper(
-    <DefaultCon title="Create Post" {...props}>
-      <CreatePost />
-    </DefaultCon>
-  )
+  <DefaultCon title="Create Post" {...props}>
+    <CreatePost />
+  </DefaultCon>
 );

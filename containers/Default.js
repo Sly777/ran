@@ -1,27 +1,38 @@
+import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import App from '../components/App';
 import Header from '../components/Header';
+import { onComponentDidMount } from '../libraries/googleAnalytics';
 
-const Default = props =>
-  <App>
-    <Helmet>
-      <title>
-        {props.title !== '' ? `${props.title} :: RAN! Example` : 'RAN! Example'}
-      </title>
-    </Helmet>
-    <Header pathname={props.url.pathname} />
-    {props.children}
-  </App>;
+export default class Default extends Component {
+  static propTypes = {
+    title: PropTypes.string,
+    url: PropTypes.object.isRequired,
+    children: PropTypes.element.isRequired
+  };
 
-Default.propTypes = {
-  title: PropTypes.string,
-  url: PropTypes.object.isRequired,
-  children: PropTypes.element.isRequired
-};
+  static defaultProps = {
+    title: ''
+  };
 
-Default.defaultProps = {
-  title: ''
-};
+  componentDidMount() {
+    onComponentDidMount();
+  }
 
-export default Default;
+  render() {
+    return (
+      <App>
+        <Helmet>
+          <title>
+            {this.props.title !== ''
+              ? `${this.props.title} :: RAN! Example`
+              : 'RAN! Example'}
+          </title>
+        </Helmet>
+        <Header pathname={this.props.url.pathname} />
+        {this.props.children}
+      </App>
+    );
+  }
+}
