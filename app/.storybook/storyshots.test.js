@@ -1,6 +1,6 @@
-import initStoryshots from "@storybook/addon-storyshots";
+import initStoryshots from '@storybook/addon-storyshots'
 
 initStoryshots({
-  configPath: "app/.storybook",
+  configPath: 'app/.storybook',
   storyKindRegex: /^((?!.*?DontTest).)*$/
-});
+})

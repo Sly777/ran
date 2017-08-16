@@ -1,16 +1,16 @@
-import { configure, addDecorator } from "@storybook/react";
-import centered from "@storybook/addon-centered";
+import { configure, addDecorator } from '@storybook/react'
+import centered from '@storybook/addon-centered'
 
-import "~/__utils__/setup";
+import '~/__utils__/setup'
 
 // settings
-addDecorator(centered);
+addDecorator(centered)
 
 // load
-const req = require.context("../", true, /stories.jsx?$/);
+const req = require.context('../', true, /stories.jsx?$/)
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach(filename => req(filename))
 }
 
-configure(loadStories, module);
+configure(loadStories, module)
