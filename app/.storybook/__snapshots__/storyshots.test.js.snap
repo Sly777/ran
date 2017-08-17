@@ -222,7 +222,7 @@ exports[`Storyshots Logo default 1`] = `
       alt="logo"
       className="c0"
       onClick={[Function]}
-      src="/logo.png"
+      src="/static/logo.png"
     />
   </div>
 </div>

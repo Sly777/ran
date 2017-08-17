@@ -1,19 +1,19 @@
-import { mount } from 'enzyme'
 import React from 'react'
+import { mount } from 'enzyme'
 
-import { themeDecorator } from '~/__utils__/theme'
-import { defaultProps } from './__mocks__/props.mock'
+import Layout from '~/__utils__/Layout'
 import LinkList from '../'
 
-const mountWithMainTheme = (child, options) => {
-  const decorate = themeDecorator('main')
-  return mount(decorate(child), options)
-}
+const noop = () => {}
 
 describe('<LinkList />', () => {
   it('when not authenticated', () => {
-    const child = <LinkList {...defaultProps} authenticated={false} />
-    const wrapper = mountWithMainTheme(child)
+    const child = (
+      <Layout>
+        <LinkList pathname={'/'} authenticated={false} logout={noop} />
+      </Layout>
+    )
+    const wrapper = mount(child)
     const text = wrapper.text()
 
     expect(text).toEqual(expect.stringContaining('Main Page'))
@@ -24,8 +24,12 @@ describe('<LinkList />', () => {
   })
 
   it('when authenticated', () => {
-    const child = <LinkList {...defaultProps} authenticated />
-    const wrapper = mountWithMainTheme(child)
+    const child = (
+      <Layout>
+        <LinkList pathname={'/'} authenticated logout={noop} />
+      </Layout>
+    )
+    const wrapper = mount(child)
     const text = wrapper.text()
 
     expect(text).toEqual(expect.stringContaining('Main Page'))

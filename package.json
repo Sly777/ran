@@ -46,7 +46,7 @@
     "lint:watch": "esw -w --fix --ext .gql --ext .graphql --ext .js pages app server helper_scripts next.config.js",
     "lint:css": "stylelint '**/*.js'",
     "lint:all": "yarn run lint && yarn run lint:css",
-    "format": "prettier-eslint --write **/*.js app/.storybook/*.js app/__utils__/*.js next.config.js",
+    "format": "prettier-eslint --write \"{app, helper_scripts, __{tests, mocks, utils}__}/**/*.js\" *.js",
     "format:css": "styled-components-stylefmt -r '**/*.js'",
     "analyze": "ANALYZE_BUILD=true yarn run build",
     "setup": "node ./helper_scripts/CL_commands/setup.js && yarn run setup:after",

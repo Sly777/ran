@@ -3,7 +3,7 @@ module.exports = {
   collectCoverage: true,
   moduleFileExtensions: ['js', 'json'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupTestFrameworkScriptFile: '<rootDir>/app/__utils__/setup.js',
+  setupTestFrameworkScriptFile: '<rootDir>/app/__utils__/setup/index.js',
   testRegex: '\\.test\\.js$',
   testPathIgnorePatterns: [
     '<rootDir>/(build|docs|node_modules)/',
