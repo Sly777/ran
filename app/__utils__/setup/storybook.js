@@ -7,6 +7,6 @@ const mockedNextRouter = {
   },
   prefetch: () => {
     console.log('storybook prefetch')
-  }
+  },
 }
 NextRouter.router = mockedNextRouter

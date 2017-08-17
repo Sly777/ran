@@ -16,8 +16,8 @@ module.exports = {
         exclude: /node_modules/,
         enforce: 'pre',
         options: {
-          fix: true
-        }
+          fix: true,
+        },
       })
     }
 
@@ -26,7 +26,7 @@ module.exports = {
         new BundleAnalyzerPlugin({
           analyzerMode: 'server',
           analyzerPort: 8888,
-          openAnalyzer: true
+          openAnalyzer: true,
         })
       )
     }
@@ -67,16 +67,16 @@ module.exports = {
           __tests: dev ? { ignoreRuntime: true } : {},
           ServiceWorker: {
             events: true,
-            navigateFallbackURL: '/'
+            navigateFallbackURL: '/',
           },
           AppCache: {
             directory: './',
-            events: true
-          }
+            events: true,
+          },
         })
       )
     }
 
     return config
-  }
+  },
 }

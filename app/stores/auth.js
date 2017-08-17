@@ -9,7 +9,7 @@ export const AUTH_SERVERERROR = 'AUTH/SERVERERROR'
 const initialState = {
   authenticated: false,
   token: null,
-  error: null
+  error: null,
 }
 
 // Reducer
@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         authenticated: true,
         token: action.token,
-        error: null
+        error: null,
       }
     case AUTH_SIGNOUT:
       return { ...state, authenticated: false, token: null, error: null }

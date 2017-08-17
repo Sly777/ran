@@ -20,7 +20,7 @@ function afterPageCreation(filename, prettyurl = null) {
       `${helper.config.templatesDir}/route.hbs`,
       {
         filename,
-        prettyurl
+        prettyurl,
       },
       code => {
         process.stdout.write('\n')
@@ -52,14 +52,14 @@ function askQuestions() {
           return true
         }
         return 'It cannot be empty. Please enter it correctly...'
-      }
+      },
     },
     {
       name: 'isPretty',
       type: 'confirm',
       message: ({ filename }) =>
         `Do you want different URL? (current: /${filename})`,
-      default: false
+      default: false,
     },
     {
       name: 'prettyurl',
@@ -74,8 +74,8 @@ function askQuestions() {
           return true
         }
         return 'It cannot be empty. Please enter it correctly...'
-      }
-    }
+      },
+    },
   ]
 
   inquirer.prompt(questions).then(({ filename, prettyurl = null }) => {
@@ -83,7 +83,7 @@ function askQuestions() {
       `${helper.config.templatesDir}/page.hbs`,
       {
         filename,
-        prettyurl
+        prettyurl,
       },
       code => {
         fs.writeFile(

@@ -5,7 +5,7 @@ import * as S from './styles'
 
 const PostList = ({
   data: { allPosts, loading, _allPostsMeta },
-  loadMorePosts
+  loadMorePosts,
 }) => {
   if (allPosts && allPosts.length) {
     const areMorePosts = allPosts.length < _allPostsMeta.count
@@ -22,7 +22,7 @@ const PostList = ({
                   route="details"
                   params={{
                     postId: post.id,
-                    postTitle: encodeURIComponent(post.title)
+                    postTitle: encodeURIComponent(post.title),
                   }}
                   passHref
                 >
@@ -48,7 +48,7 @@ const PostList = ({
 
 PostList.propTypes = {
   data: PropTypes.object.isRequired,
-  loadMorePosts: PropTypes.func.isRequired
+  loadMorePosts: PropTypes.func.isRequired,
 }
 
 export default PostList

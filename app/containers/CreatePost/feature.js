@@ -6,8 +6,8 @@ import * as S from './styles'
 export default class CreateForm extends React.Component {
   static propTypes = {
     mutations: PropTypes.shape({
-      createPost: PropTypes.func.isRequired
-    }).isRequired
+      createPost: PropTypes.func.isRequired,
+    }).isRequired,
   };
 
   handleSubmit = e => {

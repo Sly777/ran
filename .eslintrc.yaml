@@ -34,6 +34,9 @@ rules:
   quotes:
   - error
   - single
+  comma-dangle:
+  - error
+  - always-multiline
   graphql/template-strings:
   - error
   - env: literal

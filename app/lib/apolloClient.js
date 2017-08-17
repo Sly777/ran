@@ -5,8 +5,8 @@ const initNetworkInterface = token => {
   const networkInterface = createNetworkInterface({
     uri: 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn',
     opts: {
-      credentials: 'same-origin'
-    }
+      credentials: 'same-origin',
+    },
   })
 
   networkInterface.use([
@@ -21,8 +21,8 @@ const initNetworkInterface = token => {
           req.options.headers.authorization = token ? `Bearer ${token}` : null
           next()
         })()
-      }
-    }
+      },
+    },
   ])
 
   return networkInterface
@@ -35,7 +35,7 @@ const createClient = (headers, token) =>
     ssrMode: !process.browser,
     ssrForceFetchDelay: 100,
     headers,
-    networkInterface: initNetworkInterface(token)
+    networkInterface: initNetworkInterface(token),
   })
 
 export default (headers, token) => {

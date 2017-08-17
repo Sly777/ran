@@ -26,7 +26,7 @@ const handle = app.getRequestHandler()
 
 const ssrCache = new LRUCache({
   max: 100,
-  maxAge: 3600 // 1 hour
+  maxAge: 3600, // 1 hour
 })
 
 const buildStats = isProd
@@ -90,7 +90,7 @@ app.prepare().then(() => {
     cors({
       origin:
         prettyHost.indexOf('http') !== -1 ? prettyHost : `http://${prettyHost}`,
-      credentials: true
+      credentials: true,
     })
   )
   server.use(helmet())

@@ -13,7 +13,7 @@ modules.config = {
   componentsDir: './components',
   templatesDir: './helper_scripts/templates',
   routeFile: './routes.js',
-  serverFile: './server.js'
+  serverFile: './server.js',
 }
 
 modules.writeRan = function writeRan(callback) {
@@ -21,7 +21,7 @@ modules.writeRan = function writeRan(callback) {
     figlet.text(
       'RAN!',
       {
-        verticalLayout: 'full'
+        verticalLayout: 'full',
       },
       (err, data) => {
         if (err) {

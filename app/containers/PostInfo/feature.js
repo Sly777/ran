@@ -2,7 +2,10 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 import * as S from './styles'
 
-const PostInfo = ({ loading, Post, error }) => {
+const PostInfo = ctx => {
+  console.log(ctx)
+  const { loading, Post, error } = ctx
+
   if (loading) {
     return (
       <S.Section>
@@ -46,12 +49,11 @@ PostInfo.propTypes = {
   Post: PropTypes.object,
   error: PropTypes.object,
   postId: PropTypes.string.isRequired,
-  postTitle: PropTypes.string.isRequired
 }
 
 PostInfo.defaultProps = {
   Post: null,
-  error: null
+  error: null,
 }
 
 export default PostInfo

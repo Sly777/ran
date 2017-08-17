@@ -6,12 +6,12 @@ export default {
       bigger: '16px',
       small: '13px',
       smaller: '12px',
-      tiny: '11px'
+      tiny: '11px',
     },
     family: {
       normal:
-        'Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif'
-    }
+        'Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif',
+    },
   },
   spacing: {
     normal: '10px',
@@ -20,11 +20,11 @@ export default {
     huge: '40px',
     small: '10px',
     smaller: '5px',
-    noSpace: '0'
+    noSpace: '0',
   },
   alignment: {
     horizontalCenter: '0 auto',
-    center: 'auto'
+    center: 'auto',
   },
   colors: {
     main: '#22BAD9',
@@ -33,6 +33,6 @@ export default {
     error: '#d9534f',
     background: '#ffffff',
     text: '#000000',
-    textAlt: '#ffffff'
-  }
+    textAlt: '#ffffff',
+  },
 }

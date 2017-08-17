@@ -17,12 +17,12 @@ const App = ({ children, theme }) => {
 }
 
 App.defaultProps = {
-  theme: 'main'
+  theme: 'main',
 }
 
 App.propTypes = {
   children: PropTypes.array.isRequired,
-  theme: PropTypes.string
+  theme: PropTypes.string,
 }
 
 injectGlobal`

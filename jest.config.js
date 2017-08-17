@@ -7,6 +7,6 @@ module.exports = {
   testRegex: '\\.test\\.js$',
   testPathIgnorePatterns: [
     '<rootDir>/(build|docs|node_modules)/',
-    '/__mocks__/'
-  ]
+    '/__mocks__/',
+  ],
 }

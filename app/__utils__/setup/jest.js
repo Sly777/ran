@@ -4,6 +4,6 @@ import 'jest-styled-components'
 import NextRouter from 'next/router'
 const mockedNextRouter = {
   push: () => {},
-  prefetch: () => {}
+  prefetch: () => {},
 }
 NextRouter.router = mockedNextRouter

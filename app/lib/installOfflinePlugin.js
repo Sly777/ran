@@ -10,7 +10,7 @@ export default function installOfflinePlugin() {
       },
       onUpdated() {
         window.location.reload()
-      }
+      },
     })
     offlineInstalled = true
   }

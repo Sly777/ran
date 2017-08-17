@@ -15,7 +15,7 @@ function afterPageCreation(filename, prettyurl = null) {
     `${helper.config.templatesDir}/route.hbs`,
     {
       filename,
-      prettyurl
+      prettyurl,
     },
     code => {
       process.stdout.write('\n')
@@ -33,14 +33,14 @@ function askQuestions() {
       name: 'filename',
       type: 'list',
       message: 'Which page do you want to use:',
-      choices: () => helper.getFilesOnDir(helper.config.pagesDir)
+      choices: () => helper.getFilesOnDir(helper.config.pagesDir),
     },
     {
       name: 'isPretty',
       type: 'confirm',
       message: ({ filename }) =>
         `Do you want different URL? (current: /${filename})`,
-      default: false
+      default: false,
     },
     {
       name: 'prettyurl',
@@ -55,8 +55,8 @@ function askQuestions() {
           return true
         }
         return 'It cannot be empty. Please enter it correctly...'
-      }
-    }
+      },
+    },
   ]
 
   inquirer.prompt(questions).then(({ filename, prettyurl = null }) => {

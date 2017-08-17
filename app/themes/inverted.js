@@ -9,6 +9,6 @@ export default mergeObjects(main, {
     error: '#26ACB0',
     background: '#000000',
     text: '#ffffff',
-    textAlt: '#000000'
-  }
+    textAlt: '#000000',
+  },
 })

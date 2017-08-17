@@ -10,7 +10,7 @@ const AuthFields = props => {
     handleChange,
     handleSubmit,
     touched,
-    errors
+    errors,
   } = props
   const mapFields = fields.map(field =>
     <div key={field.key}>
@@ -56,7 +56,7 @@ AuthFields.propTypes = {
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   touched: PropTypes.bool.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 }
 
 export default AuthFields
