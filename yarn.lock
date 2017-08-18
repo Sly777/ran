@@ -1040,7 +1040,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@3.5.0, bluebird@^3.4.7:
+bluebird@^3.4.7:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
@@ -3665,26 +3665,7 @@ ini@^1.3.3, ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-inquirer@3.2.1, inquirer@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.2.1.tgz#06ceb0f540f45ca548c17d6840959878265fa175"
-  dependencies:
-    ansi-escapes "^2.0.0"
-    chalk "^2.0.0"
-    cli-cursor "^2.1.0"
-    cli-width "^2.0.0"
-    external-editor "^2.0.4"
-    figures "^2.0.0"
-    lodash "^4.3.0"
-    mute-stream "0.0.7"
-    run-async "^2.2.0"
-    rx-lite "^4.0.8"
-    rx-lite-aggregates "^4.0.8"
-    string-width "^2.1.0"
-    strip-ansi "^4.0.0"
-    through "^2.3.6"
-
-inquirer@3.2.2:
+inquirer@3.2.2, inquirer@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.2.2.tgz#c2aaede1507cc54d826818737742d621bef2e823"
   dependencies:
@@ -5889,13 +5870,12 @@ relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
 
-release@1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/release/-/release-1.4.3.tgz#d00663e66c2a63925e610a21cc39434f0d83bd81"
+release@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/release/-/release-2.0.1.tgz#b1a90099be67dd12ebd2939f854ec60babcfe6ea"
   dependencies:
     args "3.0.4"
     async-retry "1.1.3"
-    bluebird "3.5.0"
     capitalize "1.0.0"
     chalk "2.1.0"
     configstore "3.1.1"
@@ -5905,7 +5885,7 @@ release@1.4.3:
     git-state "4.0.0"
     git-username "0.5.0"
     github "9.2.0"
-    inquirer "3.2.1"
+    inquirer "3.2.2"
     node-version "1.1.0"
     open "0.0.5"
     ora "1.3.0"
