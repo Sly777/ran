@@ -4,7 +4,7 @@ import { addTypenameToDocument } from 'apollo-client'
 import { storiesOf } from '@storybook/react'
 
 import PostInfo from '../'
-import PostInfoWithoutData from '../feature'
+// import PostInfoWithoutData from '../feature'
 import getPostGql from '../getPost.gql'
 
 const query = addTypenameToDocument(getPostGql)

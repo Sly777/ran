@@ -8,7 +8,7 @@ export const Img = styled.img`
 `
 const Logo = () =>
   <Link href="/">
-    <Img src="/static/logo.png" alt="logo" />
+    <Img src="/static/images/logo.png" alt="logo" />
   </Link>
 
 export default Logo
