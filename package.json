@@ -108,7 +108,7 @@
     "nodemon": "1.11.0",
     "pre-commit": "1.2.2",
     "prettier": "1.5.3",
-    "release": "1.4.3",
+    "release": "2.0.0",
     "shelljs": "0.7.8"
   }
 }
