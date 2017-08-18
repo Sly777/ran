@@ -48,7 +48,6 @@ PostInfo.propTypes = {
   loading: PropTypes.bool.isRequired,
   Post: PropTypes.object,
   error: PropTypes.object,
-  postId: PropTypes.string.isRequired,
 }
 
 PostInfo.defaultProps = {

@@ -222,13 +222,59 @@ exports[`Storyshots Logo default 1`] = `
       alt="logo"
       className="c0"
       onClick={[Function]}
-      src="/static/logo.png"
+      src="mocked-file-src"
     />
   </div>
 </div>
 `;
 
-exports[`Storyshots PostInfo default 1`] = `
+exports[`Storyshots PostInfo loading 1`] = `
+.c0 {
+  padding-bottom: 20px;
+}
+
+.c0 > h1 {
+  margin-top: 0;
+}
+
+.c0 > p {
+  font-size: 17px;
+}
+
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "justifyContent": "center",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+      }
+    }
+  >
+    <section
+      className="c0"
+    >
+      <h1>
+        Loading...
+      </h1>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PostInfo showing post 1`] = `
 .c0 {
   padding-bottom: 20px;
 }
