@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Layout from '~/__utils__/Layout'
+import Themed from '~/__utils__/Themed'
 import LinkList from '../'
 
 const noop = () => {}
@@ -9,9 +9,9 @@ const noop = () => {}
 describe('<LinkList />', () => {
   it('when not authenticated', () => {
     const child = (
-      <Layout>
+      <Themed>
         <LinkList pathname={'/'} authenticated={false} logout={noop} />
-      </Layout>
+      </Themed>
     )
     const wrapper = mount(child)
     const text = wrapper.text()
@@ -25,9 +25,9 @@ describe('<LinkList />', () => {
 
   it('when authenticated', () => {
     const child = (
-      <Layout>
+      <Themed>
         <LinkList pathname={'/'} authenticated logout={noop} />
-      </Layout>
+      </Themed>
     )
     const wrapper = mount(child)
     const text = wrapper.text()

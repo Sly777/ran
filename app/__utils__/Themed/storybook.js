@@ -6,9 +6,9 @@ const themes = ['main', 'eightbit', 'inverted']
 const defaultTheme = themes[0]
 const themeSelector = select('Theme', themes, defaultTheme)
 
-const StorybookLayout = ({ children, theme }) =>
+const StorybookThemed = ({ children, theme }) =>
   <ThemeProvider theme={getTheme(themeSelector)}>
     {children}
   </ThemeProvider>
 
-export default StorybookLayout
+export default StorybookThemed

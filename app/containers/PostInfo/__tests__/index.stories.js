@@ -4,13 +4,13 @@ import { addTypenameToDocument } from 'apollo-client'
 import { storiesOf } from '@storybook/react'
 
 import PostInfo from '../'
-import PostInfoWithoutData from '../feature'
+import PostInfoFeature from '../feature'
 import getPostGql from '../getPost.gql'
 
 const query = addTypenameToDocument(getPostGql)
 
 storiesOf('PostInfo', module)
-  .add('loading', () => <PostInfoWithoutData loading />)
+  .add('loading', () => <PostInfoFeature loading />)
   .add('showing post', () => {
     const variables = { postId: 1 }
     const data = {
@@ -18,6 +18,9 @@ storiesOf('PostInfo', module)
         title: 'title',
         id: 'id',
         url: 'someurl',
+        votes: 1,
+        createdAt: new Date(),
+        __typename: 'Post',
       },
     }
 
@@ -29,3 +32,19 @@ storiesOf('PostInfo', module)
       </MockedProvider>
     )
   })
+// .add('no such post', () => {
+//   const variables = { postId: 1 }
+//   const data = {
+//     error: {
+//
+//     },
+//   }
+//
+//   const mocks = [{ request: { query, variables }, result: { data } }]
+//
+//   return (
+//     <MockedProvider mocks={mocks}>
+//       <PostInfo />
+//     </MockedProvider>
+//   )
+// })
