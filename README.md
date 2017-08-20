@@ -1,4 +1,5 @@
 # RAN!
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 ### React . GraphQL . Next.js Boilerplate
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Sly777/ran.svg)](https://greenkeeper.io/) [![Join the chat at https://gitter.im/ran-boilerplate/Lobby](https://badges.gitter.im/ran-boilerplate/Lobby.svg)](https://gitter.im/ran-boilerplate/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/Sly777/ran.svg?branch=master)](https://travis-ci.org/Sly777/ran) [![license](https://img.shields.io/github/license/sly777/ran.svg)]() [![Code Climate](https://codeclimate.com/github/Sly777/ran/badges/gpa.svg)](https://codeclimate.com/github/Sly777/ran) [![Known Vulnerabilities](https://snyk.io/test/github/sly777/ran/badge.svg)](https://snyk.io/test/github/sly777/ran) [![npm](https://img.shields.io/npm/v/ran-boilerplate.svg)](https://www.npmjs.com/package/ran-boilerplate) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -85,3 +86,14 @@ See also the list of [maintainers](MAINTAINERS.md) who participated in this proj
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2017 Ilker Guller. For more information see [LICENSE.md](LICENSE.md).
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars0.githubusercontent.com/u/694940?v=4" width="100px;"/><br /><sub>Ilker Güller</sub>](http://ilkerguller.com)<br />[💻](https://github.com/sly777/ran/commits?author=Sly777 "Code") [📖](https://github.com/sly777/ran/commits?author=Sly777 "Documentation") [👀](#review-Sly777 "Reviewed Pull Requests") [📢](#talk-Sly777 "Talks") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

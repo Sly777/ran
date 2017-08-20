@@ -1,0 +1,23 @@
+{
+  "projectName": "ran",
+  "projectOwner": "sly777",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "Sly777",
+      "name": "Ilker Güller",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/694940?v=4",
+      "profile": "http://ilkerguller.com",
+      "contributions": [
+        "code",
+        "doc",
+        "review",
+        "talk"
+      ]
+    }
+  ]
+}
