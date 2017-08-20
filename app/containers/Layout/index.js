@@ -17,11 +17,11 @@ const Default = props =>
 Default.propTypes = {
   title: PropTypes.string,
   url: PropTypes.object.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 }
 
 Default.defaultProps = {
-  title: '',
+  title: ''
 }
 
 export default Default

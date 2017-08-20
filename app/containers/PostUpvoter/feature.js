@@ -10,11 +10,11 @@ const PostUpvoter = ({ upvote, votes, id }) =>
 PostUpvoter.propTypes = {
   upvote: PropTypes.func.isRequired,
   votes: PropTypes.number,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 }
 
 PostUpvoter.defaultProps = {
-  votes: [],
+  votes: []
 }
 
 export default PostUpvoter

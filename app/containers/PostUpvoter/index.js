@@ -12,11 +12,11 @@ const withMutation = graphql(upvotePostGql, {
           updatePost: {
             __typename: 'Post',
             id: ownProps.id,
-            votes: ownProps.votes + 1,
-          },
-        },
-      }),
-  }),
+            votes: ownProps.votes + 1
+          }
+        }
+      })
+  })
 })
 
 export default withMutation(Feature)

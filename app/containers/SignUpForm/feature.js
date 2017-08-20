@@ -6,17 +6,17 @@ import validate from '~/components/AuthFields/validation'
 export default class SignUpForm extends React.Component {
   static propTypes = {
     mutations: PropTypes.shape({
-      signUp: PropTypes.func.isRequired,
+      signUp: PropTypes.func.isRequired
     }).isRequired,
     actions: PropTypes.shape({
-      signIn: PropTypes.func.isRequired,
-    }).isRequired,
+      signIn: PropTypes.func.isRequired
+    }).isRequired
   };
 
   state = {
     errors: {},
     serverErrors: {},
-    touched: false,
+    touched: false
   };
 
   getServerErrors(err) {
@@ -24,7 +24,7 @@ export default class SignUpForm extends React.Component {
       const obj = {}
       obj.message = err.graphQLErrors[0].message
       this.setState({
-        serverErrors: obj,
+        serverErrors: obj
       })
     }
   }
@@ -33,7 +33,7 @@ export default class SignUpForm extends React.Component {
     { key: 1, attr: { name: 'firstName', type: 'text', label: 'First Name' } },
     { key: 2, attr: { name: 'lastName', type: 'text', label: 'Last Name' } },
     { key: 3, attr: { name: 'email', type: 'email', label: 'Email' } },
-    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } },
+    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } }
   ];
 
   handleTouch = () => {
@@ -54,7 +54,7 @@ export default class SignUpForm extends React.Component {
     // reset state
     this.setState({
       errors: {},
-      serverErrors: {},
+      serverErrors: {}
     })
 
     const handleValidate = validate(valuesPack)
@@ -73,7 +73,7 @@ export default class SignUpForm extends React.Component {
           this.props.actions.signIn(response.data.signinUser.token)
         } else {
           this.setState({
-            errors: response.data.createUser.errors,
+            errors: response.data.createUser.errors
           })
         }
       })

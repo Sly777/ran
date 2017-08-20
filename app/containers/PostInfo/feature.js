@@ -2,9 +2,11 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 import * as S from './styles'
 
-const PostInfo = ctx => {
-  console.log(ctx)
-  const { loading, Post, error } = ctx
+const PostInfo = ({ loading, Post, error }) => {
+  if (error) {
+    console.log(error) // eslint-disable-line no-console
+    return
+  }
 
   if (loading) {
     return (
@@ -14,10 +16,12 @@ const PostInfo = ctx => {
     )
   }
 
-  if (error) {
-    console.log(error) // eslint-disable-line no-console
-    window.alert('Load error, check console') // eslint-disable-line no-alert
-    return
+  if (!Post) {
+    return (
+      <S.Section>
+        <h1>No such post</h1>
+      </S.Section>
+    )
   }
 
   return (
@@ -47,12 +51,12 @@ const PostInfo = ctx => {
 PostInfo.propTypes = {
   loading: PropTypes.bool.isRequired,
   Post: PropTypes.object,
-  error: PropTypes.object,
+  error: PropTypes.object
 }
 
 PostInfo.defaultProps = {
   Post: null,
-  error: null,
+  error: null
 }
 
 export default PostInfo

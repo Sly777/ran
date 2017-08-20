@@ -13,13 +13,13 @@ export const withMutation = graphql(createPostGql, {
               const newPost = mutationResult.data.createPost
               return Object.assign({}, previousResult, {
                 // Append the new post
-                allPosts: [newPost, ...previousResult.allPosts],
+                allPosts: [newPost, ...previousResult.allPosts]
               })
-            },
-          },
-        }),
-    },
-  }),
+            }
+          }
+        })
+    }
+  })
 })
 
 export default withMutation(Feature)

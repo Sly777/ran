@@ -3,14 +3,15 @@ import { MockedProvider } from 'react-apollo/test-utils'
 import { addTypenameToDocument } from 'apollo-client'
 import { storiesOf } from '@storybook/react'
 
-import PostInfo from '../'
-import PostInfoFeature from '../feature'
+import PostInfoWithData from '../'
+import PostInfo from '../feature'
 import getPostGql from '../getPost.gql'
+import Themed from '~/__utils__/Themed'
 
 const query = addTypenameToDocument(getPostGql)
 
 storiesOf('PostInfo', module)
-  .add('loading', () => <PostInfoFeature loading />)
+  .add('loading', () => <PostInfo loading />)
   .add('showing post', () => {
     const variables = { postId: 1 }
     const data = {
@@ -19,32 +20,34 @@ storiesOf('PostInfo', module)
         id: 'id',
         url: 'someurl',
         votes: 1,
-        createdAt: new Date(),
-        __typename: 'Post',
-      },
+        createdAt: Date.now(),
+        __typename: 'Post'
+      }
     }
 
     const mocks = [{ request: { query, variables }, result: { data } }]
 
     return (
       <MockedProvider mocks={mocks}>
-        <PostInfo />
+        <Themed>
+          <PostInfoWithData />
+        </Themed>
       </MockedProvider>
     )
   })
-// .add('no such post', () => {
-//   const variables = { postId: 1 }
-//   const data = {
-//     error: {
-//
-//     },
-//   }
-//
-//   const mocks = [{ request: { query, variables }, result: { data } }]
-//
-//   return (
-//     <MockedProvider mocks={mocks}>
-//       <PostInfo />
-//     </MockedProvider>
-//   )
-// })
+  .add('no such post error', () => {
+    const variables = { postId: 1 }
+    const data = {
+      Post: null
+    }
+
+    const mocks = [{ request: { query, variables }, result: { data } }]
+
+    return (
+      <MockedProvider mocks={mocks}>
+        <Themed>
+          <PostInfoWithData />
+        </Themed>
+      </MockedProvider>
+    )
+  })

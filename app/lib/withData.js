@@ -12,7 +12,7 @@ export default Component =>
     static propTypes = () => ({
       headers: PropTypes.object.isRequired,
       accessToken: PropTypes.string,
-      initialState: PropTypes.object.isRequired,
+      initialState: PropTypes.object.isRequired
     });
 
     static async getInitialProps(ctx) {
@@ -25,7 +25,7 @@ export default Component =>
         url: { query: ctx.query, pathname: ctx.pathname },
         ...(await (Component.getInitialProps
           ? Component.getInitialProps(ctx)
-          : {})),
+          : {}))
       }
 
       if (!process.browser) {
@@ -42,11 +42,11 @@ export default Component =>
         initialState: {
           ...state,
           apollo: {
-            data: state.apollo.data,
-          },
+            data: state.apollo.data
+          }
         },
         headers,
-        ...props,
+        ...props
       }
     }
 

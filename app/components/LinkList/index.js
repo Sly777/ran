@@ -39,7 +39,7 @@ const LinkList = ({ pathname, authenticated, logout }) =>
 LinkList.propTypes = {
   pathname: PropTypes.string.isRequired,
   authenticated: PropTypes.bool.isRequired,
-  logout: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired
 }
 
 export default LinkList

@@ -17,8 +17,8 @@ module.exports = {
         {
           loader: 'emit-file-loader',
           options: {
-            name: 'dist/[path][name].[ext]',
-          },
+            name: 'dist/[path][name].[ext]'
+          }
         },
         // this will create image copy, that we will use
         {
@@ -29,29 +29,29 @@ module.exports = {
             // this dont change url of image,
             // this is used just to shut up '__webpack_public_path__ is not defined'
             publicPath: '/_next/webpack/',
-            limit: 1000,
-          },
+            limit: 1000
+          }
         },
         {
           loader: 'image-webpack-loader',
           options: {
             gifsicle: {
-              interlaced: false,
+              interlaced: false
             },
             optipng: {
-              optimizationLevel: 7,
+              optimizationLevel: 7
             },
             pngquant: {
               quality: '65-90',
-              speed: 4,
+              speed: 4
             },
             mozjpeg: {
               progressive: true,
-              quality: 65,
-            },
-          },
-        },
-      ],
+              quality: 65
+            }
+          }
+        }
+      ]
     })
 
     // FIXME: not fixing gql and graphql files, but fixing js files
@@ -62,8 +62,8 @@ module.exports = {
         exclude: /node_modules/,
         enforce: 'pre',
         options: {
-          fix: true,
-        },
+          fix: true
+        }
       })
     }
 
@@ -72,7 +72,7 @@ module.exports = {
         new BundleAnalyzerPlugin({
           analyzerMode: 'server',
           analyzerPort: 8888,
-          openAnalyzer: true,
+          openAnalyzer: true
         })
       )
     }
@@ -113,16 +113,16 @@ module.exports = {
           __tests: dev ? { ignoreRuntime: true } : {},
           ServiceWorker: {
             events: true,
-            navigateFallbackURL: '/',
+            navigateFallbackURL: '/'
           },
           AppCache: {
             directory: './',
-            events: true,
-          },
+            events: true
+          }
         })
       )
     }
 
     return config
-  },
+  }
 }

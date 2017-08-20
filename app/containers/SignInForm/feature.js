@@ -6,17 +6,17 @@ import validate from '~/components/AuthFields/validation'
 export default class SignInForm extends React.Component {
   static propTypes = {
     mutations: PropTypes.shape({
-      signIn: PropTypes.func.isRequired,
+      signIn: PropTypes.func.isRequired
     }).isRequired,
     actions: PropTypes.shape({
-      signIn: PropTypes.func.isRequired,
-    }).isRequired,
+      signIn: PropTypes.func.isRequired
+    }).isRequired
   };
 
   state = {
     errors: {},
     serverErrors: {},
-    touched: false,
+    touched: false
   };
 
   getServerErrors(err) {
@@ -24,14 +24,14 @@ export default class SignInForm extends React.Component {
       const obj = {}
       obj.message = err.graphQLErrors[0].message
       this.setState({
-        serverErrors: obj,
+        serverErrors: obj
       })
     }
   }
 
   formFields = [
     { key: 1, attr: { name: 'email', type: 'email', label: 'Email' } },
-    { key: 2, attr: { name: 'password', type: 'password', label: 'Password' } },
+    { key: 2, attr: { name: 'password', type: 'password', label: 'Password' } }
   ];
 
   handleTouch = () => {
@@ -52,7 +52,7 @@ export default class SignInForm extends React.Component {
     // reset state
     this.setState({
       errors: {},
-      serverErrors: {},
+      serverErrors: {}
     })
 
     const handleValidate = validate(valuesPack)

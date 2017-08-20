@@ -7,7 +7,7 @@ import eightbit from './eightbit'
 const themeList = {
   main,
   inverted,
-  eightbit,
+  eightbit
 }
 
 export default function getTheme(name) {

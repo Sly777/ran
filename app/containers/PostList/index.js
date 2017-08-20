@@ -8,15 +8,15 @@ const withData = graphql(allPostsGql, {
   options: () => ({
     variables: {
       skip: 0,
-      first: POSTS_PER_PAGE,
-    },
+      first: POSTS_PER_PAGE
+    }
   }),
   props: ({ data }) => ({
     data,
     loadMorePosts: () =>
       data.fetchMore({
         variables: {
-          skip: data.allPosts.length,
+          skip: data.allPosts.length
         },
         updateQuery: (previousResult, { fetchMoreResult }) => {
           if (!fetchMoreResult) {
@@ -24,11 +24,11 @@ const withData = graphql(allPostsGql, {
           }
           return Object.assign({}, previousResult, {
             // Append the new posts results to the old one
-            allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts],
+            allPosts: [...previousResult.allPosts, ...fetchMoreResult.allPosts]
           })
-        },
-      }),
-  }),
+        }
+      })
+  })
 })
 
 export default withData(Feature)

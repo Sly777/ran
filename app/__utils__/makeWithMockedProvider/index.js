@@ -11,13 +11,13 @@ export default function makeWithMockedProvider(mocks) {
 
   addMockFunctionsToSchema({
     schema,
-    mocks,
+    mocks
   })
 
   const mockNetworkInterface = mockNetworkInterfaceWithSchema({ schema })
 
   const client = new ApolloClient({
-    networkInterface: mockNetworkInterface,
+    networkInterface: mockNetworkInterface
   })
 
   return children =>

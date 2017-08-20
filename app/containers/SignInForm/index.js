@@ -9,18 +9,18 @@ const withMutation = graphql(signInGql, {
     mutations: {
       signIn: ({ email, password }) =>
         mutate({
-          variables: { email, password },
-        }),
-    },
-  }),
+          variables: { email, password }
+        })
+    }
+  })
 })
 
 const mapDispatchToProps = dispatch => ({
   actions: {
     signIn(token) {
       dispatch(dispatchers.signIn(token))
-    },
-  },
+    }
+  }
 })
 
 const featureWithApollo = withMutation(Feature)

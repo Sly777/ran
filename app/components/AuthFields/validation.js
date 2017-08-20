@@ -24,6 +24,6 @@ export default values => {
 
   return {
     errors,
-    touched: true,
+    touched: true
   }
 }

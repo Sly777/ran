@@ -7,11 +7,11 @@ export default mergeObjects(main, {
     success: '#1bcb01',
     error: '#722640',
     background: '#000000',
-    text: '#ffffff',
+    text: '#ffffff'
   },
   font: {
     family: {
-      normal: 'Consolas, monaco, monospace',
-    },
-  },
+      normal: 'Consolas, monaco, monospace'
+    }
+  }
 })
