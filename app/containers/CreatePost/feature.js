@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Router } from '~/routes'
-import * as S from './styles'
+import { Form, SubmitButton } from './styles'
 
 export default class CreateForm extends React.Component {
   static propTypes = {
@@ -37,10 +37,10 @@ export default class CreateForm extends React.Component {
   };
 
   render = () =>
-    <S.Form onSubmit={this.handleSubmit}>
+    <Form onSubmit={this.handleSubmit}>
       <h1>Add new post</h1>
       <input placeholder="title" name="title" />
       <input placeholder="url" name="url" />
-      <S.SubmitButton type="submit">Submit</S.SubmitButton>
-    </S.Form>;
+      <SubmitButton type="submit">Submit</SubmitButton>
+    </Form>;
 }

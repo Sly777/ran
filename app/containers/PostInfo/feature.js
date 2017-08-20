@@ -1,31 +1,30 @@
 import moment from 'moment'
 import PropTypes from 'prop-types'
-import * as S from './styles'
+import { Section, A } from './styles'
 
 const PostInfo = ({ loading, Post, error }) => {
-  if (error) {
-    console.log(error) // eslint-disable-line no-console
-    return
-  }
+  let title
 
   if (loading) {
-    return (
-      <S.Section>
-        <h1>Loading...</h1>
-      </S.Section>
-    )
+    title = 'Loading...'
+  } else if (error) {
+    title = error.toString()
+  } else if (!Post) {
+    title = 'No such post'
   }
 
-  if (!Post) {
+  if (title) {
     return (
-      <S.Section>
-        <h1>No such post</h1>
-      </S.Section>
+      <Section>
+        <h1>
+          {title}
+        </h1>
+      </Section>
     )
   }
 
   return (
-    <S.Section>
+    <Section>
       <h1>
         {Post.title}
       </h1>
@@ -40,11 +39,11 @@ const PostInfo = ({ loading, Post, error }) => {
         </span>
       </div>
       <p>
-        <S.A target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
+        <A target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
           {Post.url}
-        </S.A>
+        </A>
       </p>
-    </S.Section>
+    </Section>
   )
 }
 

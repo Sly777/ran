@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types'
 import { Link } from '~/routes'
 import PostUpvoter from '~/containers/PostUpvoter'
-import * as S from './styles'
+import {
+  Main,
+  ItemList,
+  Index,
+  Title,
+  ShowMore,
+  Item,
+  Loading
+} from './styles'
 
 const PostList = ({
   data: { allPosts, loading, _allPostsMeta },
@@ -10,14 +18,14 @@ const PostList = ({
   if (allPosts && allPosts.length) {
     const areMorePosts = allPosts.length < _allPostsMeta.count
     return (
-      <S.Main>
-        <S.ItemList>
+      <Main>
+        <ItemList>
           {allPosts.map((post, index) =>
-            <S.Item key={post.id}>
+            <Item key={post.id}>
               <div>
-                <S.Index>
+                <Index>
                   {index + 1}.{' '}
-                </S.Index>
+                </Index>
                 <Link
                   route="details"
                   params={{
@@ -26,24 +34,24 @@ const PostList = ({
                   }}
                   passHref
                 >
-                  <S.Title>
+                  <Title>
                     {post.title}
-                  </S.Title>
+                  </Title>
                 </Link>
                 <PostUpvoter id={post.id} votes={post.votes} />
               </div>
-            </S.Item>
+            </Item>
           )}
-        </S.ItemList>
+        </ItemList>
         {areMorePosts
-          ? <S.ShowMore onClick={() => loadMorePosts()}>
+          ? <ShowMore onClick={() => loadMorePosts()}>
               {loading ? 'Loading...' : 'Show More'}
-            </S.ShowMore>
+            </ShowMore>
           : ''}
-      </S.Main>
+      </Main>
     )
   }
-  return <S.Loading>Loading</S.Loading>
+  return <Loading>Loading</Loading>
 }
 
 PostList.propTypes = {
