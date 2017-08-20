@@ -18,6 +18,16 @@
         "review",
         "talk"
       ]
+    },
+    {
+      "login": "BjornMelgaard",
+      "name": "bjornmelgaard",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7573215?v=4",
+      "profile": "https://bitbucket.org/melgaardbjorn",
+      "contributions": [
+        "code",
+        "question"
+      ]
     }
   ]
 }
