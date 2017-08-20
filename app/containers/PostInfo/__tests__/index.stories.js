@@ -14,7 +14,7 @@ storiesOf('PostInfo', module)
         id: 'uuidv4',
         url: 'http://bogus.com',
         votes: 1,
-        createdAt: new Date(0)
+        createdAt: '2014-08-20 15:30:00'
       }
     }
 
