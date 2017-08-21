@@ -1,0 +1,42 @@
+{
+  "projectName": "ran",
+  "projectOwner": "sly777",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "Sly777",
+      "name": "Ilker Güller",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/694940?v=4",
+      "profile": "http://ilkerguller.com",
+      "contributions": [
+        "code",
+        "doc",
+        "review",
+        "talk"
+      ]
+    },
+    {
+      "login": "BjornMelgaard",
+      "name": "bjornmelgaard",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7573215?v=4",
+      "profile": "https://bitbucket.org/melgaardbjorn",
+      "contributions": [
+        "code",
+        "question"
+      ]
+    },
+    {
+      "login": "astenmies",
+      "name": "Asten Mies",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/10152022?v=4",
+      "profile": "https://github.com/astenmies",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
