@@ -12,10 +12,6 @@ function afterPageCreation(filename, prettyurl = null) {
   process.stdout.write(`New Page ${filename} is created and ready!`);
   process.stdout.write('\n');
   if (prettyurl) {
-    process.stdout.write(
-      'Please add the code below to "./routes.js" file to use pretty URL'
-    );
-    process.stdout.write('\n');
     helper.getTempfromHandlebar(
       `${helper.config.templatesDir}/route.hbs`,
       {
@@ -23,11 +19,20 @@ function afterPageCreation(filename, prettyurl = null) {
         prettyurl
       },
       code => {
-        process.stdout.write('\n');
-        process.stdout.write(code);
-        process.stdout.write('\n');
-        process.stdout.write('\n');
-        process.exit(0);
+        helper.addTexttoFile(
+          helper.config.routeFile,
+          '// @RANEndRoutes',
+          code,
+          () => {
+            process.stdout.write('\n');
+            process.stdout.write(
+              `New Page ${filename} is added to "./routes.js" and ready!`
+            );
+            process.stdout.write('\n');
+            process.stdout.write('\n');
+            process.exit(0);
+          }
+        );
       }
     );
   }

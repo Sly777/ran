@@ -3,7 +3,8 @@ const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs');
 const handlebars = require('handlebars');
-const routes = require('../../routes');
+const replace = require('replace-in-file');
+const router = require('../../routes');
 
 const modules = {};
 
@@ -78,8 +79,8 @@ modules.getFilesOnDir = function getFilesOnDir(startPath) {
 
 modules.isUsedOnRoutes = function isUsedOnRoutes(url) {
   let isFound = false;
-  routes.default.forEach(route => {
-    if (route.prettyUrl({}).indexOf(url) !== -1) {
+  router.routes.forEach(route => {
+    if (route.pattern.indexOf(url) !== -1) {
       isFound = true;
     }
   });
@@ -98,6 +99,31 @@ modules.getTempfromHandlebar = function getTempfromHandlebar(
 
     callback(exportCode);
   });
+};
+
+modules.addTexttoFile = function addTexttoFile(
+  filePath,
+  from,
+  text,
+  cb,
+  before = true
+) {
+  const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
+  const re = new RegExp(from.replace(matchOperatorsRe, '\\$&'));
+
+  replace(
+    {
+      encoding: 'utf8',
+      files: filePath,
+      from: re,
+      to: before ? `${text}${from}` : `${from}\n${text}`
+    },
+    error => {
+      if (error) {
+        return console.error('Error occurred:', error);
+      }
+    }
+  );
 };
 
 module.exports = modules;
