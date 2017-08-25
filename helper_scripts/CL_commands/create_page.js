@@ -38,7 +38,7 @@ function askQuestions() {
     {
       name: 'filename',
       type: 'input',
-      message: 'Enter page name:',
+      message: 'Enter page name: (without whitespace)',
       validate(value) {
         if (value.length) {
           if (
