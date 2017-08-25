@@ -34,9 +34,10 @@
     ]
   },
   "scripts": {
-    "build": "next build",
-    "dev": "npm run lint && node server.js",
-    "dev:next": "npm run lint && next",
+    "build": "npm run clean-cache && next build",
+    "clean-cache": "rm -rf ./node_modules/.cache",
+    "dev": "npm run lint && npm run clean-cache && node server.js",
+    "dev:next": "npm run lint && npm run clean-cache && next",
     "start": "NODE_ENV=production node server.js",
     "start:next": "next start",
     "lint": "eslint --fix --ext .gql --ext .graphql --ext .js pages components containers libraries server helper_scripts",
