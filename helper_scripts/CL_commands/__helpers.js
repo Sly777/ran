@@ -122,6 +122,7 @@ modules.addTexttoFile = function addTexttoFile(
       if (error) {
         return console.error('Error occurred:', error);
       }
+      cb();
     }
   );
 };
