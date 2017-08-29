@@ -17,6 +17,10 @@
 
   - [Environment Variables](Architecture/environment-variables.md)
 
+  - [App Icons and Favicon](Architecture/app-and-fav-icons.md)
+
+  - [Static Files (Images, Docs, Others...)](Architecture/static-files.md)
+
 - [Packages](Packages.md)
 
 - [Commands](Commands.md)
