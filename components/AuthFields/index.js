@@ -12,7 +12,7 @@ const AuthFields = props => {
     touched,
     errors
   } = props;
-  const mapFields = fields.map(field =>
+  const mapFields = fields.map(field => (
     <div key={field.key}>
       <input
         name={field.attr.name}
@@ -21,19 +21,14 @@ const AuthFields = props => {
         onChange={handleChange}
         onFocus={handleTouch}
       />
-      {errors &&
-        <div>
-          {errors[field.attr.name]}
-        </div>}
+      {errors && <div>{errors[field.attr.name]}</div>}
     </div>
-  );
+  ));
   const authMethod =
     (selectFields === 'signinFields' && 'Sign In') || 'Sign Up';
   return (
     <Main>
-      <h1>
-        {authMethod}
-      </h1>
+      <h1>{authMethod}</h1>
       <form>
         {mapFields}
         <br />

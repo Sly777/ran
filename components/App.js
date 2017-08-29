@@ -26,9 +26,7 @@ const App = ({ children, theme }) => {
 
   return (
     <ThemeProvider theme={themeList[themeName]}>
-      <ThemedApp>
-        {children}
-      </ThemedApp>
+      <ThemedApp>{children}</ThemedApp>
     </ThemeProvider>
   );
 };

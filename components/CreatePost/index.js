@@ -37,13 +37,14 @@ class CreateForm extends React.Component {
     Router.pushRoute('/');
   };
 
-  render = () =>
+  render = () => (
     <Form onSubmit={this.handleSubmit}>
       <h1>Add new post</h1>
       <input placeholder="title" name="title" />
       <input placeholder="url" name="url" />
       <SubmitButton type="submit">Submit</SubmitButton>
-    </Form>;
+    </Form>
+  );
 }
 
 export default connect(CreateForm);

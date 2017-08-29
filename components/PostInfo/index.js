@@ -20,9 +20,7 @@ const PostInfo = ({ loading, Post, error }) => {
 
   return (
     <Section>
-      <h1>
-        {Post.title}
-      </h1>
+      <h1>{Post.title}</h1>
       <div>
         <span>
           ID: <b>{Post.id}</b>

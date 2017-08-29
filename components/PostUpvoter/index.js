@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import connect from './store';
 import { UpvoteButton } from './styles';
 
-const PostUpvoter = ({ upvote, votes, id }) =>
-  <UpvoteButton onClick={() => upvote(id, votes + 1)}>
-    {votes}
-  </UpvoteButton>;
+const PostUpvoter = ({ upvote, votes, id }) => (
+  <UpvoteButton onClick={() => upvote(id, votes + 1)}>{votes}</UpvoteButton>
+);
 
 PostUpvoter.propTypes = {
   upvote: PropTypes.func.isRequired,

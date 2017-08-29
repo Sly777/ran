@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import App from '../components/App';
 import Header from '../components/Header';
 
-const Default = props =>
+const Default = props => (
   <App>
     <Helmet>
       <title>
@@ -12,7 +12,8 @@ const Default = props =>
     </Helmet>
     <Header pathname={props.url.pathname} />
     {props.children}
-  </App>;
+  </App>
+);
 
 Default.propTypes = {
   title: PropTypes.string,

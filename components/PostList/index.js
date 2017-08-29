@@ -21,12 +21,10 @@ const PostList = ({
     return (
       <Main>
         <ItemList>
-          {allPosts.map((post, index) =>
+          {allPosts.map((post, index) => (
             <Item key={post.id}>
               <div>
-                <Index>
-                  {index + 1}.{' '}
-                </Index>
+                <Index>{index + 1}. </Index>
                 <Link
                   route="details"
                   params={{
@@ -35,20 +33,20 @@ const PostList = ({
                   }}
                   passHref
                 >
-                  <Title>
-                    {post.title}
-                  </Title>
+                  <Title>{post.title}</Title>
                 </Link>
                 <PostUpvoter id={post.id} votes={post.votes} />
               </div>
             </Item>
-          )}
+          ))}
         </ItemList>
-        {areMorePosts
-          ? <ShowMore onClick={() => loadMorePosts()}>
-              {loading ? 'Loading...' : 'Show More'}
-            </ShowMore>
-          : ''}
+        {areMorePosts ? (
+          <ShowMore onClick={() => loadMorePosts()}>
+            {loading ? 'Loading...' : 'Show More'}
+          </ShowMore>
+        ) : (
+          ''
+        )}
       </Main>
     );
   }
