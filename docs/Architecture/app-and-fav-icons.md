@@ -8,6 +8,6 @@ For rendering App Icons and favicon, RAN is using ```/components/AppIcons/index.
 
 You can copy your icon (with same names) to ```/static/icons/``` folder. It will start to use your icon immediately.
 
-### Change the path of Icons
+#### Change the path of Icons
 
 You can make your changes on ```/components/AppIcons/index.js``` file. Every icons are coming from this component.
