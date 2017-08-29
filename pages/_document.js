@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
+import AppIcons from '../components/AppIcons';
 
 export default class MyDocument extends Document {
   static async getInitialProps(...args) {
@@ -40,6 +41,7 @@ export default class MyDocument extends Document {
           <meta httpEquiv="expires" content="10800" />
           <meta name="generator" content="RAN! 0.5.0" />
           {this.helmetHeadComponents()}
+          {AppIcons()}
           {styleTags}
         </Head>
         <body>

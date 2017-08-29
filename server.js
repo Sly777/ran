@@ -96,6 +96,10 @@ app.prepare().then(() => {
   server.use(helmet());
   server.use(routerHandler);
 
+  server.get(`/favicon.ico`, (req, res) =>
+    app.serveStatic(req, res, path.resolve('./static/icons/favicon.ico'))
+  );
+
   server.get('/sw.js', (req, res) =>
     app.serveStatic(req, res, path.resolve('./.next/sw.js'))
   );
