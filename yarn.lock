@@ -3692,7 +3692,7 @@ ini@^1.3.3, ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-inquirer@3.2.2, inquirer@^3.2.0:
+inquirer@3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.2.2.tgz#c2aaede1507cc54d826818737742d621bef2e823"
   dependencies:
@@ -3711,7 +3711,7 @@ inquirer@3.2.2, inquirer@^3.2.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@3.2.3:
+inquirer@3.2.3, inquirer@^3.2.0:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.2.3.tgz#1c7b1731cf77b934ec47d22c9ac5aa8fe7fbe095"
   dependencies:
@@ -4676,9 +4676,9 @@ next@3.2.1:
     write-file-webpack-plugin "4.1.0"
     xss-filters "1.2.7"
 
-ngrok@2.2.21:
-  version "2.2.21"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.21.tgz#4e1afdc10f8bc7bd1d27e66da34de5c7e1e575da"
+ngrok@2.2.22:
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.22.tgz#8f76264e630579d2524aefb23b31bfe4e15e10eb"
   dependencies:
     "@types/node" "^8.0.19"
     async "^2.3.0"
@@ -5474,11 +5474,11 @@ pump@^1.0.1:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-punycode@1.3.2:
+punycode@1.3.2, punycode@^1.2.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
-punycode@^1.2.4, punycode@^1.4.1:
+punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
