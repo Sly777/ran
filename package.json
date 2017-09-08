@@ -70,7 +70,7 @@
     "js-cookie": "2.1.4",
     "lru-cache": "4.1.1",
     "moment": "2.18.1",
-    "next": "3.2.1",
+    "next": "3.2.2",
     "next-cookies": "1.0.2",
     "next-routes": "1.0.40",
     "offline-plugin": "4.8.3",
