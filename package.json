@@ -109,7 +109,7 @@
     "pre-commit": "1.2.2",
     "prettier": "1.6.1",
     "release": "2.2.0",
-    "replace-in-file": "2.6.4",
+    "replace-in-file": "3.0.0-beta.2",
     "shelljs": "0.7.8"
   }
 }
