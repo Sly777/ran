@@ -1,5 +1,5 @@
-# source: https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn
-# timestamp: Thu Sep 14 2017 13:37:40 GMT+0200 (CEST)
+# source: https://api.graph.cool/simple/v1/cj7ke77fv0e9i0122pflagbvx
+# timestamp: Thu Sep 14 2017 13:52:38 GMT+0200 (CEST)
 
 enum _ModelMutationType {
   CREATED
@@ -40,12 +40,12 @@ scalar DateTime
 
 type File implements Node {
   contentType: String!
-  createdAt: DateTime
+  createdAt: DateTime!
   id: ID!
   name: String!
   secret: String!
   size: Int!
-  updatedAt: DateTime
+  updatedAt: DateTime!
   url: String!
 }
 
@@ -344,12 +344,12 @@ enum FileOrderBy {
 
 type FilePreviousValues {
   contentType: String!
-  createdAt: DateTime
+  createdAt: DateTime!
   id: ID!
   name: String!
   secret: String!
   size: Int!
-  updatedAt: DateTime
+  updatedAt: DateTime!
   url: String!
 }
 
@@ -673,10 +673,10 @@ interface Node {
 }
 
 type Post implements Node {
-  createdAt: DateTime
+  createdAt: DateTime!
   id: ID!
   title: String!
-  updatedAt: DateTime
+  updatedAt: DateTime!
   url: String!
   votes: Int
 }
@@ -891,10 +891,10 @@ enum PostOrderBy {
 }
 
 type PostPreviousValues {
-  createdAt: DateTime
+  createdAt: DateTime!
   id: ID!
   title: String!
-  updatedAt: DateTime
+  updatedAt: DateTime!
   url: String!
   votes: Int
 }
@@ -1166,13 +1166,13 @@ input UpdateUser {
 }
 
 type User implements Node {
-  createdAt: DateTime
+  createdAt: DateTime!
   email: String
   firstName: String!
   id: ID!
   lastName: String!
   password: String
-  updatedAt: DateTime
+  updatedAt: DateTime!
 }
 
 input UserFilter {
@@ -1445,13 +1445,13 @@ enum UserOrderBy {
 }
 
 type UserPreviousValues {
-  createdAt: DateTime
+  createdAt: DateTime!
   email: String
   firstName: String!
   id: ID!
   lastName: String!
   password: String
-  updatedAt: DateTime
+  updatedAt: DateTime!
 }
 
 input UserSubscriptionFilter {
