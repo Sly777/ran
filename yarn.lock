@@ -5990,9 +5990,9 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-replace-in-file@2.6.4:
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/replace-in-file/-/replace-in-file-2.6.4.tgz#a80e25c5c0e0efe9d04afe01a4a57ff98e8b6461"
+replace-in-file@3.0.0-beta.1:
+  version "3.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/replace-in-file/-/replace-in-file-3.0.0-beta.1.tgz#f5e5edfb33509672cc2a650eaa294ca6281a8021"
   dependencies:
     chalk "^2.1.0"
     glob "^7.1.2"
