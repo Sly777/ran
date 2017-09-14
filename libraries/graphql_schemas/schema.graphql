@@ -1,5 +1,5 @@
 # source: https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn
-# timestamp: Wed Aug 09 2017 15:01:10 GMT+0300 (EEST)
+# timestamp: Thu Sep 14 2017 13:37:40 GMT+0200 (CEST)
 
 enum _ModelMutationType {
   CREATED
@@ -20,12 +20,6 @@ input AUTH_PROVIDER_EMAIL {
 input AuthProviderSignupData {
   email: AUTH_PROVIDER_EMAIL
 }
-
-# The `BigDecimal` scalar type represents signed fractional values with arbitrary precision.
-scalar BigDecimal
-
-# The `BigInt` scalar type represents non-fractional signed whole numeric values. BigInt can represent arbitrary big values.
-scalar BigInt
 
 input CreateFile {
   name: String!
@@ -655,10 +649,6 @@ type FileSubscriptionPayload {
   updatedFields: [String!]
   previousValues: FilePreviousValues
 }
-
-# The `Long` scalar type represents non-fractional signed whole numeric values.
-# Long can represent values between -(2^63) and 2^63 - 1.
-scalar Long
 
 type Mutation {
   createFile(name: String!): File
