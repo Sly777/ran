@@ -1914,7 +1914,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@*, debug@2, debug@2.6.8, debug@^2.1.1, debug@^2.1.2, debug@^2.2.0, debug@^2.6, debug@^2.6.3, debug@^2.6.6, debug@^2.6.8:
+debug@*, debug@2, debug@2.6.8, debug@^2.1.1, debug@^2.1.2, debug@^2.2.0, debug@^2.6.3, debug@^2.6.6, debug@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -1926,7 +1926,7 @@ debug@2.6.7:
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.1:
+debug@^3, debug@^3.0, debug@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.0.1.tgz#0564c612b521dc92d9f2988f0549e34f9c98db64"
   dependencies:
@@ -1935,12 +1935,6 @@ debug@^3.0.1:
 debug@~0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.8.1.tgz#20ff4d26f5e422cb68a1bacbbb61039ad8c1c130"
-
-debug@~2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
-  dependencies:
-    ms "0.7.1"
 
 decamelize@^1.0.0, decamelize@^1.1.1:
   version "1.2.0"
@@ -2765,13 +2759,9 @@ fbjs@^0.8.4, fbjs@^0.8.5, fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fclone@1.0.11:
+fclone@1.0.11, fclone@^1:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/fclone/-/fclone-1.0.11.tgz#10e85da38bfea7fc599341c296ee1d77266ee640"
-
-fclone@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/fclone/-/fclone-1.0.8.tgz#a0d4a73d983249978c0e0671a161520b996467eb"
 
 figlet@1.2.0:
   version "1.2.0"
@@ -4647,10 +4637,6 @@ moment@2.18.1, "moment@>= 2.9.0", moment@^2.11.2, moment@^2.18:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
-ms@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5338,20 +5324,20 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-pm2-axon-rpc@0.4.5:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/pm2-axon-rpc/-/pm2-axon-rpc-0.4.5.tgz#fb62e9a53f3e2b7bed1afe16e3b0d1b06fe8ba69"
+pm2-axon-rpc@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/pm2-axon-rpc/-/pm2-axon-rpc-0.5.0.tgz#ad08d6a27f580d5c7be4d7bf9dddff398f868994"
   dependencies:
-    debug "*"
-    fclone "1.0.8"
+    debug "^3.0"
+    fclone "^1"
 
-pm2-axon@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/pm2-axon/-/pm2-axon-3.0.2.tgz#53de1d34edbf266d58f6b1dea2d8244c71ad24b9"
+pm2-axon@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/pm2-axon/-/pm2-axon-3.1.0.tgz#1b4527f3385e203adc1a5b0488bb52f0322731da"
   dependencies:
     amp "~0.3.1"
     amp-message "~0.1.1"
-    debug "~2.2.0"
+    debug "^3.0"
     escape-regexp "0.0.1"
 
 pm2-deploy@^0.3.5:
@@ -5367,9 +5353,9 @@ pm2-multimeter@^0.1.2:
   dependencies:
     charm "~0.1.1"
 
-pm2@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.6.1.tgz#a9c2fdb7bf1676655935eb4176239003fca5c8da"
+pm2@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.7.0.tgz#5c0d7b304588d0542686d32fd6bd1f8fa22621ca"
   dependencies:
     async "^2.5"
     blessed "^0.1.81"
@@ -5378,7 +5364,7 @@ pm2@2.6.1:
     cli-table-redemption "^1.0.0"
     commander "2.11.0"
     cron "1.2.1"
-    debug "^2.6"
+    debug "^3.0"
     eventemitter2 "1.0.5"
     fclone "1.0.11"
     mkdirp "0.5.1"
@@ -5386,26 +5372,26 @@ pm2@2.6.1:
     needle "1.6.0"
     nssocket "0.6.0"
     pidusage "^1.1.0"
-    pm2-axon "3.0.2"
-    pm2-axon-rpc "0.4.5"
+    pm2-axon "3.1.0"
+    pm2-axon-rpc "0.5.0"
     pm2-deploy "^0.3.5"
     pm2-multimeter "^0.1.2"
-    pmx "^1.2.0"
+    pmx "~1.5.0"
     promptly "2.2.0"
     semver "^5.3"
     shelljs "0.7.8"
-    source-map-support "^0.4.15"
+    source-map-support "^0.4.18"
     sprintf-js "1.1.1"
     vizion "^0.2"
     yamljs "0.3.0"
   optionalDependencies:
     gkt "https://tgz.pm2.io/gkt-1.0.0.tgz"
 
-pmx@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/pmx/-/pmx-1.2.0.tgz#712a9e1fdea53a9b061169cc7676b14838c87585"
+pmx@~1.5.0:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/pmx/-/pmx-1.5.2.tgz#f7198c39eddd0f56dad0eb3fcafdab25039b7738"
   dependencies:
-    debug "^2.6"
+    debug "^3"
     json-stringify-safe "^5.0"
     vxx "^1.2.0"
 
@@ -6465,9 +6451,15 @@ source-list-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
 
-source-map-support@0.4.15, source-map-support@^0.4.14, source-map-support@^0.4.15, source-map-support@^0.4.2:
+source-map-support@0.4.15, source-map-support@^0.4.14, source-map-support@^0.4.2:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.15.tgz#03202df65c06d2bd8c7ec2362a193056fef8d3b1"
+  dependencies:
+    source-map "^0.5.6"
+
+source-map-support@^0.4.18:
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
   dependencies:
     source-map "^0.5.6"
 
