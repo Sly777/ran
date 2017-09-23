@@ -5434,9 +5434,9 @@ pm2-multimeter@^0.1.2:
   dependencies:
     charm "~0.1.1"
 
-pm2@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.7.0.tgz#5c0d7b304588d0542686d32fd6bd1f8fa22621ca"
+pm2@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.7.1.tgz#b7b8404d8bec587526fd58bc21feffea351bec15"
   dependencies:
     async "^2.5"
     blessed "^0.1.81"
