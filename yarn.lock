@@ -5047,9 +5047,9 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
-offline-plugin@4.8.3:
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/offline-plugin/-/offline-plugin-4.8.3.tgz#9e95bd342ea2ac836b001b81f204c40638694d6c"
+offline-plugin@4.8.4:
+  version "4.8.4"
+  resolved "https://registry.yarnpkg.com/offline-plugin/-/offline-plugin-4.8.4.tgz#1084c59f6606bded5ee5a6bf6208e2b9f5bdd339"
   dependencies:
     deep-extend "^0.4.0"
     ejs "^2.3.4"
