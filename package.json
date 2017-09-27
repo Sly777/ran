@@ -60,7 +60,7 @@
     "babel-plugin-styled-components": "1.2.0",
     "chalk": "2.1.0",
     "color": "2.0.0",
-    "compression": "1.7.0",
+    "compression": "1.7.1",
     "cors": "2.8.4",
     "dotenv": "4.0.0",
     "express": "4.15.4",
@@ -86,7 +86,7 @@
     "webpack-bundle-analyzer": "2.9.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.0.0",
+    "babel-eslint": "8.0.1",
     "cli-clear": "1.0.4",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.1.0",
