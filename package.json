@@ -107,7 +107,7 @@
     "lint-staged": "4.2.3",
     "ngrok": "2.2.22",
     "pre-commit": "1.2.2",
-    "prettier": "1.7.3",
+    "prettier": "1.7.4",
     "release": "2.5.2",
     "replace-in-file": "3.0.0-beta.2",
     "shelljs": "0.7.8"
