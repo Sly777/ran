@@ -5,7 +5,9 @@ export const App = styled.div`
   color: ${props => props.theme.colors.text};
 `;
 
-export const A = styled.a`color: ${props => props.theme.colors.main};`;
+export const A = styled.a`
+  color: ${props => props.theme.colors.main};
+`;
 
 export const P = styled.p`
   font-size: ${props => props.theme.font.sizes.normal};
