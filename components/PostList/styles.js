@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import * as T from '../Theme';
 
-export const Main = styled.section`padding-bottom: 20px;`;
+export const Main = styled.section`
+  padding-bottom: 20px;
+`;
 
 export const Item = styled.li`
   display: block;
