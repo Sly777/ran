@@ -16,7 +16,8 @@ const words = [
   'ibne',
   'top',
   'house',
-  'hh'
+  'hh',
+  'cuk'
 ];
 
 export default words;
