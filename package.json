@@ -73,7 +73,7 @@
     "moment": "2.18.1",
     "next": "3.2.2",
     "next-cookies": "1.0.2",
-    "next-routes": "1.0.40",
+    "next-routes": "1.1.0",
     "offline-plugin": "4.8.4",
     "pm2": "2.7.1",
     "prop-types": "15.6.0",
