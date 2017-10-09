@@ -56,7 +56,7 @@
     "graphql:see_graph": "graphql voyager"
   },
   "dependencies": {
-    "babel-plugin-inline-import-graphql-ast": "2.0.1",
+    "babel-plugin-inline-import-graphql-ast": "2.0.2",
     "babel-plugin-styled-components": "1.2.1",
     "chalk": "2.1.0",
     "color": "2.0.0",
