@@ -600,12 +600,11 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-inline-import-graphql-ast@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-inline-import-graphql-ast/-/babel-plugin-inline-import-graphql-ast-2.0.1.tgz#6a952c4ec964b569d24462e72de9b3a65ba21e93"
+babel-plugin-inline-import-graphql-ast@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-inline-import-graphql-ast/-/babel-plugin-inline-import-graphql-ast-2.0.2.tgz#64362e3406a9d4822b869878d199426edf9e9910"
   dependencies:
     babylon "^6.17.0"
-    graphql "^0.9.6"
     graphql-tag "^2.0.0"
 
 babel-plugin-module-resolver@2.6.2:
@@ -3702,12 +3701,6 @@ graphql@^0.11.6:
   dependencies:
     iterall "1.1.3"
 
-graphql@^0.9.6:
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.6.tgz#514421e9d225c29dfc8fd305459abae58815ef2c"
-  dependencies:
-    iterall "^1.0.0"
-
 gzip-size@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-3.0.0.tgz#546188e9bdc337f673772f81660464b389dce520"
@@ -4415,7 +4408,7 @@ iterall@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
 
-iterall@^1.0.0, iterall@^1.1.0, iterall@^1.1.1:
+iterall@^1.1.0, iterall@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.1.tgz#f7f0af11e9a04ec6426260f5019d9fcca4d50214"
 
