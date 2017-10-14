@@ -106,7 +106,7 @@
     "husky": "0.14.3",
     "inquirer": "3.3.0",
     "lint-staged": "4.2.3",
-    "ngrok": "2.2.22",
+    "ngrok": "2.2.23",
     "pre-commit": "1.2.2",
     "prettier": "1.7.4",
     "release": "2.5.2",
