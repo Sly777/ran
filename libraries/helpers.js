@@ -20,7 +20,8 @@ export function mergeObjects(...args) {
   const aargs = [].splice.call(args, 0);
 
   while (aargs.length > 0) {
-    src = aargs.splice(0, 1)[0];
+    const idx = 0;
+    src = aargs.splice(0, 1)[idx];
     if (toString.call(src) === '[object Object]') {
       for (p in src) {
         if (Object.prototype.hasOwnProperty.call(src, p)) {
