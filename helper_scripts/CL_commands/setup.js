@@ -4,7 +4,7 @@
 
 const shell = require('shelljs');
 const clear = require('cli-clear');
-const exec = require('child_process').exec;
+const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const helper = require('./__helpers');
