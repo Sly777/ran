@@ -2061,9 +2061,9 @@ create-react-class@^15.5.2, create-react-class@^15.6.0:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-cron@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/cron/-/cron-1.2.1.tgz#3a86c09b41b8f261ac863a7cc85ea4735857eab2"
+cron@^1.3:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/cron/-/cron-1.3.0.tgz#7e459968eaf94e1a445be796ce402166c234659d"
   dependencies:
     moment-timezone "^0.5.x"
 
@@ -6240,9 +6240,9 @@ pm2-axon@3.1.0:
     debug "^3.0"
     escape-regexp "0.0.1"
 
-pm2-deploy@^0.3.5:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/pm2-deploy/-/pm2-deploy-0.3.7.tgz#07b685008b76b6d04c2bbb500297645c7c74ac3f"
+pm2-deploy@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/pm2-deploy/-/pm2-deploy-0.3.8.tgz#233eec0103bba0700b9e0e0eafb6e5d006a55b04"
   dependencies:
     async "^1.5"
     tv4 "^1.2"
@@ -6253,9 +6253,9 @@ pm2-multimeter@^0.1.2:
   dependencies:
     charm "~0.1.1"
 
-pm2@2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.7.1.tgz#b7b8404d8bec587526fd58bc21feffea351bec15"
+pm2@2.7.2:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.7.2.tgz#de421ee140e2f186659da299a8900ff2c1308ba0"
   dependencies:
     async "^2.5"
     blessed "^0.1.81"
@@ -6263,7 +6263,7 @@ pm2@2.7.1:
     chokidar "^1.7"
     cli-table-redemption "^1.0.0"
     commander "2.11.0"
-    cron "1.2.1"
+    cron "^1.3"
     debug "^3.0"
     eventemitter2 "1.0.5"
     fclone "1.0.11"
@@ -6274,7 +6274,7 @@ pm2@2.7.1:
     pidusage "^1.1.0"
     pm2-axon "3.1.0"
     pm2-axon-rpc "0.5.0"
-    pm2-deploy "^0.3.5"
+    pm2-deploy "^0.3.8"
     pm2-multimeter "^0.1.2"
     pmx "~1.5.0"
     promptly "2.2.0"
