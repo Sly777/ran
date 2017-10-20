@@ -1100,7 +1100,7 @@ babel-template@7.0.0-beta.0:
     babylon "7.0.0-beta.22"
     lodash "^4.2.0"
 
-babel-template@^6.24.1, babel-template@^6.7.0:
+babel-template@^6.24.1:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.25.0.tgz#665241166b7c2aa4c619d71e192969552b10c071"
   dependencies:
@@ -5540,9 +5540,9 @@ next-routes@1.1.0:
   dependencies:
     path-to-regexp "^1.7.0"
 
-next@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/next/-/next-4.1.0.tgz#63828efdbb8a0f44a09ccf5880cf60b27b91ea2e"
+next@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/next/-/next-4.1.2.tgz#a8aa90336f4410cfc31138f4c70e8dc3f87e8b9d"
   dependencies:
     ansi-html "0.0.7"
     babel-core "6.26.0"
@@ -5583,7 +5583,7 @@ next@4.1.0:
     pkg-up "2.0.0"
     prop-types "15.6.0"
     prop-types-exact "1.1.1"
-    react-hot-loader "^3.0.0"
+    react-hot-loader "3.1.1"
     recursive-copy "2.0.6"
     send "0.16.1"
     source-map-support "0.4.18"
@@ -6692,11 +6692,10 @@ react-helmet@5.2.0:
     prop-types "^15.5.4"
     react-side-effect "^1.1.0"
 
-react-hot-loader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0.tgz#6e28da9d459da8085f5ee8bdd775046ba4b5cd0b"
+react-hot-loader@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.1.1.tgz#e06db8cd0841c41e3ab0b395b2b774126fc8914e"
   dependencies:
-    babel-template "^6.7.0"
     global "^4.3.0"
     react-deep-force-update "^2.1.1"
     react-proxy "^3.0.0-alpha.0"
