@@ -45,6 +45,11 @@ _command:_ ```yarn run build``` (or ```npm run build```)
 
 Build the application for Production
 
+### build and export for Static HTML Export
+_command:_ ```yarn run build:static_export``` (or ```npm run build:static_export```)
+
+Build and export your application by using Static HTML Export feature of Next.js. To see limitations, [Click here](/docs/Architecture/static-html-export.md) 
+
 ## GraphQL Commands
 
 On these commands, RAN is using  [graphql-config](https://github.com/graphcool/graphql-config), [graphql-cli](https://github.com/graphcool/graphql-cli), [graphql-voyager](https://github.com/APIs-guru/graphql-voyager) and [grapql-cli-voyager](https://github.com/graphcool/graphql-cli-voyager). The important thing is that you need to update your [/.graphqlconfig](/.graphqlconfig) file with your real graphql url to work with them. For details info how to work with ```.graphgqlconfig``` file, please check [graphql-config](https://github.com/graphcool/graphql-config).

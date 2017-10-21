@@ -53,7 +53,8 @@
     "release": "release",
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
-    "graphql:see_graph": "graphql voyager"
+    "graphql:see_graph": "graphql voyager",
+    "build:static_export": "npm run build && next export"
   },
   "dependencies": {
     "babel-plugin-inline-import-graphql-ast": "2.0.2",
