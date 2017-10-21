@@ -19,9 +19,7 @@ function cleanSetup(callback) {
   if (!isCleanSetup) return callback();
 
   shell.rm('-rf', 'components/*/');
-  exec(
-    'find pages/. -type f ! -regex ".*/(_document.js|index.js)" -print0 | xargs -0 rm --'
-  );
+  shell.rm('-rf', ['pages/*', '!(pages/_document.js|pages/index.js)']);
   shell.rm('-rf', 'static/*/');
   callback();
 }
