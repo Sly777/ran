@@ -9,7 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const helper = require('./__helpers');
 
-const isCleanSetup = process.env.cleanSetup || false;
+const isCleanSetup = process.env.CLEANSETUP || false;
 
 clear();
 process.stdin.resume();
@@ -22,7 +22,7 @@ function cleanSetup(callback) {
   exec(
     'find pages/. -type f ! -regex ".*/(_document.js|index.js)" -print0 | xargs -0 rm --'
   );
-  shell.rm('-rf', 'static/**/*');
+  shell.rm('-rf', 'static/*/');
   callback();
 }
 

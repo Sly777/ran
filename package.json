@@ -44,6 +44,7 @@
     "lint:watch": "esw -w --fix components libraries server",
     "analyze": "ANALYZE_BUILD=true npm run build",
     "setup": "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
+    "setup:clean": "CLEANSETUP=true node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm run build",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
