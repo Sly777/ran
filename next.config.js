@@ -81,6 +81,9 @@ const initExport = {
 if (process.env.STATIC_EXPORT) {
   initExport.exportPathMap = function exportPathMap() {
     const routes = {};
+    routes['/'] = {
+      page: 'index'
+    };
     router.routes.forEach(route => {
       if (!route.pattern.includes(':')) {
         routes[route.pattern] = {

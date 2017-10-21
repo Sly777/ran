@@ -54,7 +54,7 @@
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
     "graphql:see_graph": "graphql voyager",
-    "build:static_export": "npm run build && next export"
+    "build:static_export": "STATIC_EXPORT=true npm run build && STATIC_EXPORT=true next export"
   },
   "dependencies": {
     "babel-plugin-inline-import-graphql-ast": "2.0.2",
