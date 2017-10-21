@@ -9,9 +9,22 @@ const path = require('path');
 const fs = require('fs');
 const helper = require('./__helpers');
 
+const isCleanSetup = process.env.cleanSetup || false;
+
 clear();
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
+
+function cleanSetup(callback) {
+  if (!isCleanSetup) return callback();
+
+  shell.rm('-rf', 'components/*/');
+  exec(
+    'find pages/. -type f ! -regex ".*/(_document.js|index.js)" -print0 | xargs -0 rm --'
+  );
+  shell.rm('-rf', 'static/**/*');
+  callback();
+}
 
 /**
  * Initializes git again
@@ -41,12 +54,14 @@ function installDepsCallback(error) {
   deleteFileInCurrentDir('setup.js', () => {
     process.stdout.write('Initialising new repository...');
     initGit(() => {
-      clear();
-      process.stdout.write('\n');
-      process.stdout.write('\nRAN! is ready to go!');
-      process.stdout.write('\n');
-      process.stdout.write('\n');
-      process.exit(0);
+      cleanSetup(() => {
+        clear();
+        process.stdout.write('\n');
+        process.stdout.write('\nRAN! is ready to go!');
+        process.stdout.write('\n');
+        process.stdout.write('\n');
+        process.exit(0);
+      });
     });
   });
 }

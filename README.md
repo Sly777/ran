@@ -39,6 +39,14 @@ yarn install && yarn run setup
 
 And that's all!
 
+#### Clean Setup (without example pages & components)
+
+```bash
+git clone --depth=1 https://github.com/Sly777/ran.git RAN
+cd RAN
+yarn install && yarn run setup --cleanSetup=true
+```
+
 #### Beta Version (Unstable)
 
 Also, There is a ```beta``` version for new features & fixes that we are testing before release. To access beta;
