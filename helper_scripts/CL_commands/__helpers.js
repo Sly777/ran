@@ -122,7 +122,7 @@ modules.addTexttoFile = function addTexttoFile(
     },
     error => {
       if (error) {
-        return console.error('Error occurred:', error);
+        throw error;
       }
       cb();
     }
