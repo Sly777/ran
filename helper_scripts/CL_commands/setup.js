@@ -23,7 +23,8 @@ function cleanSetup(callback) {
   );
   exec('find ./pages -type f -not -name "_document.js" -print0 | xargs -0 rm');
   helper.createPageFromTemplate('index', () => {});
-  helper.createContainerFromTemplate('Default', () => {
+  helper.createContainerFromTemplate('Default', () => {});
+  helper.clearReducerList(() => {
     callback();
   });
 }

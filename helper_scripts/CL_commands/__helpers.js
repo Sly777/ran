@@ -13,6 +13,7 @@ modules.config = {
   pagesDir: './pages',
   componentsDir: './components',
   containersDir: './containers',
+  librariesDir: './libraries',
   templatesDir: './helper_scripts/templates',
   routeFile: './routes.js',
   serverFile: './server.js'
@@ -164,6 +165,25 @@ modules.createContainerFromTemplate = function createContainerFromTemplate(
     code => {
       fs.writeFile(
         `${modules.config.containersDir}/${filename}.js`,
+        code,
+        { flag: 'w' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.clearReducerList = function clearReducerList(callback) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/reducer.hbs`,
+    {},
+    code => {
+      fs.writeFile(
+        `${modules.config.librariesDir}/reducer.js`,
         code,
         { flag: 'w' },
         _err => {
