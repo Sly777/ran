@@ -14,6 +14,11 @@ _command:_ ```yarn run create:route``` (or ```npm run create:route```)
 
 Create new route for your pages
 
+### create:container
+_command:_ ```yarn run create:container``` (or ```npm run create:container```)
+
+Create new container
+
 ### lint
 _command:_ ```yarn run lint``` (or ```npm run lint```)
 

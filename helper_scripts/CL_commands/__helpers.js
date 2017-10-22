@@ -12,6 +12,7 @@ modules.config = {
   appDir: './',
   pagesDir: './pages',
   componentsDir: './components',
+  containersDir: './containers',
   templatesDir: './helper_scripts/templates',
   routeFile: './routes.js',
   serverFile: './server.js'
@@ -139,6 +140,30 @@ modules.createPageFromTemplate = function createPageFromTemplate(
     code => {
       fs.writeFile(
         `${modules.config.pagesDir}/${filename}.js`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.createContainerFromTemplate = function createContainerFromTemplate(
+  filename,
+  callback
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/container.hbs`,
+    {
+      filename
+    },
+    code => {
+      fs.writeFile(
+        `${modules.config.containersDir}/${filename}.js`,
         code,
         { flag: 'wx' },
         _err => {

@@ -22,7 +22,8 @@ function cleanSetup(callback) {
     'find ./components -not -name AppIcons -not -path "*AppIcons*" -not -name App.js -not -name Theme.js -delete'
   );
   exec('find ./pages -type f -not -name "_document.js" -print0 | xargs -0 rm');
-  helper.createPageFromTemplate('index', () => {
+  helper.createPageFromTemplate('index', () => {});
+  helper.createContainerFromTemplate('Default', () => {
     callback();
   });
 }
