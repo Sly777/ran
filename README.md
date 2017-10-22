@@ -44,7 +44,7 @@ And that's all!
 ```bash
 git clone --depth=1 https://github.com/Sly777/ran.git RAN
 cd RAN
-yarn install && yarn run setup --cleanSetup=true
+yarn install && yarn run setup:clean
 ```
 
 #### Beta Version (Unstable)

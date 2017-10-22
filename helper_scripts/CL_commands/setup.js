@@ -18,10 +18,13 @@ process.stdin.setEncoding('utf8');
 function cleanSetup(callback) {
   if (!isCleanSetup) return callback();
 
-  shell.rm('-rf', 'components/*/');
-  shell.rm('-rf', ['pages/*', '!(pages/_document.js|pages/index.js)']);
-  shell.rm('-rf', 'static/*/');
-  callback();
+  exec(
+    'find ./components -not -name AppIcons -not -path "*AppIcons*" -not -name App.js -not -name Theme.js -delete'
+  );
+  exec('find ./pages -type f -not -name "_document.js" -print0 | xargs -0 rm');
+  helper.createPageFromTemplate('index', () => {
+    callback();
+  });
 }
 
 /**

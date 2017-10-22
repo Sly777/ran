@@ -127,4 +127,28 @@ modules.addTexttoFile = function addTexttoFile(
   );
 };
 
+modules.createPageFromTemplate = function createPageFromTemplate(
+  filename,
+  callback
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/page.hbs`,
+    {
+      filename
+    },
+    code => {
+      fs.writeFile(
+        `${modules.config.pagesDir}/${filename}.js`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
 module.exports = modules;
