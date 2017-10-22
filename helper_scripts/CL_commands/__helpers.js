@@ -165,7 +165,7 @@ modules.createContainerFromTemplate = function createContainerFromTemplate(
       fs.writeFile(
         `${modules.config.containersDir}/${filename}.js`,
         code,
-        { flag: 'wx' },
+        { flag: 'w' },
         _err => {
           if (_err) throw _err;
 
