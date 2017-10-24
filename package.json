@@ -83,7 +83,7 @@
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
-    "styled-components": "2.2.1",
+    "styled-components": "2.2.2",
     "webpack-bundle-analyzer": "2.9.0"
   },
   "devDependencies": {
