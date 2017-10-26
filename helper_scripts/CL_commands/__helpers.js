@@ -196,4 +196,23 @@ modules.clearReducerList = function clearReducerList(callback) {
   );
 };
 
+modules.clearRoutes = function clearRoutes(callback) {
+  const re = /^(routes.)[A-Za-z(', /:);_]*/gm;
+
+  replace(
+    {
+      encoding: 'utf8',
+      files: `${modules.config.routeFile}`,
+      from: re,
+      to: ''
+    },
+    error => {
+      if (error) {
+        throw error;
+      }
+      callback();
+    }
+  );
+};
+
 module.exports = modules;
