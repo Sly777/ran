@@ -34,7 +34,7 @@
     ]
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
+    "start": "NODE_ENV=production node server.js",
     "build": "npm run clean-cache && next build",
     "clean-cache": "rm -rf ./node_modules/.cache",
     "dev": "npm run lint && npm run clean-cache && node server.js",
