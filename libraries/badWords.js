@@ -17,7 +17,8 @@ const words = [
   'top',
   'house',
   'hh',
-  'cuk'
+  'cuk',
+  'fuckin'
 ];
 
 export default words;
