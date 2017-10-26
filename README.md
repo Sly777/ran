@@ -61,7 +61,7 @@ It can be unstable, so that's why please use stable version if you are working o
 
 ## Example
 
-[Click here](https://ran.now.sh/) to see example project to understand how RAN! works on production. I used [graph.cool](https://graph.cool/) service for GraphQL in the example.
+[Click here](https://ran.now.sh/) to see example project to understand how RAN! works on production. I used [graph.cool](https://graph.cool/) service for GraphQL and [now](https://zeit.co/now) for hosting in the example.
 
 ## Commands
 
@@ -72,7 +72,7 @@ Best feature of RAN! is **CL commands**. You can just run one command to create 
 
 ## Documentation
 
-[Click here](docs) to see all details of RAN!
+[Click here](https://sly777.gitbooks.io/ran/) to see all details of RAN!
 
 ## FAQ
 
