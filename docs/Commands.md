@@ -57,7 +57,7 @@ _command:_ ```yarn run build``` (or ```npm run build```)
 
 Build the application for Production
 
-### build and export for Static HTML Export
+### build:static_export
 _command:_ ```yarn run build:static_export``` (or ```npm run build:static_export```)
 
 Build and export your application by using Static HTML Export feature of Next.js. To see limitations, [Click here](/docs/Architecture/static-html-export.md) 
