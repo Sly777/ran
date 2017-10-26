@@ -21,6 +21,8 @@
 
   - [Static Files (Images, Docs, Others...)](Architecture/static-files.md)
 
+  - [Static HTML Export](Architecture/static-html-export.md)
+
 - [Packages](Packages.md)
 
 - [Commands](Commands.md)
