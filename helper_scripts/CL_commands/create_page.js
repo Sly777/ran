@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const inquirer = require('inquirer');
-const fs = require('fs');
 const helper = require('./__helpers');
 
 process.stdin.resume();
@@ -84,25 +83,9 @@ function askQuestions() {
   ];
 
   inquirer.prompt(questions).then(({ filename, prettyurl = null }) => {
-    helper.getTempfromHandlebar(
-      `${helper.config.templatesDir}/page.hbs`,
-      {
-        filename,
-        prettyurl
-      },
-      code => {
-        fs.writeFile(
-          `${helper.config.pagesDir}/${filename}.js`,
-          code,
-          { flag: 'wx' },
-          _err => {
-            if (_err) throw _err;
-
-            afterPageCreation(filename, prettyurl);
-          }
-        );
-      }
-    );
+    helper.createPageFromTemplate(filename, () => {
+      afterPageCreation(filename, prettyurl);
+    });
   });
 }
 

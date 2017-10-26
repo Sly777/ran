@@ -1,0 +1,33 @@
+{{#if haveGraphql}}
+import { graphql } from 'react-apollo';
+import {{graphqlName}}Gql from './{{graphqlName}}.gql';
+
+const withData = graphql({{graphqlName}}Gql, {
+  options: ({ postId }) => ({
+    variables: {
+      postId
+    }
+  }),
+  props: ({ data: { loading, Post, error } }) => ({
+    loading,
+    Post,
+    error
+  })
+});
+
+export default comp => withData(comp);
+{{else}}
+import { connect } from 'react-redux';
+
+const mapStateToProps = () => ({
+  example: true
+});
+
+const mapDispatchToProps = dispatch => ({
+  actions: {
+    exampleCall: () => dispatch({ type: 'EXAMPLE' })
+  }
+});
+
+export default comp => connect(mapStateToProps, mapDispatchToProps)(comp);
+{{/if}}

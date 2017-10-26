@@ -9,9 +9,25 @@ const path = require('path');
 const fs = require('fs');
 const helper = require('./__helpers');
 
+const isCleanSetup = process.env.CLEANSETUP || false;
+
 clear();
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
+
+function cleanSetup(callback) {
+  if (!isCleanSetup) return callback();
+
+  exec(
+    'find ./components -not -name AppIcons -not -path "*AppIcons*" -not -name AuthFields -not -path "*AuthFields*" -not -name App.js -not -name Theme.js -delete'
+  );
+  exec('find ./pages -type f -not -name "_document.js" -print0 | xargs -0 rm');
+  helper.createPageFromTemplate('index', () => {});
+  helper.createContainerFromTemplate('Default', () => {});
+  helper.clearRoutes(() => {
+    callback();
+  });
+}
 
 /**
  * Initializes git again
@@ -41,12 +57,14 @@ function installDepsCallback(error) {
   deleteFileInCurrentDir('setup.js', () => {
     process.stdout.write('Initialising new repository...');
     initGit(() => {
-      clear();
-      process.stdout.write('\n');
-      process.stdout.write('\nRAN! is ready to go!');
-      process.stdout.write('\n');
-      process.stdout.write('\n');
-      process.exit(0);
+      cleanSetup(() => {
+        clear();
+        process.stdout.write('\n');
+        process.stdout.write('\nRAN! is ready to go!');
+        process.stdout.write('\n');
+        process.stdout.write('\n');
+        process.exit(0);
+      });
     });
   });
 }

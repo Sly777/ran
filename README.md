@@ -39,6 +39,14 @@ yarn install && yarn run setup
 
 And that's all!
 
+#### Clean Setup (without example pages & components)
+
+```bash
+git clone --depth=1 https://github.com/Sly777/ran.git RAN
+cd RAN
+yarn install && yarn run setup:clean
+```
+
 #### Beta Version (Unstable)
 
 Also, There is a ```beta``` version for new features & fixes that we are testing before release. To access beta;
@@ -60,6 +68,7 @@ It can be unstable, so that's why please use stable version if you are working o
 Best feature of RAN! is **CL commands**. You can just run one command to create page with route! [Click here](docs/Commands.md) to see details how It works on RAN!.
 
 ![YAY](https://media.giphy.com/media/l0Iy6nmyS5p7hIAso/giphy.gif)
+![YAYY](https://media.giphy.com/media/26vIfscbQhVK7ML5u/giphy.gif)
 
 ## Documentation
 
