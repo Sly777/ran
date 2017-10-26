@@ -49,6 +49,7 @@
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
     "create:container": "node ./helper_scripts/CL_commands/create_container.js",
+    "create:component": "node ./helper_scripts/CL_commands/create_component.js",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
     "heroku-postbuild": "npm run build",

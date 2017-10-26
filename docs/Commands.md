@@ -19,6 +19,13 @@ _command:_ ```yarn run create:container``` (or ```npm run create:container```)
 
 Create new container
 
+### create:component
+_command:_ ```yarn run create:component``` (or ```npm run create:component```)
+
+Create new component with options (such as 'Style support', 'Store support', 'GraphQL support')
+
+![create:component](https://media.giphy.com/media/26vIfscbQhVK7ML5u/giphy.gif)
+
 ### lint
 _command:_ ```yarn run lint``` (or ```npm run lint```)
 
@@ -54,6 +61,16 @@ Build the application for Production
 _command:_ ```yarn run build:static_export``` (or ```npm run build:static_export```)
 
 Build and export your application by using Static HTML Export feature of Next.js. To see limitations, [Click here](/docs/Architecture/static-html-export.md) 
+
+### setup
+_command:_ ```yarn run setup``` (or ```npm run setup```)
+
+Prepare the application with example project
+
+### setup:clean
+_command:_ ```yarn run setup:clean``` (or ```npm run setup:clean```)
+
+Prepare the application without example project. Recommended if you work on static application
 
 ## GraphQL Commands
 

@@ -68,6 +68,7 @@ It can be unstable, so that's why please use stable version if you are working o
 Best feature of RAN! is **CL commands**. You can just run one command to create page with route! [Click here](docs/Commands.md) to see details how It works on RAN!.
 
 ![YAY](https://media.giphy.com/media/l0Iy6nmyS5p7hIAso/giphy.gif)
+![YAYY](https://media.giphy.com/media/26vIfscbQhVK7ML5u/giphy.gif)
 
 ## Documentation
 

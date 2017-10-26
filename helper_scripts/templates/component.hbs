@@ -1,0 +1,24 @@
+{{#if haveStyle}}
+import { {{filename}} as Styled{{filename}} } from './styles';
+{{/if}}
+{{#if haveStore}}
+import connect from './store';
+{{/if}}
+
+const {{filename}} = () => (
+  {{#if haveStyle}}
+  <Styled{{filename}}>
+    <span>{{filename}}</span>
+  </Styled{{filename}}>
+  {{else}}
+  <div>
+    <span>{{filename}}</span>
+  </div>
+  {{/if}}
+);
+
+{{#if haveStore}}
+export default connect({{filename}});
+{{else}}
+export default {{filename}};
+{{/if}}

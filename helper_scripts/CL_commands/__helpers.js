@@ -36,9 +36,17 @@ modules.writeRan = function writeRan(callback) {
   );
 };
 
-modules.isUsedOnDir = function isUsedOnDir(startPath, filter) {
+modules.isUsedOnDir = function isUsedOnDir(
+  startPath,
+  filter,
+  onlyDirectories = false
+) {
   if (!fs.existsSync(startPath)) {
     return false;
+  }
+
+  if (onlyDirectories) {
+    return fs.existsSync(`${startPath}/${filter}`);
   }
 
   const files = fs.readdirSync(startPath);
@@ -167,6 +175,101 @@ modules.createContainerFromTemplate = function createContainerFromTemplate(
         `${modules.config.containersDir}/${filename}.js`,
         code,
         { flag: 'w' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.createComponentFromTemplate = function createComponentFromTemplate(
+  options,
+  callback = () => {}
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/component.hbs`,
+    options,
+    code => {
+      if (
+        !fs.existsSync(`${modules.config.componentsDir}/${options.filename}`)
+      ) {
+        fs.mkdirSync(`${modules.config.componentsDir}/${options.filename}`);
+      }
+
+      fs.writeFile(
+        `${modules.config.componentsDir}/${options.filename}/index.js`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.createStoreFromTemplate = function createStoreFromTemplate(
+  options,
+  callback = () => {}
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/component_store.hbs`,
+    options,
+    code => {
+      fs.writeFile(
+        `${modules.config.componentsDir}/${options.filename}/store.js`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.createStyleFromTemplate = function createStyleFromTemplate(
+  options,
+  callback = () => {}
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/component_style.hbs`,
+    options,
+    code => {
+      fs.writeFile(
+        `${modules.config.componentsDir}/${options.filename}/styles.js`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
+modules.createGraphqlFromTemplate = function createGraphqlFromTemplate(
+  options,
+  callback = () => {}
+) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/component_graphql.hbs`,
+    options,
+    code => {
+      fs.writeFile(
+        `${modules.config
+          .componentsDir}/${options.filename}/${options.graphqlName}.gql`,
+        code,
+        { flag: 'wx' },
         _err => {
           if (_err) throw _err;
 
