@@ -77,7 +77,7 @@ Prepare the application without example project. Recommended if you work on stat
 On these commands, RAN is using  [graphql-config](https://github.com/graphcool/graphql-config), [graphql-cli](https://github.com/graphcool/graphql-cli), [graphql-voyager](https://github.com/APIs-guru/graphql-voyager) and [grapql-cli-voyager](https://github.com/graphcool/graphql-cli-voyager). The important thing is that you need to update your [/.graphqlconfig](/.graphqlconfig) file with your real graphql url to work with them. For details info how to work with ```.graphgqlconfig``` file, please check [graphql-config](https://github.com/graphcool/graphql-config).
 
 ##### **Important Info**
-Don't save secure information in ```.graphqlconfig``` file. Use [Environment variables](/docs/Architecture/environment-variables.md) for that. On RAN boilerplate, We are using hard-coded example graphql url inside of that but It doesn't mean it's secure way.
+Don't save secure information in ```.graphqlconfig``` file. Use [Environment variables](/docs/Architecture/environment-variables.md) for that. On RAN toolkit, We are using hard-coded example graphql url inside of that but It doesn't mean it's secure way.
 
 ### graphql:play
 _command:_ ```yarn run graphql:play``` (or ```npm run graphql:play```)
