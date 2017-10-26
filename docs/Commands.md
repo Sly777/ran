@@ -22,7 +22,7 @@ Create new container
 ### create:component
 _command:_ ```yarn run create:component``` (or ```npm run create:component```)
 
-Create new component with options (such as 'Style support', 'Store support', 'GraphQL support')
+Create new component with options (such as *Style support*, *Store support*, *GraphQL support*)
 
 ![create:component](https://media.giphy.com/media/26vIfscbQhVK7ML5u/giphy.gif)
 
