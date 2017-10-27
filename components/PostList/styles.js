@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import * as T from '../Theme';
 
 export const Main = styled.section`
+  padding: 10px 15px;
   padding-bottom: 20px;
 `;
 
