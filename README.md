@@ -72,7 +72,7 @@ Best feature of RAN! is **CL commands**. You can just run one command to create 
 
 ## Documentation
 
-[Click here](https://sly777.gitbooks.io/ran/) to see all details of RAN!
+[Click here](https://www.rantoolkit.com/) to see all details of RAN!
 
 ## FAQ
 

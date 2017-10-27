@@ -36,11 +36,12 @@
 
 * [Helper Scripts](Helper-scripts.md)
 
+* [Example](Example.md)
+
 * [Roadmap](Roadmap.md)
 
 * [Contributing](Contributing.md)
 
 * [FAQ](FAQ.md)
 
-
-
+* [Support](Support.md)
