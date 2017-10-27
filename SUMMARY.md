@@ -1,6 +1,8 @@
 # Summary
 
-* [Introduction](README.md)
+* [Read Me](README.md)
+* [Example](docs/Example.md)
+* [Support](docs/Support.md)
 * [Documentation](docs/README.md)
   * [Deployment](docs/Deployment/README.md)
     * [Now](docs/Deployment/with-now.md)
