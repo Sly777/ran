@@ -7,6 +7,11 @@ export const App = styled.div`
 
 export const A = styled.a`
   color: ${props => props.theme.colors.main};
+
+  &:active,
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const P = styled.p`

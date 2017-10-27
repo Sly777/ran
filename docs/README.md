@@ -1,42 +1,47 @@
 # RAN!
 
 ## Documentation
+
 ## Table of Contents
 
-- [Deployment](Deployment)
+* [Deployment](Deployment)
 
-  - [NOW](Deployment/with-now.md)
+  * [NOW](Deployment/with-now.md)
 
-  - [Amazon - AWS](Deployment/aws.md)
+  * [Amazon - AWS](Deployment/aws.md)
 
-  - [Heroku](Deployment/heroku.md)
+  * [Heroku](Deployment/heroku.md)
 
-  - [Digital Ocean](Deployment/digital-ocean.md)
+  * [Digital Ocean](Deployment/digital-ocean.md)
 
-- [Architecture](Architecture)
+* [Architecture](Architecture)
 
-  - [Environment Variables](Architecture/environment-variables.md)
+  * [Environment Variables](Architecture/environment-variables.md)
 
-  - [App Icons and Favicon](Architecture/app-and-fav-icons.md)
+  * [App Icons and Favicon](Architecture/app-and-fav-icons.md)
 
-  - [Static Files (Images, Docs, Others...)](Architecture/static-files.md)
+  * [Static Files \(Images, Docs, Others...\)](Architecture/static-files.md)
 
-  - [Static HTML Export](Architecture/static-html-export.md)
+  * [Static HTML Export](Architecture/static-html-export.md)
 
-- [Packages](Packages.md)
+* [Packages](Packages.md)
 
-- [Commands](Commands.md)
+* [Commands](Commands.md)
 
-- [Styling](Styling.md)
+* [Styling](Styling.md)
 
-- [Routing](Routing.md)
+* [Routing](Routing.md)
 
-- [Offline Support](Offline.md)
+* [Offline Support](Offline.md)
 
-- [Helper Scripts](Helper-scripts.md)
+* [Helper Scripts](Helper-scripts.md)
 
-- [Roadmap](Roadmap.md)
+* [Example](Example.md)
 
-- [Contributing](Contributing.md)
+* [Roadmap](Roadmap.md)
 
-- [FAQ](FAQ.md)
+* [Contributing](Contributing.md)
+
+* [FAQ](FAQ.md)
+
+* [Support](Support.md)

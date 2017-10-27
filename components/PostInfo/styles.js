@@ -3,6 +3,7 @@ import { A } from '../Theme';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Section = styled.section`
+  padding: 10px 15px;
   padding-bottom: 20px;
 
   > h1 {

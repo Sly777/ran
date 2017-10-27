@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="robots" content="index,follow" />
           <meta httpEquiv="expires" content="10800" />
-          <meta name="generator" content="RAN! 0.7.0" />
+          <meta name="generator" content="RAN! 0.7.1" />
           {this.helmetHeadComponents()}
           {AppIcons()}
           {styleTags}
