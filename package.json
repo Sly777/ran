@@ -34,7 +34,12 @@
       "git add"
     ]
   },
+  "now": {
+    "name": "ran-toolkit",
+    "alias": "ran"
+  },
   "scripts": {
+    "deploy:now": "now && now alias",
     "start": "NODE_ENV=production node server.js",
     "build": "npm run clean-cache && next build",
     "clean-cache": "rm -rf ./node_modules/.cache",
