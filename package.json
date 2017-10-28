@@ -88,8 +88,7 @@
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
-    "styled-components": "2.2.2",
-    "webpack-bundle-analyzer": "2.9.0"
+    "styled-components": "2.2.2"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
@@ -116,6 +115,7 @@
     "prettier": "1.7.4",
     "release": "2.5.2",
     "replace-in-file": "3.0.0-beta.2",
-    "shelljs": "0.7.8"
+    "shelljs": "0.7.8",
+    "webpack-bundle-analyzer": "2.9.0"
   }
 }

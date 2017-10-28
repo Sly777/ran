@@ -1,4 +1,4 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+/* eslint-disable global-require */
 const { IgnorePlugin } = require('webpack');
 const OfflinePlugin = require('offline-plugin');
 const router = require('./routes');
@@ -19,6 +19,7 @@ const initExport = {
     }
 
     if (process.env.ANALYZE_BUILD) {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'server',
@@ -96,4 +97,5 @@ if (process.env.STATIC_EXPORT) {
   };
 }
 
+/* eslint-enable global-require */
 module.exports = initExport;
