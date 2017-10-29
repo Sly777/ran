@@ -73,7 +73,7 @@
     "helmet": "3.9.0",
     "ip": "1.1.5",
     "isomorphic-fetch": "2.2.1",
-    "js-cookie": "2.1.4",
+    "js-cookie": "2.2.0",
     "lru-cache": "4.1.1",
     "moment": "2.19.1",
     "next": "4.1.4",
