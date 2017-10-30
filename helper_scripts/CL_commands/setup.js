@@ -47,6 +47,7 @@ function cleanSetup(callback) {
 
 function updateReadme(callback) {
   const projectName = path.basename(path.dirname(helper.config.appDir));
+  shell.rm('-rf', shell.find(`${helper.config.appDir}README.md`));
   helper.updateReadme(projectName, () => {
     callback();
   });
