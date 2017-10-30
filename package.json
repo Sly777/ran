@@ -35,17 +35,17 @@
     ]
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
+    "start": "cross-env NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
     "build": "npm run clean-cache && next build",
-    "clean-cache": "rm -rf ./node_modules/.cache",
+    "clean-cache": "rimraf -rf ./node_modules/.cache",
     "dev": "npm run lint && npm run clean-cache && node server.js",
     "dev:next": "npm run lint && npm run clean-cache && next",
     "start:next": "node ./node_modules/.bin/pm2 start npm --name \"next\" -- start",
     "lint": "eslint --fix --ext .js pages components containers libraries server helper_scripts",
     "lint:watch": "esw -w --fix components libraries server",
-    "analyze": "ANALYZE_BUILD=true npm run build",
+    "analyze": "cross-env ANALYZE_BUILD=true npm run build",
     "setup": "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
-    "setup:clean": "CLEANSETUP=true node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
+    "setup:clean": "cross-env CLEANSETUP=true node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm run build",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
@@ -58,7 +58,7 @@
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
     "graphql:see_graph": "graphql voyager",
-    "build:static_export": "STATIC_EXPORT=true npm run build && STATIC_EXPORT=true next export"
+    "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export"
   },
   "dependencies": {
     "babel-plugin-inline-import-graphql-ast": "2.0.2",
@@ -67,6 +67,7 @@
     "color": "2.0.0",
     "compression": "1.7.1",
     "cors": "2.8.4",
+    "cross-env": "^5.1.1",
     "dotenv": "4.0.0",
     "express": "4.16.2",
     "graphql": "^0.10.5",
@@ -115,6 +116,7 @@
     "prettier": "1.7.4",
     "release": "2.5.2",
     "replace-in-file": "3.0.0-beta.2",
+    "rimraf": "^2.6.2",
     "shelljs": "0.7.8",
     "webpack-bundle-analyzer": "2.9.0"
   }
