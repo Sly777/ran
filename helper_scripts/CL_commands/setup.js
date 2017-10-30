@@ -10,6 +10,7 @@ const fs = require('fs');
 const helper = require('./__helpers');
 
 const isCleanSetup = process.env.CLEANSETUP || false;
+const projectName = path.basename(path.resolve(helper.config.appDir)) || 'RAN';
 
 clear();
 process.stdin.resume();
@@ -46,7 +47,6 @@ function cleanSetup(callback) {
 }
 
 function updateReadme(callback) {
-  const projectName = path.basename(path.dirname(helper.config.appDir));
   shell.rm('-rf', shell.find(`${helper.config.appDir}README.md`));
   helper.updateReadme(projectName, () => {
     callback();
