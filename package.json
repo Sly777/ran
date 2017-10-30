@@ -67,7 +67,7 @@
     "color": "2.0.0",
     "compression": "1.7.1",
     "cors": "2.8.4",
-    "cross-env": "^5.1.1",
+    "cross-env": "5.1.1",
     "dotenv": "4.0.0",
     "express": "4.16.2",
     "graphql": "^0.10.5",
@@ -89,6 +89,7 @@
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
+    "rimraf": "2.6.2",
     "styled-components": "2.2.3"
   },
   "devDependencies": {
@@ -116,7 +117,6 @@
     "prettier": "1.7.4",
     "release": "2.5.2",
     "replace-in-file": "3.0.0-beta.2",
-    "rimraf": "^2.6.2",
     "shelljs": "0.7.8",
     "webpack-bundle-analyzer": "2.9.0"
   }
