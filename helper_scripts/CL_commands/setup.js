@@ -21,7 +21,8 @@ function cleanSetup(callback) {
   const comps = shell
     .find(helper.config.componentsDir)
     .filter(
-      file =>
+      (file, index) =>
+        index !== 0 &&
         !file.toLowerCase().includes('appicons') &&
         !file.toLowerCase().includes('authfields') &&
         !file.toLowerCase().includes('app.js') &&
@@ -32,7 +33,8 @@ function cleanSetup(callback) {
   const pages = shell
     .find(helper.config.pagesDir)
     .filter(
-      file =>
+      (file, index) =>
+        index !== 0 &&
         !file.toLowerCase().includes('_document.js') &&
         !file.toLowerCase().includes('index.js')
     );
