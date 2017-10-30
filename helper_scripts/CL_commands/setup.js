@@ -34,9 +34,7 @@ function cleanSetup(callback) {
     .find(helper.config.pagesDir)
     .filter(
       (file, index) =>
-        index !== 0 &&
-        !file.toLowerCase().includes('_document.js') &&
-        !file.toLowerCase().includes('index.js')
+        index !== 0 && !file.toLowerCase().includes('_document.js')
     );
   shell.rm('-rf', pages);
 
