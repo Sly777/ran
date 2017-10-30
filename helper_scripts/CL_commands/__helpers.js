@@ -326,7 +326,7 @@ modules.updateReadme = function updateReadme(projectname, callback) {
     },
     code => {
       fs.writeFile(
-        `${modules.config.appDir}/README.md`,
+        `${modules.config.appDir}README.md`,
         code,
         { flag: 'wx' },
         _err => {
