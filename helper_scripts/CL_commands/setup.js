@@ -31,7 +31,11 @@ function cleanSetup(callback) {
 
   const pages = shell
     .find(helper.config.pagesDir)
-    .filter(file => !file.toLowerCase().includes('_document.js'));
+    .filter(
+      file =>
+        !file.toLowerCase().includes('_document.js') &&
+        !file.toLowerCase().includes('index.js')
+    );
   shell.rm('-rf', pages);
 
   helper.createPageFromTemplate('index', () => {});
