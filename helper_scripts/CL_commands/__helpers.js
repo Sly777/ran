@@ -318,4 +318,25 @@ modules.clearRoutes = function clearRoutes(callback) {
   );
 };
 
+modules.updateReadme = function updateReadme(projectname, callback) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/readme.hbs`,
+    {
+      projectname
+    },
+    code => {
+      fs.writeFile(
+        `${modules.config.appDir}/README.md`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
+    }
+  );
+};
+
 module.exports = modules;
