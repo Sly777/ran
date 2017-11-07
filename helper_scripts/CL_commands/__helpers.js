@@ -266,8 +266,9 @@ modules.createGraphqlFromTemplate = function createGraphqlFromTemplate(
     options,
     code => {
       fs.writeFile(
-        `${modules.config
-          .componentsDir}/${options.filename}/${options.graphqlName}.gql`,
+        `${modules.config.componentsDir}/${options.filename}/${
+          options.graphqlName
+        }.gql`,
         code,
         { flag: 'wx' },
         _err => {

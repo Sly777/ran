@@ -27,8 +27,7 @@ const PostInfo = ({ loading, Post, error }) => {
         </span>
         <span>&nbsp;|&nbsp;</span>
         <span>
-          Created At: {' '}
-          <b>{moment(Post.createdAt).format('DD.MM.YYYY kk:mm')}</b>
+          Created At: <b>{moment(Post.createdAt).format('DD.MM.YYYY kk:mm')}</b>
         </span>
       </div>
       <p>
