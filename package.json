@@ -118,6 +118,6 @@
     "release": "2.5.4",
     "replace-in-file": "3.0.0",
     "shelljs": "0.7.8",
-    "webpack-bundle-analyzer": "2.9.0"
+    "webpack-bundle-analyzer": "2.9.1"
   }
 }
