@@ -266,8 +266,9 @@ modules.createGraphqlFromTemplate = function createGraphqlFromTemplate(
     options,
     code => {
       fs.writeFile(
-        `${modules.config
-          .componentsDir}/${options.filename}/${options.graphqlName}.gql`,
+        `${modules.config.componentsDir}/${options.filename}/${
+          options.graphqlName
+        }.gql`,
         code,
         { flag: 'wx' },
         _err => {
@@ -314,6 +315,27 @@ modules.clearRoutes = function clearRoutes(callback) {
         throw error;
       }
       callback();
+    }
+  );
+};
+
+modules.updateReadme = function updateReadme(projectname, callback) {
+  modules.getTempfromHandlebar(
+    `${modules.config.templatesDir}/readme.hbs`,
+    {
+      projectname
+    },
+    code => {
+      fs.writeFile(
+        `${modules.config.appDir}README.md`,
+        code,
+        { flag: 'wx' },
+        _err => {
+          if (_err) throw _err;
+
+          callback();
+        }
+      );
     }
   );
 };

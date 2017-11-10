@@ -10,6 +10,7 @@ const fs = require('fs');
 const helper = require('./__helpers');
 
 const isCleanSetup = process.env.CLEANSETUP || false;
+const projectName = path.basename(path.resolve(helper.config.appDir)) || 'RAN';
 
 clear();
 process.stdin.resume();
@@ -18,13 +19,36 @@ process.stdin.setEncoding('utf8');
 function cleanSetup(callback) {
   if (!isCleanSetup) return callback();
 
-  exec(
-    'find ./components -not -name AppIcons -not -path "*AppIcons*" -not -name AuthFields -not -path "*AuthFields*" -not -name App.js -not -name Theme.js -delete'
-  );
-  exec('find ./pages -type f -not -name "_document.js" -print0 | xargs -0 rm');
+  const comps = shell
+    .find(helper.config.componentsDir)
+    .filter(
+      (file, index) =>
+        index !== 0 &&
+        !file.toLowerCase().includes('appicons') &&
+        !file.toLowerCase().includes('authfields') &&
+        !file.toLowerCase().includes('app.js') &&
+        !file.toLowerCase().includes('theme.js')
+    );
+  shell.rm('-rf', comps);
+
+  const pages = shell
+    .find(helper.config.pagesDir)
+    .filter(
+      (file, index) =>
+        index !== 0 && !file.toLowerCase().includes('_document.js')
+    );
+  shell.rm('-rf', pages);
+
   helper.createPageFromTemplate('index', () => {});
   helper.createContainerFromTemplate('Default', () => {});
   helper.clearRoutes(() => {
+    callback();
+  });
+}
+
+function updateReadme(callback) {
+  shell.rm('-rf', shell.find(`${helper.config.appDir}README.md`));
+  helper.updateReadme(projectName, () => {
     callback();
   });
 }
@@ -58,12 +82,14 @@ function installDepsCallback(error) {
     process.stdout.write('Initialising new repository...');
     initGit(() => {
       cleanSetup(() => {
-        clear();
-        process.stdout.write('\n');
-        process.stdout.write('\nRAN! is ready to go!');
-        process.stdout.write('\n');
-        process.stdout.write('\n');
-        process.exit(0);
+        updateReadme(() => {
+          clear();
+          process.stdout.write('\n');
+          process.stdout.write('\nRAN! is ready to go!');
+          process.stdout.write('\n');
+          process.stdout.write('\n');
+          process.exit(0);
+        });
       });
     });
   });

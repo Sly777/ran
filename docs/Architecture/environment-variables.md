@@ -26,6 +26,7 @@ For more info, please [click here to check dotenv repo](https://github.com/motdo
 
 #### Tips
 - **Do not commit the ".env" file to any repository**, .gitignore file has a definition for that. If you commit, It can possibly create security flaw on your application.
+- If you are deploying to Zeit Now, in addition to dotenv, use [Now Secrets](https://zeit.co/docs/features/env-and-secrets). Zeit's OSS plan makes the source of your app available to the public and **sensitive information in ".env", "now.json" or other files may be exposed**.
 
 ### Shared Variables between Client and Server (WIP)
 (WIP)
