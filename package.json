@@ -110,7 +110,7 @@
     "graphql-cli-voyager": "0.1.2",
     "handlebars": "4.0.11",
     "husky": "0.14.3",
-    "inquirer": "3.3.0",
+    "inquirer": "4.0.0",
     "lint-staged": "4.3.0",
     "ngrok": "2.2.23",
     "pre-commit": "1.2.2",
