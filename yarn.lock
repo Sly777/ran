@@ -7108,9 +7108,9 @@ relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
 
-release@2.5.5:
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/release/-/release-2.5.5.tgz#cca6d59f08735be37fc1d6c7b004fe813c645eb0"
+release@2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/release/-/release-2.5.6.tgz#f3b0c4b4035ce4c02811123fe0909a8d6ce75cd9"
   dependencies:
     args "3.0.7"
     async-retry "1.1.4"
