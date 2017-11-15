@@ -2,7 +2,7 @@
 
 ## Environment Variables
 
-One of the best ways to use sensitive information is setting environment variables. Even in open source repositories without hard-coding the information within publicly available repositories, It's more important. Set your environment variable by using ```.env``` files, then you can use it on your application. On Node.js applications, [Dotenv](https://github.com/motdotla/dotenv) module is the easiest way to store/retrieve environment variables. It's a zero dependency module and simple to use. For access to these variables client-side [dotenv-webpack](https://github.com/mrsteele/dotenv-webpack) has been added which only exposes variables that are used by your front-end pages, leaving the rest hidden by default.
+One of the best ways to use sensitive information is setting environment variables. Even in open source repositories without hard-coding the information within publicly available repositories, It's more important. Set your environment variable by using ```.env``` files, then you can use it on your application. On Node.js applications, [Dotenv](https://github.com/motdotla/dotenv) module is the easiest way to store/retrieve environment variables. It's a zero dependency module and simple to use. For access to these variables client-side [dotenv-webpack](https://github.com/mrsteele/dotenv-webpack) has been added which only exposes variables that are used by your front-end pages.
 
 #### How can we use?
 Just rename ".env-sample" file to ".env" to use your environment variables.
