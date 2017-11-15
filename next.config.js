@@ -2,11 +2,13 @@
 const { IgnorePlugin } = require('webpack');
 const OfflinePlugin = require('offline-plugin');
 const router = require('./routes');
+const Dotenv = require('dotenv-webpack');
 
 const initExport = {
   webpack: (config, { dev }) => {
     const prod = !dev;
 
+    config.plugins.push(new Dotenv());
     config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/));
 
     if (dev) {
