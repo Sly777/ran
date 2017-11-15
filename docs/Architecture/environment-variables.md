@@ -15,6 +15,8 @@ DB_HOST=localhost
 DB_PASSWORD=password123
 ```
 
+**On The Server**
+
 On your application, you can access these values by using ```process.env```.
 ```javascript
 process.env.PORT
@@ -24,7 +26,9 @@ process.env.DB_PASSWORD
 
 For more info, please [click here to check dotenv repo](https://github.com/motdotla/dotenv)
 
-On any of your client-side scripts, you can access your environment variables similarly.
+**On The Client**
+
+On any of your client-side scripts, you can access your environment variables similarly
 ```javascript
 export default (props) => (
   <div>You are connected on port {process.env.PORT}</div>
