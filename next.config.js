@@ -8,7 +8,7 @@ const initExport = {
   webpack: (config, { dev }) => {
     const prod = !dev;
 
-    config.plugins.push(new Dotenv());
+    config.plugins.push(new Dotenv({ path: './public.env' }));
     config.plugins.push(new IgnorePlugin(/^\.\/locale$/, /moment$/));
 
     if (dev) {

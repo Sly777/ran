@@ -7,7 +7,9 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors');
 const helmet = require('helmet');
-require('dotenv').config();
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const router = require('./routes');
 const logger = require('./server/logger');
@@ -28,6 +30,23 @@ const ssrCache = new LRUCache({
   max: 100,
   maxAge: 3600 // 1 hour
 });
+
+// share public env variables (if not already set)
+try {
+  const publicEnv = dotenv.parse(
+    fs.readFileSync(path.resolve(__dirname, 'public.env'))
+  );
+  Object.keys(publicEnv).forEach(key => {
+    if (!process.env[key]) {
+      process.env[key] = publicEnv[key];
+    }
+  });
+} catch (err) {
+  // silence is golden
+}
+
+console.log(process.env.TEST);
+console.log(process.env.TEST2);
 
 const buildStats = isProd
   ? JSON.parse(fs.readFileSync('./.next/build-stats.json', 'utf8').toString())
