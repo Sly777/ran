@@ -1,6 +1,6 @@
 {
   "name": "ran-boilerplate",
-  "version": "0.7.2",
+  "version": "0.7.1",
   "main": "server.js",
   "description": "React . Apollo (GraphQL) . Next.js Toolkit",
   "author": "Ilker Guller <me@ilkerguller.com> (http://ilkerguller.com)",
