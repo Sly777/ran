@@ -22,6 +22,7 @@ const customHost = process.env.HOST;
 const host = customHost || null;
 const prettyHost = customHost || 'localhost';
 const port = parseInt(process.env.PORT, 10) || 3000;
+const publicEnvFilename = 'public.env';
 
 const app = next({ dev: isDev });
 const handle = app.getRequestHandler();
@@ -33,20 +34,19 @@ const ssrCache = new LRUCache({
 
 // share public env variables (if not already set)
 try {
-  const publicEnv = dotenv.parse(
-    fs.readFileSync(path.resolve(__dirname, 'public.env'))
-  );
-  Object.keys(publicEnv).forEach(key => {
-    if (!process.env[key]) {
-      process.env[key] = publicEnv[key];
-    }
-  });
+  if (fs.existsSync(path.resolve(__dirname, publicEnvFilename))) {
+    const publicEnv = dotenv.parse(
+      fs.readFileSync(path.resolve(__dirname, publicEnvFilename))
+    );
+    Object.keys(publicEnv).forEach(key => {
+      if (!process.env[key]) {
+        process.env[key] = publicEnv[key];
+      }
+    });
+  }
 } catch (err) {
   // silence is golden
 }
-
-console.log(process.env.TEST);
-console.log(process.env.TEST2);
 
 const buildStats = isProd
   ? JSON.parse(fs.readFileSync('./.next/build-stats.json', 'utf8').toString())
