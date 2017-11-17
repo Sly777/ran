@@ -2,6 +2,7 @@
 .next/
 config.js
 .env
+public.env
 coverage/
 out/
 
