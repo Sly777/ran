@@ -727,9 +727,9 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-inline-import-graphql-ast@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-inline-import-graphql-ast/-/babel-plugin-inline-import-graphql-ast-2.0.2.tgz#64362e3406a9d4822b869878d199426edf9e9910"
+babel-plugin-inline-import-graphql-ast@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-inline-import-graphql-ast/-/babel-plugin-inline-import-graphql-ast-2.0.3.tgz#5fbe9326d05607fa8d330f5e62f1f2a69fe4f324"
   dependencies:
     babylon "^6.17.0"
     graphql-tag "^2.0.0"
