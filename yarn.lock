@@ -2279,7 +2279,7 @@ debug@2.6.7:
   dependencies:
     ms "2.0.0"
 
-debug@2.6.9, debug@^2.4.1, debug@^2.6.9:
+debug@2.6.9, debug@^2.4.1:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -3393,11 +3393,11 @@ follow-redirects@0.0.7:
     debug "^2.2.0"
     stream-consume "^0.1.0"
 
-follow-redirects@1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.2.5.tgz#ffd3e14cbdd5eaa72f61b6368c1f68516c2a26cc"
+follow-redirects@1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.2.6.tgz#4dcdc7e4ab3dd6765a97ff89c3b4c258117c79bf"
   dependencies:
-    debug "^2.6.9"
+    debug "^3.1.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -3683,12 +3683,14 @@ github-username@4.1.0:
   dependencies:
     gh-got "^6.0.0"
 
-github@12.0.1:
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/github/-/github-12.0.1.tgz#4f7467434d8d01152782e669e925b3115aa0b219"
+github@12.0.6:
+  version "12.0.6"
+  resolved "https://registry.yarnpkg.com/github/-/github-12.0.6.tgz#5f951307acc696e41da4ada1e88341cfbc3ae921"
   dependencies:
-    follow-redirects "1.2.5"
+    dotenv "^4.0.0"
+    follow-redirects "1.2.6"
     https-proxy-agent "^2.1.0"
+    lodash "^4.17.4"
     mime "^2.0.3"
     netrc "^0.1.4"
 
@@ -7178,9 +7180,9 @@ relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
 
-release@2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/release/-/release-2.5.6.tgz#f3b0c4b4035ce4c02811123fe0909a8d6ce75cd9"
+release@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/release/-/release-2.6.0.tgz#1d56be637edc948f5f8bf0e13f46bc5040f27881"
   dependencies:
     args "3.0.7"
     async-retry "1.1.4"
@@ -7192,7 +7194,7 @@ release@2.5.6:
     git-spawned-stream "1.0.0"
     git-state "4.0.0"
     git-username "0.5.0"
-    github "12.0.1"
+    github "12.0.6"
     github-username "4.1.0"
     inquirer "4.0.0"
     node-version "1.1.0"
