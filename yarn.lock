@@ -5730,9 +5730,9 @@ next-cookies@Sly777/next-cookies#master:
     component-cookie "^1.1.3"
     cookie "^0.3.1"
 
-next-routes@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/next-routes/-/next-routes-1.1.0.tgz#8b924603b553b905ab285e47d710d4dc3fa5962e"
+next-routes@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/next-routes/-/next-routes-1.1.1.tgz#b0221e84a91684bf5cf8ae8df2cf1eca5d82080e"
   dependencies:
     path-to-regexp "^1.7.0"
 
