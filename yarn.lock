@@ -3915,9 +3915,9 @@ graphql-cli-voyager@0.1.2:
     graphql-voyager "^1.0.0-rc.7"
     opn "^5.1.0"
 
-graphql-cli@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/graphql-cli/-/graphql-cli-2.0.4.tgz#8c7a4dd53261966e61277346e271d237c85dede1"
+graphql-cli@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/graphql-cli/-/graphql-cli-2.0.5.tgz#b708a3bfe0b8d598010f67532d876db33e69ab30"
   dependencies:
     chalk "^2.3.0"
     disparity "^2.0.0"
