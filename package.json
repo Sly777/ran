@@ -77,7 +77,7 @@
     "isomorphic-fetch": "2.2.1",
     "js-cookie": "2.2.0",
     "lru-cache": "4.1.1",
-    "moment": "2.19.4",
+    "moment": "2.20.0",
     "next": "4.2.1",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.2.0",
