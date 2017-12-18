@@ -18,7 +18,9 @@ type Context = {
   pathname: string,
   query: string,
   asPath: string,
-  req?: Object,
+  req?: {
+    headers?: Object
+  },
   res?: Object,
   jsonPageRes?: Object,
   err?: Object
@@ -38,7 +40,7 @@ export default (Component: React.ComponentType<any>) =>
 
     static async getInitialProps(ctx: Context) {
       const headers = ctx.req ? ctx.req.headers : {};
-      const token = cookies(ctx)[persist.ACCESS_TOKEN_KEY];
+      const token: string = cookies(ctx)[persist.ACCESS_TOKEN_KEY];
 
       const client = apolloClient(headers, token);
       const store = reduxStore(client, client.initialState, token);

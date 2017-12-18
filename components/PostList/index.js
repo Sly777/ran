@@ -14,13 +14,20 @@ import {
 } from './styles';
 import connect from './store';
 
+type Post = {
+  id: string | number,
+  title: string,
+  votes: number,
+  createdAt: string
+};
+
 type Props = {
   data: {
-    allPosts: Array<*>,
-    _allPostsMeta: any,
+    allPosts: Array<Post>,
+    _allPostsMeta: { count: number },
     loading: boolean
   },
-  loadMorePosts: Function
+  loadMorePosts: () => void
 };
 
 const PostList = ({ data, loadMorePosts }: Props) => {
