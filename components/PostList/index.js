@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
 import PostUpvoter from '../PostUpvoter';
@@ -12,7 +14,16 @@ import {
 } from './styles';
 import connect from './store';
 
-const PostList = ({ data, loadMorePosts }) => {
+type Props = {
+  data: {
+    allPosts: Array<*>,
+    _allPostsMeta: any,
+    loading: boolean
+  },
+  loadMorePosts: Function
+};
+
+const PostList = ({ data, loadMorePosts }: Props) => {
   if (data.allPosts && data.allPosts.length) {
     const areMorePosts = data.allPosts.length < data._allPostsMeta.count;
     return (
