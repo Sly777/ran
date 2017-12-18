@@ -22,20 +22,20 @@
 
 - ***Production Deployment Ready for Now, Digital Ocean and Heroku***
 
-- ***Prettier and Eslint integrated***
+- ***Prettier and ESLint integrated***
 
 ## How to use
 
-- Firstly, Clone the repo with this command.
+- Firstly, clone the repo with this command.
 
 ```bash
 git clone --depth=1 https://github.com/Sly777/ran.git RAN
 cd RAN
-yarn install && yarn run setup
+yarn && yarn setup
 ```
 
-- If you are not using Yarn, just run ```npm install && npm run setup``` instead ```yarn install && yarn run setup```
-- After everything is finished, run ```yarn run dev``` (or ```npm run dev```)
+- If you are not using Yarn, just run ```npm install && npm run setup``` instead of ```yarn && yarn setup```
+- After everything is finished, run ```yarn dev``` (or ```npm run dev```)
 
 And that's all!
 
@@ -44,17 +44,17 @@ And that's all!
 ```bash
 git clone --depth=1 https://github.com/Sly777/ran.git RAN
 cd RAN
-yarn install && yarn run setup:clean
+yarn && yarn setup:clean
 ```
 
 #### Beta Version (Unstable)
 
-Also, There is a ```beta``` version for new features & fixes that we are testing before release. To access beta;
+Also, there is a ```beta``` version for new features & fixes that we are testing before release. To access beta;
 
 ```bash
 git clone --depth=1 -b beta https://github.com/Sly777/ran.git RAN_beta
 cd RAN_beta
-yarn install && yarn run setup
+yarn && yarn setup
 ```
 
 It can be unstable, so that's why please use stable version if you are working on the project that is in production.
