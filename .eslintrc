@@ -13,7 +13,8 @@
   ],
   "plugins": [
     "prettier",
-    "import"
+    "import",
+    "flowtype"
   ],
   "globals": {
     "document": true,
@@ -44,5 +45,10 @@
     "prettier/prettier": ["error", {
       "singleQuote": true
     }]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   }
 }
