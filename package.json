@@ -91,7 +91,7 @@
     "react-redux": "5.0.6",
     "redux": "3.7.2",
     "rimraf": "2.6.2",
-    "styled-components": "2.3.0"
+    "styled-components": "2.3.2"
   },
   "devDependencies": {
     "babel-eslint": "8.0.3",
