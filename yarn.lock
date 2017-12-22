@@ -8209,9 +8209,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-styled-components@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.3.2.tgz#323d86cc9ac89f3fd233a2dfa0849da236f143e3"
+styled-components@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.3.3.tgz#351d0be84699db750c73d95617e4334157421f71"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
