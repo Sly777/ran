@@ -6,7 +6,7 @@
 
 - _I have graphQL endpoint for my project. How can I use it?_
 
-  Just change the URL on [/libraries/apolloClient.js]([/libraries/apolloClient.js) line:8
+  Just change the URL on [/libraries/apolloClient.js](/libraries/apolloClient.js) line:6
 
 - _What is GraphQL?_
 
