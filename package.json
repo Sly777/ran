@@ -116,7 +116,7 @@
     "ngrok": "2.2.24",
     "pre-commit": "1.2.2",
     "prettier": "1.9.2",
-    "release": "3.0.2",
+    "release": "3.0.3",
     "replace-in-file": "3.1.0",
     "shelljs": "0.7.8",
     "webpack-bundle-analyzer": "2.9.1"
