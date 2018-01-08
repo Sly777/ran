@@ -24,3 +24,11 @@ declare type HeadersType = {
   'upgrade-insecure-requests': string,
   'user-agent': string
 };
+
+declare type Post = {
+  id: string,
+  title: string,
+  votes: number,
+  createdAt: string,
+  url: string
+};

@@ -14,13 +14,6 @@ import {
 } from './styles';
 import connect from './store';
 
-type Post = {
-  id: string | number,
-  title: string,
-  votes: number,
-  createdAt: string
-};
-
 type Props = {
   data: {
     allPosts: Array<Post>,
