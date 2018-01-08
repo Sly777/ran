@@ -9,14 +9,15 @@ import reduxStore from './reduxStore';
 import persist from './persist';
 
 type Props = {
-  headers: Object,
+  headers: HeadersType,
   accessToken: ?string,
-  initialState: Object
+  initialState: Object,
+  url: UrlType
 };
 
 type Context = {
   pathname: string,
-  query: string,
+  query: Object,
   asPath: string,
   req?: {
     headers?: Object
@@ -26,9 +27,11 @@ type Context = {
   err?: Object
 };
 
-export default (Component: React.ComponentType<any>) =>
+export default (
+  Component: React.ComponentType<*>
+): React.ComponentType<Props> =>
   class extends React.Component<Props> {
-    static propTypes: Props = {
+    static propTypes = {
       headers: PropTypes.object.isRequired,
       accessToken: PropTypes.string,
       initialState: PropTypes.object.isRequired
@@ -73,7 +76,7 @@ export default (Component: React.ComponentType<any>) =>
       };
     }
 
-    constructor(props: Object) {
+    constructor(props: Props) {
       super(props);
 
       this.apolloClient = apolloClient(this.props.headers);
