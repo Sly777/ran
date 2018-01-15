@@ -78,7 +78,7 @@
     "js-cookie": "2.2.0",
     "lru-cache": "4.1.1",
     "moment": "2.20.1",
-    "next": "4.2.2",
+    "next": "4.2.3",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.2.0",
     "offline-plugin": "4.9.0",
@@ -118,7 +118,7 @@
     "prettier": "1.10.2",
     "release": "3.0.3",
     "replace-in-file": "3.1.0",
-    "shelljs": "0.7.8",
+    "shelljs": "0.8.0",
     "webpack-bundle-analyzer": "2.9.2"
   }
 }
