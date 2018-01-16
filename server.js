@@ -29,7 +29,7 @@ const handle = app.getRequestHandler();
 
 const ssrCache = new LRUCache({
   max: 100,
-  maxAge: 3600 // 1 hour
+  maxAge: 1000 * 60 * 60 // 1hour
 });
 
 // share public env variables (if not already set)
