@@ -37,12 +37,7 @@
     "consistent-return": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "import/no-extraneous-dependencies": 0,
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true
-      }
-    ],
+    "prettier/prettier": "error",
     "flowtype/define-flow-type": 1
   },
   "settings": {
