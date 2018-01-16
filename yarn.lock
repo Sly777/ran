@@ -3565,13 +3565,14 @@ github-username@4.1.0:
   dependencies:
     gh-got "^6.0.0"
 
-github@13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/github/-/github-13.0.1.tgz#4ccf4a41df662f92367e77a474674eabb1b6c78d"
+github@13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/github/-/github-13.1.0.tgz#fc925950beebdff0cb0583197598b86f41bedaa4"
   dependencies:
     debug "^3.1.0"
     dotenv "^4.0.0"
     https-proxy-agent "^2.1.0"
+    is-stream "^1.1.0"
     lodash "^4.17.4"
     proxy-from-env "^1.0.0"
     url-template "^2.0.8"
@@ -4535,6 +4536,24 @@ inquirer@4.0.2:
     run-async "^2.2.0"
     rx-lite "^4.0.8"
     rx-lite-aggregates "^4.0.8"
+    string-width "^2.1.0"
+    strip-ansi "^4.0.0"
+    through "^2.3.6"
+
+inquirer@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-5.0.0.tgz#261b77cdb535495509f1b90197108ffb96c02db5"
+  dependencies:
+    ansi-escapes "^3.0.0"
+    chalk "^2.0.0"
+    cli-cursor "^2.1.0"
+    cli-width "^2.0.0"
+    external-editor "^2.1.0"
+    figures "^2.0.0"
+    lodash "^4.3.0"
+    mute-stream "0.0.7"
+    run-async "^2.2.0"
+    rxjs "^5.5.2"
     string-width "^2.1.0"
     strip-ansi "^4.0.0"
     through "^2.3.6"
@@ -7032,9 +7051,9 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-release@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/release/-/release-3.0.3.tgz#3cd28b266b3eed87545d48f78e3e8708b1e0c5f2"
+release@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/release/-/release-3.1.0.tgz#cb1195528e21fefe2d9d9c1eb563fc75ec8c6a87"
   dependencies:
     args "3.0.8"
     async-retry "1.1.4"
@@ -7046,9 +7065,9 @@ release@3.0.3:
     git-spawned-stream "1.0.0"
     git-state "4.0.0"
     git-username "0.5.0"
-    github "13.0.1"
+    github "13.1.0"
     github-username "4.1.0"
-    inquirer "4.0.2"
+    inquirer "5.0.0"
     node-version "1.1.0"
     open "0.0.5"
     ora "1.3.0"
@@ -7348,6 +7367,12 @@ rxjs@^5.4.2:
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.2.tgz#28d403f0071121967f18ad665563255d54236ac3"
   dependencies:
     symbol-observable "^1.0.1"
+
+rxjs@^5.5.2:
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.6.tgz#e31fb96d6fd2ff1fd84bcea8ae9c02d007179c02"
+  dependencies:
+    symbol-observable "1.0.1"
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
@@ -7875,6 +7900,10 @@ supports-color@^4.2.1:
 svg-pan-zoom@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/svg-pan-zoom/-/svg-pan-zoom-3.5.2.tgz#18a2d68c27d15ffc562d4a7f9925519269f6abd0"
+
+symbol-observable@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
 symbol-observable@^0.2.2:
   version "0.2.4"
