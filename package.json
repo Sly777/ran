@@ -29,25 +29,23 @@
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "scripts": {
-    "start":
-      "cross-env NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
+    "start": "cross-env NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
     "build": "npm run clean-cache && next build",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "dev": "npm run lint && npm run clean-cache && node server.js",
     "dev:next": "npm run lint && npm run clean-cache && next",
-    "start:next":
-      "node ./node_modules/.bin/pm2 start npm --name \"next\" -- start",
-    "lint":
-      "eslint --fix --ext .js pages components containers libraries server helper_scripts",
+    "start:next": "node ./node_modules/.bin/pm2 start npm --name \"next\" -- start",
+    "lint": "eslint --fix --ext .js pages components containers libraries server helper_scripts",
     "lint:watch": "esw -w --fix components libraries server",
     "analyze": "cross-env ANALYZE_BUILD=true npm run build",
-    "setup":
-      "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
-    "setup:clean":
-      "cross-env CLEANSETUP=true node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
+    "setup": "node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
+    "setup:clean": "cross-env CLEANSETUP=true node ./helper_scripts/CL_commands/setup.js && npm run setup:after",
     "setup:after": "npm run build",
     "create:page": "node ./helper_scripts/CL_commands/create_page.js",
     "create:route": "node ./helper_scripts/CL_commands/create_route.js",
@@ -60,8 +58,7 @@
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
     "graphql:see_graph": "graphql voyager",
-    "build:static_export":
-      "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export"
+    "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export"
   },
   "dependencies": {
     "babel-plugin-inline-import-graphql-ast": "2.0.4",
@@ -126,5 +123,9 @@
     "replace-in-file": "3.1.0",
     "shelljs": "0.8.0",
     "webpack-bundle-analyzer": "2.9.2"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/ran"
   }
 }

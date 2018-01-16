@@ -3,7 +3,7 @@
 
 [![Backers on Open Collective](https://opencollective.com/ran/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/ran/sponsors/badge.svg)](#sponsors)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Sly777/ran.svg)](https://greenkeeper.io/) [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) [![Join the chat at https://gitter.im/ran-boilerplate/Lobby](https://badges.gitter.im/ran-boilerplate/Lobby.svg)](https://gitter.im/ran-boilerplate/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/Sly777/ran.svg?branch=master)](https://travis-ci.org/Sly777/ran) [![license](https://img.shields.io/github/license/sly777/ran.svg)]()<br/>
-[![Code Climate](https://codeclimate.com/github/Sly777/ran/badges/gpa.svg)](https://codeclimate.com/github/Sly777/ran) [![Known Vulnerabilities](https://snyk.io/test/github/sly777/ran/badge.svg)](https://snyk.io/test/github/sly777/ran) [![npm](https://img.shields.io/npm/v/ran-boilerplate.svg)](https://www.npmjs.com/package/ran-boilerplate) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![GitHub stars](https://img.shields.io/github/stars/sly777/ran.svg?style=social&label=Stars)](https://github.com/Sly777/ran) [![Backers on Open Collective](https://opencollective.com/ran/tiers/backer/badge.svg?label=backer&color=brightgreen)](https://opencollective.com/ran) 
+[![Code Climate](https://codeclimate.com/github/Sly777/ran/badges/gpa.svg)](https://codeclimate.com/github/Sly777/ran) [![Known Vulnerabilities](https://snyk.io/test/github/sly777/ran/badge.svg)](https://snyk.io/test/github/sly777/ran) [![npm](https://img.shields.io/npm/v/ran-boilerplate.svg)](https://www.npmjs.com/package/ran-boilerplate) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![GitHub stars](https://img.shields.io/github/stars/sly777/ran.svg?style=social&label=Stars)](https://github.com/Sly777/ran)
 
 ## Features
 
@@ -103,57 +103,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/694940?v=4" width="100px;"/><br /><sub><b>Ilker Güller</b></sub>](http://ilkerguller.com)<br />[💻](https://github.com/sly777/ran/commits?author=Sly777 "Code") [📖](https://github.com/sly777/ran/commits?author=Sly777 "Documentation") [👀](#review-Sly777 "Reviewed Pull Requests") [📢](#talk-Sly777 "Talks") | [<img src="https://avatars2.githubusercontent.com/u/7573215?v=4" width="100px;"/><br /><sub><b>bjornmelgaard</b></sub>](https://bitbucket.org/melgaardbjorn)<br />[💻](https://github.com/sly777/ran/commits?author=BjornMelgaard "Code") [💬](#question-BjornMelgaard "Answering Questions") | [<img src="https://avatars0.githubusercontent.com/u/10152022?v=4" width="100px;"/><br /><sub><b>Asten Mies</b></sub>](https://github.com/astenmies)<br />[💻](https://github.com/sly777/ran/commits?author=astenmies "Code") | [<img src="https://avatars0.githubusercontent.com/u/3647106?v=4" width="100px;"/><br /><sub><b>Jordi Talens</b></sub>](https://github.com/talensjr)<br />[💻](https://github.com/sly777/ran/commits?author=talensjr "Code") |
+| [<img src="https://avatars0.githubusercontent.com/u/694940?v=4" width="100px;"/><br /><sub><b>Ilker Guller</b></sub>](http://ilkerguller.com)<br />[💻](https://github.com/sly777/ran/commits?author=Sly777 "Code") [📖](https://github.com/sly777/ran/commits?author=Sly777 "Documentation") [👀](#review-Sly777 "Reviewed Pull Requests") [📢](#talk-Sly777 "Talks") | [<img src="https://avatars2.githubusercontent.com/u/7573215?v=4" width="100px;"/><br /><sub><b>bjornmelgaard</b></sub>](https://bitbucket.org/melgaardbjorn)<br />[💻](https://github.com/sly777/ran/commits?author=BjornMelgaard "Code") [💬](#question-BjornMelgaard "Answering Questions") | [<img src="https://avatars0.githubusercontent.com/u/10152022?v=4" width="100px;"/><br /><sub><b>Asten Mies</b></sub>](https://github.com/astenmies)<br />[💻](https://github.com/sly777/ran/commits?author=astenmies "Code") | [<img src="https://avatars0.githubusercontent.com/u/3647106?v=4" width="100px;"/><br /><sub><b>Jordi Talens</b></sub>](https://github.com/talensjr)<br />[💻](https://github.com/sly777/ran/commits?author=talensjr "Code") |
 | :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
-
-<!doctype html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/public/vendors/normalize.css">
-    <title>Open Collective</title>
-    <style>
-      #content-404 {
-        margin: 7% auto;
-        max-width: 400px;
-        font-size: 18px;
-      }
-
-      #content-404 img{
-        width: 100%;
-      }
-
-      #content-404 p{
-        margin-left: 13px;
-      }
-  </style>
-  </head>
-  <body>
-    <div id="content-404">
-      <a href='https://opencollective.com/'> <img src='/public/images/LogoLargeTransparent.png'></a>
-
-      <p><b>We couldn&#x27;t find that page :(</b></p>
-      <pre></pre>
-
-      <p>Try our <a href='https://opencollective.com/'>homepage</a>, <a href='https://opencollective.com/faq'>FAQ</a> or <a href='https://medium.com/open-collective'>blog</a>. </p>
-
-      <p>Or chat with us on our <a href='https://slack.opencollective.com/'>Slack channel</a>.</p>
-
-      <img src='/public/images/404.gif'>
-
-    </div>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-        ga('create', 'UA-71870756-1', 'auto');
-        ga('send', 'pageview');
-    
-      </script>
-  </body>
-</html>
