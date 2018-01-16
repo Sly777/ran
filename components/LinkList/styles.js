@@ -4,7 +4,6 @@ import * as T from '../Theme';
 export const A = T.A.extend`
   font-size: 14px;
   margin-right: 15px;
-  text-decoration: none;
   cursor: pointer;
   text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
 `;

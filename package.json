@@ -81,7 +81,7 @@
     "js-cookie": "2.2.0",
     "lru-cache": "4.1.1",
     "moment": "2.20.1",
-    "next": "4.2.1",
+    "next": "4.2.3",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.2.0",
     "offline-plugin": "4.9.0",
@@ -97,7 +97,7 @@
     "styled-components": "2.4.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.1.2",
+    "babel-eslint": "8.2.1",
     "babel-preset-flow": "6.23.0",
     "cli-clear": "1.0.4",
     "eslint": "4.15.0",
@@ -113,7 +113,7 @@
     "eslint-watch": "3.1.3",
     "figlet": "1.2.0",
     "flow-bin": "0.59.0",
-    "graphql-cli": "2.10.0",
+    "graphql-cli": "2.10.1",
     "graphql-cli-voyager": "0.1.3",
     "handlebars": "4.0.11",
     "husky": "0.14.3",
@@ -121,10 +121,10 @@
     "lint-staged": "6.0.0",
     "ngrok": "2.2.24",
     "pre-commit": "1.2.2",
-    "prettier": "1.9.2",
+    "prettier": "1.10.2",
     "release": "3.0.3",
     "replace-in-file": "3.1.0",
-    "shelljs": "0.7.8",
-    "webpack-bundle-analyzer": "2.9.1"
+    "shelljs": "0.8.0",
+    "webpack-bundle-analyzer": "2.9.2"
   }
 }
