@@ -1,9 +1,16 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import connect from './store';
 import { UpvoteButton } from './styles';
 
-const PostUpvoter = ({ upvote, votes, id }) => (
+type Props = {
+  upvote: (string | number, number) => void,
+  id: string,
+  votes?: number
+};
+
+const PostUpvoter = ({ upvote, votes, id }: Props) => (
   <UpvoteButton onClick={() => upvote(id, votes + 1)}>{votes}</UpvoteButton>
 );
 
@@ -14,7 +21,7 @@ PostUpvoter.propTypes = {
 };
 
 PostUpvoter.defaultProps = {
-  votes: []
+  votes: 0
 };
 
 export default connect(PostUpvoter);

@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
 import PostUpvoter from '../PostUpvoter';
@@ -12,16 +14,22 @@ import {
 } from './styles';
 import connect from './store';
 
-const PostList = ({
-  data: { allPosts, loading, _allPostsMeta },
-  loadMorePosts
-}) => {
-  if (allPosts && allPosts.length) {
-    const areMorePosts = allPosts.length < _allPostsMeta.count;
+type Props = {
+  data: {
+    allPosts: Array<Post>,
+    _allPostsMeta: { count: number },
+    loading: boolean
+  },
+  loadMorePosts: () => void
+};
+
+const PostList = ({ data, loadMorePosts }: Props) => {
+  if (data.allPosts && data.allPosts.length) {
+    const areMorePosts = data.allPosts.length < data._allPostsMeta.count;
     return (
       <Main>
         <ItemList>
-          {allPosts.map((post, index) => (
+          {data.allPosts.map((post, index) => (
             <Item key={post.id}>
               <div>
                 <Index>{index + 1}. </Index>
@@ -42,7 +50,7 @@ const PostList = ({
         </ItemList>
         {areMorePosts ? (
           <ShowMore onClick={() => loadMorePosts()}>
-            {loading ? 'Loading...' : 'Show More'}
+            {data.loading ? 'Loading...' : 'Show More'}
           </ShowMore>
         ) : (
           ''

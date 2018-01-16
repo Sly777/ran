@@ -1,9 +1,19 @@
+// @flow
+import * as React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { Section, A } from './styles';
 import connect from './store';
 
-const PostInfo = ({ loading, Post, error }) => {
+type Props = {
+  loading: boolean,
+  Post?: Post,
+  error?: string,
+  postId: string,
+  postName: string
+};
+
+const PostInfo = ({ loading, Post, error }: Props) => {
   if (loading) {
     return (
       <Section>
@@ -20,19 +30,24 @@ const PostInfo = ({ loading, Post, error }) => {
 
   return (
     <Section>
-      <h1>{Post.title}</h1>
+      <h1>{Post && Post.title}</h1>
       <div>
         <span>
-          ID: <b>{Post.id}</b>
+          ID: <b>{Post && Post.id}</b>
         </span>
         <span>&nbsp;|&nbsp;</span>
         <span>
-          Created At: <b>{moment(Post.createdAt).format('DD.MM.YYYY kk:mm')}</b>
+          Created At:{' '}
+          <b>{moment(Post && Post.createdAt).format('DD.MM.YYYY kk:mm')}</b>
         </span>
       </div>
       <p>
-        <A target="_blank" href={Post.url} rel="noopener noreferrer nofollow">
-          {Post.url}
+        <A
+          target="_blank"
+          href={Post && Post.url}
+          rel="noopener noreferrer nofollow"
+        >
+          {Post && Post.url}
         </A>
       </p>
     </Section>

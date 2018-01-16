@@ -1,8 +1,16 @@
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../../routes';
 import { A, LogOutButton, Nav, Externals } from './styles';
 
-const LinkList = ({ pathname, authenticated, logout }) => (
+type Props = {
+  pathname: string,
+  authenticated: boolean,
+  logout: Function
+};
+
+const LinkList = ({ pathname, authenticated, logout }: Props) => (
   <Nav>
     <Link prefetch href="/" passHref>
       <A active={pathname === '/'}>Main Page</A>

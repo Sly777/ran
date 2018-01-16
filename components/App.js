@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import color from 'color';
@@ -6,7 +8,12 @@ import { App as ThemedApp } from '../components/Theme';
 
 let offlineInstalled = false;
 
-const App = ({ children, theme }) => {
+type Props = {
+  children: React.Node,
+  theme?: string
+};
+
+const App = ({ children, theme }: Props) => {
   const themeName = !themeList[theme] ? 'main' : theme;
   if (!themeList[themeName].helper) themeList[themeName].helper = color;
 
