@@ -1,9 +1,19 @@
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import LinkList from '../../components/LinkList';
 import { Header as StyledHeader, Img } from './styles';
 import connect from './store';
 
-const Header = ({ pathname, authenticated, actions: { logout } }) => (
+type Props = {
+  pathname: string,
+  authenticated?: boolean,
+  actions: {
+    logout: Function
+  }
+};
+
+const Header = ({ pathname, authenticated, actions: { logout } }: Props) => (
   <StyledHeader>
     <Img
       alt="RAN!"

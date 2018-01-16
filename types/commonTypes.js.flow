@@ -1,0 +1,34 @@
+/* @flow */
+
+declare type UrlType = {
+  asPath?: string,
+  back?: Function,
+  pathname: string,
+  push?: Function,
+  pushTo?: Function,
+  query: Object,
+  replace?: Function,
+  replaceTo?: Function
+};
+
+declare type HeadersType = {
+  accept: string,
+  'accpet-encoding': string,
+  'accept-language': string,
+  'cache-control': string,
+  connection: string,
+  cookie: string,
+  host: string,
+  pragma: string,
+  referer: string,
+  'upgrade-insecure-requests': string,
+  'user-agent': string
+};
+
+declare type Post = {
+  id: string,
+  title: string,
+  votes: number,
+  createdAt: string,
+  url: string
+};

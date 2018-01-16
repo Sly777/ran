@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import PostInfo from '../components/PostInfo';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';
