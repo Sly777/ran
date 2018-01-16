@@ -2691,11 +2691,11 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-graphql@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-graphql/-/eslint-plugin-graphql-1.4.1.tgz#8c7d49548a7fa47526a68255d80739ac3d018f4f"
+eslint-plugin-graphql@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-graphql/-/eslint-plugin-graphql-1.5.0.tgz#1f0861b6499906f7ce153f9e83633659e4374ef6"
   dependencies:
-    graphql-config "^1.0.7"
+    graphql-config "~1.0.9"
     lodash "^4.11.1"
 
 eslint-plugin-import@2.8.0:
@@ -3982,22 +3982,22 @@ graphql-config@^1.0.0:
     minimatch "^3.0.4"
     rimraf "^2.6.1"
 
-graphql-config@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-1.0.7.tgz#424bda7da2e70ad6bbec4bd26c83f1d9cb49b271"
-  dependencies:
-    graphql "^0.11.6"
-    graphql-request "^1.2.0"
-    js-yaml "^3.9.0"
-    minimatch "^3.0.4"
-    rimraf "^2.6.1"
-
 graphql-config@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-1.1.1.tgz#40f22d4845ee629d3344b31c4c9db8f695ddcad5"
   dependencies:
     graphql "^0.12.3"
     graphql-import "^0.1.7"
+    graphql-request "^1.4.0"
+    js-yaml "^3.10.0"
+    minimatch "^3.0.4"
+    rimraf "^2.6.2"
+
+graphql-config@~1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-1.0.9.tgz#8fa416a7c2bdb8f62f441324775dd3ff8a266652"
+  dependencies:
+    graphql "^0.11.7"
     graphql-request "^1.4.0"
     js-yaml "^3.10.0"
     minimatch "^3.0.4"
@@ -4138,9 +4138,9 @@ graphql@0.12.3, graphql@^0.12.3:
   dependencies:
     iterall "^1.1.0"
 
-graphql@^0.11.6:
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.6.tgz#f0146b5dc1480fda579c21bb6238970fd5cf5aa3"
+graphql@^0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
   dependencies:
     iterall "1.1.3"
 
