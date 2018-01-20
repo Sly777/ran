@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import Filter from 'bad-words';
 import { Form, SubmitButton } from './styles';
@@ -9,7 +10,13 @@ import words from '../../libraries/badWords';
 const filter = new Filter({ placeHolder: ' ' });
 filter.addWords(words);
 
-class CreateForm extends React.Component {
+type Props = {
+  mutations: {
+    createPost: Function
+  }
+};
+
+class CreateForm extends React.Component<Props, *> {
   static propTypes = {
     mutations: PropTypes.shape({
       createPost: PropTypes.func.isRequired

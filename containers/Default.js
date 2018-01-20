@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import App from '../components/App';
@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import { onComponentDidMount } from '../libraries/googleAnalytics';
 import ProjectInfo from '../components/ProjectInfo';
 
-export default class Default extends Component {
+export default class Default extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     url: PropTypes.object.isRequired,

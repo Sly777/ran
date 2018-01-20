@@ -1,7 +1,7 @@
 ﻿# projectId: cj7ke77fv0e9i0122pflagbvx
-# version: 3
+# version: 4
 
-type File implements Node {
+type File @model {
   contentType: String!
   createdAt: DateTime!
   id: ID! @isUnique
@@ -12,7 +12,7 @@ type File implements Node {
   url: String! @isUnique
 }
 
-type User implements Node {
+type User @model {
   createdAt: DateTime!
   email: String @isUnique
   id: ID! @isUnique
@@ -22,7 +22,7 @@ type User implements Node {
   lastName: String!
 }
 
-type Post implements Node {
+type Post @model {
   createdAt: DateTime!
   id: ID! @isUnique
   title: String!

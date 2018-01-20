@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import { ProjectInfo as StyledProjectInfo } from './styles';
 
 const ProjectInfo = () => (

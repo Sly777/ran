@@ -1,7 +1,8 @@
+// @flow
 const cookies = require('js-cookie');
 
 class persist {
-  static get ACCESS_TOKEN_KEY() {
+  static get ACCESS_TOKEN_KEY(): string {
     return 'accessToken';
   }
 
@@ -9,7 +10,7 @@ class persist {
     return cookies.get(persist.ACCESS_TOKEN_KEY);
   }
 
-  static async willSetAccessToken(value) {
+  static async willSetAccessToken(value: string) {
     return cookies.set(persist.ACCESS_TOKEN_KEY, value);
   }
 
