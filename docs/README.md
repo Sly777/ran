@@ -24,6 +24,8 @@
 
   * [Static HTML Export](Architecture/static-html-export.md)
 
+  * [Type Checking](Architecture/type-checking.md)
+
 * [Packages](Packages.md)
 
 * [Commands](Commands.md)
