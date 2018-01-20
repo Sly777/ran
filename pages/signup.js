@@ -1,3 +1,5 @@
+// @flow
+import * as React from 'react';
 import SignUpForm from '../components/SignUpForm';
 import withData from '../libraries/withData';
 import DefaultCon from '../containers/Default';

@@ -1,10 +1,30 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import AuthFields from '../AuthFields';
 import validate from '../AuthFields/validation';
 import connect from './store';
 
-class SignUpForm extends React.Component {
+type Props = {
+  mutations: {
+    signUp: Object => Promise<Object>
+  },
+  actions: {
+    signIn: string => void
+  }
+};
+
+type State = {
+  errors: Object,
+  serverErrors: {
+    message?: string
+  },
+  touched: boolean,
+  email?: string,
+  password?: string
+};
+
+class SignUpForm extends React.Component<Props, State> {
   static propTypes = {
     mutations: PropTypes.shape({
       signUp: PropTypes.func.isRequired
@@ -20,7 +40,7 @@ class SignUpForm extends React.Component {
     touched: false
   };
 
-  getServerErrors(err) {
+  getServerErrors(err: { graphQLErrors?: Array<{ message: string }> }) {
     if (err.graphQLErrors) {
       const obj = {};
       obj.message = err.graphQLErrors[0].message;
@@ -41,15 +61,15 @@ class SignUpForm extends React.Component {
     this.setState({ touched: true });
   };
 
-  handleChange = e => {
-    const fieldValue = e.target.value;
-    const fieldName = e.target.name;
+  handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
+    const fieldValue = e.currentTarget.value;
+    const fieldName = e.currentTarget.name;
     const obj = {};
     obj[fieldName] = fieldValue;
     this.setState(obj);
   };
 
-  handleSubmit(e, valuesPack) {
+  handleSubmit(e: SyntheticEvent<HTMLButtonElement>, valuesPack) {
     e.preventDefault();
 
     // reset state
@@ -69,16 +89,23 @@ class SignUpForm extends React.Component {
 
     this.props.mutations
       .signUp(valuesPack)
-      .then(response => {
-        if (response.data.signinUser) {
-          this.props.actions.signIn(response.data.signinUser.token);
-        } else {
-          this.setState({
-            errors: response.data.createUser.errors
-          });
+      .then(
+        (response: {
+          data: {
+            signinUser: { token: string },
+            createUser: { errors: Object }
+          }
+        }) => {
+          if (response.data.signinUser) {
+            this.props.actions.signIn(response.data.signinUser.token);
+          } else {
+            this.setState({
+              errors: response.data.createUser.errors
+            });
+          }
         }
-      })
-      .catch(err => {
+      )
+      .catch((err: { graphQLErrors?: Array<{ message: string }> }) => {
         this.getServerErrors(err);
       });
   }
@@ -89,15 +116,17 @@ class SignUpForm extends React.Component {
     const valuesPack = {};
 
     fields.map(x => {
-      const y = x.attr.name;
-      valuesPack[y] = this.state[y];
+      const y: string = x.attr.name;
+      if (this.state[y]) {
+        valuesPack[y] = this.state[y];
+      }
       return valuesPack;
     });
 
     return (
       <div>
         <AuthFields
-          handleSubmit={e => {
+          handleSubmit={(e: SyntheticEvent<HTMLButtonElement>) => {
             this.handleSubmit(e, valuesPack);
           }}
           handleChange={this.handleChange}

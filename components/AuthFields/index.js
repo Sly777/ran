@@ -1,8 +1,19 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Main, SubmitButton } from './styles';
 
-const AuthFields = props => {
+type Props = {
+  selectFields: string,
+  fields: Array<{ key: number, attr: { [string]: string } }>,
+  handleTouch: Function,
+  handleChange: Function,
+  handleSubmit: Function,
+  touched: boolean,
+  errors: ?{ [string]: string }
+};
+
+const AuthFields = (props: Props) => {
   const {
     selectFields,
     fields,
