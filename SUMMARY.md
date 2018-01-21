@@ -14,6 +14,7 @@
     * [Static HTML Export](docs/Architecture/static-html-export.md)
     * [Static Files](docs/Architecture/static-files.md)
     * [Environment Variables](docs/Architecture/environment-variables.md)
+    * [Type Checking](docs/Architecture/type-checking.md)
   * [Commands](docs/Commands.md)
   * [Styling](docs/Styling.md)
   * [Routing](docs/Routing.md)
