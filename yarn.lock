@@ -6163,9 +6163,9 @@ pm2-multimeter@^0.1.2:
   dependencies:
     charm "~0.1.1"
 
-pm2@2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.9.1.tgz#1da402931be80f87208bd3fb50bc2cfa7d486335"
+pm2@2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/pm2/-/pm2-2.9.3.tgz#2b810896db2270f61729ab9756cdeb5898862442"
   dependencies:
     async "^2.5"
     blessed "^0.1.81"
@@ -6186,20 +6186,21 @@ pm2@2.9.1:
     pm2-axon-rpc "0.5.0"
     pm2-deploy "^0.3.9"
     pm2-multimeter "^0.1.2"
-    pmx "^1.5"
+    pmx "~1.5.*"
     promptly "2.2.0"
     semver "^5.3"
     shelljs "0.7.8"
     source-map-support "^0.5"
     sprintf-js "1.1.1"
+    v8-compile-cache "^1.1.0"
     vizion "^0.2"
     yamljs "^0.3.0"
   optionalDependencies:
     gkt "https://tgz.pm2.io/gkt-1.0.0.tgz"
 
-pmx@^1.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/pmx/-/pmx-1.5.5.tgz#b6e0b8576edcf58d7f406967b44db3da77e357f0"
+pmx@~1.5.*:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/pmx/-/pmx-1.5.6.tgz#ee877e7b9baa7930efe1e4c0c8ff62e9e22fc40a"
   dependencies:
     debug "^3"
     json-stringify-safe "^5.0"
@@ -7909,6 +7910,10 @@ utils-merge@1.0.1:
 uuid@3.1.0, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
+
+v8-compile-cache@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-1.1.0.tgz#1dc2a340fb8e5f800a32bcdbfb8c23cd747021b9"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
