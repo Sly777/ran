@@ -95,23 +95,11 @@ RAN! is using [SemVer](http://semver.org/) for versioning. For the versions avai
 
 * **Ilker Guller** - [website](http://ilkerguller.com) / [twitter](https://twitter.com/the_bluescreen)
 
-See also the list of [maintainers](MAINTAINERS.md) who participated in this project.
-
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/694940?v=4" width="100px;"/><br /><sub><b>Ilker Guller</b></sub>](http://ilkerguller.com)<br />[💻](https://github.com/sly777/ran/commits?author=Sly777 "Code") [📖](https://github.com/sly777/ran/commits?author=Sly777 "Documentation") [👀](#review-Sly777 "Reviewed Pull Requests") [📢](#talk-Sly777 "Talks") | [<img src="https://avatars2.githubusercontent.com/u/7573215?v=4" width="100px;"/><br /><sub><b>bjornmelgaard</b></sub>](https://bitbucket.org/melgaardbjorn)<br />[💻](https://github.com/sly777/ran/commits?author=BjornMelgaard "Code") [💬](#question-BjornMelgaard "Answering Questions") | [<img src="https://avatars0.githubusercontent.com/u/10152022?v=4" width="100px;"/><br /><sub><b>Asten Mies</b></sub>](https://github.com/astenmies)<br />[💻](https://github.com/sly777/ran/commits?author=astenmies "Code") | [<img src="https://avatars0.githubusercontent.com/u/3647106?v=4" width="100px;"/><br /><sub><b>Jordi Talens</b></sub>](https://github.com/talensjr)<br />[💻](https://github.com/sly777/ran/commits?author=talensjr "Code") |
-| :---: | :---: | :---: | :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
-
+Thanks goes to these wonderful people:
 
 <a href="graphs/contributors"><img src="https://opencollective.com/ran/contributors.svg?width=890" /></a>
-
 
 ### Backers
 
