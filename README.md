@@ -108,3 +108,25 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+
+<a href="graphs/contributors"><img src="https://opencollective.com/ran/contributors.svg?width=890" /></a>
+
+
+### Backers
+
+Thank you to all our backers! [[Become a backer](https://opencollective.com/ran#backer)]
+
+<a href="https://opencollective.com/ran#backers" target="_blank"><img src="https://opencollective.com/ran/backers.svg?width=890"></a>
+
+
+### Sponsors
+
+Thank you to all our sponsors! (please ask your company to also support this open source project by [becoming a sponsor](https://opencollective.com/ran#sponsor))
+
+<a href="https://opencollective.com/ran/sponsor/0/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/1/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/2/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/3/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/4/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/5/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/5/avatar.svg"></a>

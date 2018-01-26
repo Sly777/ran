@@ -82,6 +82,7 @@
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.2.0",
     "offline-plugin": "4.9.0",
+    "opencollective": "^1.0.3",
     "pm2": "2.9.3",
     "prop-types": "15.6.0",
     "react": "16.2.0",
