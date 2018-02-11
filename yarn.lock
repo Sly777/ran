@@ -1634,11 +1634,7 @@ commander@2.12.2, commander@^2.11.0, commander@^2.9.0:
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
-commander@~2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
-
-commander@^2.13.0:
+commander@^2.13.0, commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
 
@@ -5095,9 +5091,9 @@ next@5.0.0:
     write-file-webpack-plugin "4.2.0"
     xss-filters "1.2.7"
 
-ngrok@2.2.25:
-  version "2.2.25"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.25.tgz#bab2026476ad644797bf860487988e5db9e38b0b"
+ngrok@2.2.26:
+  version "2.2.26"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.26.tgz#ae8257c7056bc73a13a253251348c7ef062e8d0a"
   dependencies:
     "@types/node" "^8.0.19"
     async "^2.3.0"
