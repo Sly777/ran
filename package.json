@@ -119,7 +119,7 @@
     "lint-staged": "6.1.0",
     "pre-commit": "1.2.2",
     "prettier": "1.10.2",
-    "release": "3.1.5",
+    "release": "3.1.6",
     "replace-in-file": "3.1.1",
     "shelljs": "0.8.1",
     "webpack-bundle-analyzer": "2.10.0"
