@@ -5529,9 +5529,9 @@ next@5.0.0:
     write-file-webpack-plugin "4.2.0"
     xss-filters "1.2.7"
 
-ngrok@2.2.26:
-  version "2.2.26"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.2.26.tgz#ae8257c7056bc73a13a253251348c7ef062e8d0a"
+ngrok@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-2.3.0.tgz#c016b3277a14ff18e5beb64904adb35be72f99b2"
   dependencies:
     "@types/node" "^8.0.19"
     async "^2.3.0"
