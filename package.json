@@ -76,7 +76,7 @@
     "ip": "1.1.5",
     "isomorphic-fetch": "2.2.1",
     "js-cookie": "2.2.0",
-    "lru-cache": "4.1.1",
+    "lru-cache": "4.1.2",
     "moment": "2.20.1",
     "next": "5.0.0",
     "next-cookies": "Sly777/next-cookies#master",
