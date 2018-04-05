@@ -95,16 +95,26 @@ RAN! is using [SemVer](http://semver.org/) for versioning. For the versions avai
 
 * **Ilker Guller** - [website](http://ilkerguller.com) / [twitter](https://twitter.com/the_bluescreen)
 
-See also the list of [maintainers](MAINTAINERS.md) who participated in this project.
-
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Thanks goes to these wonderful people:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/694940?v=4" width="100px;"/><br /><sub><b>Ilker Guller</b></sub>](http://ilkerguller.com)<br />[💻](https://github.com/sly777/ran/commits?author=Sly777 "Code") [📖](https://github.com/sly777/ran/commits?author=Sly777 "Documentation") [👀](#review-Sly777 "Reviewed Pull Requests") [📢](#talk-Sly777 "Talks") | [<img src="https://avatars2.githubusercontent.com/u/7573215?v=4" width="100px;"/><br /><sub><b>bjornmelgaard</b></sub>](https://bitbucket.org/melgaardbjorn)<br />[💻](https://github.com/sly777/ran/commits?author=BjornMelgaard "Code") [💬](#question-BjornMelgaard "Answering Questions") | [<img src="https://avatars0.githubusercontent.com/u/10152022?v=4" width="100px;"/><br /><sub><b>Asten Mies</b></sub>](https://github.com/astenmies)<br />[💻](https://github.com/sly777/ran/commits?author=astenmies "Code") | [<img src="https://avatars0.githubusercontent.com/u/3647106?v=4" width="100px;"/><br /><sub><b>Jordi Talens</b></sub>](https://github.com/talensjr)<br />[💻](https://github.com/sly777/ran/commits?author=talensjr "Code") |
-| :---: | :---: | :---: | :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+<a href="graphs/contributors"><img src="https://opencollective.com/ran/contributors.svg?width=890" /></a>
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+### Backers
+
+Thank you to all our backers! [[Become a backer](https://opencollective.com/ran#backer)]
+
+<a href="https://opencollective.com/ran#backers" target="_blank"><img src="https://opencollective.com/ran/backers.svg?width=890"></a>
+
+
+### Sponsors
+
+Thank you to all our sponsors! (please ask your company to also support this open source project by [becoming a sponsor](https://opencollective.com/ran#sponsor))
+
+<a href="https://opencollective.com/ran/sponsor/0/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/1/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/2/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/3/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/4/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/ran/sponsor/5/website" target="_blank"><img src="https://opencollective.com/ran/sponsor/5/avatar.svg"></a>

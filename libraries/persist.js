@@ -1,7 +1,7 @@
 // @flow
-const cookies = require('js-cookie');
+import cookies from 'js-cookie';
 
-class persist {
+export default class persist {
   static get ACCESS_TOKEN_KEY(): string {
     return 'accessToken';
   }
@@ -18,5 +18,3 @@ class persist {
     return cookies.remove(persist.ACCESS_TOKEN_KEY);
   }
 }
-
-module.exports = persist;
