@@ -24,7 +24,7 @@
     "toolkit"
   ],
   "engines": {
-    "node": ">=8.x",
+    "node": "8.x",
     "npm": ">=4.x"
   },
   "pre-commit": "lint-staged",
@@ -35,7 +35,8 @@
     ]
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "start:multicore": "cross-env NODE_ENV=production node ./node_modules/.bin/pm2 start server.js -i max --attach",
     "build": "npm run clean-cache && next build",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "dev": "npm run lint && npm run clean-cache && node server.js",

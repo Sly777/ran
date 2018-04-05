@@ -62,6 +62,16 @@ _command:_ ```yarn run build:static_export``` (or ```npm run build:static_export
 
 Build and export your application by using Static HTML Export feature of Next.js. To see limitations, [Click here](/docs/Architecture/static-html-export.md) 
 
+### start
+_command:_ ```yarn run start``` (or ```npm run start```)
+
+Start the application for Production
+
+### start:multicore
+_command:_ ```yarn run start:multicore``` (or ```npm run start:multicore```)
+
+Start the application for Production with multicore support (via PM2)
+
 ### setup
 _command:_ ```yarn run setup``` (or ```npm run setup```)
 
