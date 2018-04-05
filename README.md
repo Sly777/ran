@@ -40,6 +40,12 @@ yarn && yarn setup
 
 And that's all!
 
+## Start coding on browser! (via [Glitch](https://glitch.com))
+
+Just click the button and then start to work with RAN!
+
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/Sly777/ran)
+
 #### Clean Setup (without example pages & components)
 
 ```bash

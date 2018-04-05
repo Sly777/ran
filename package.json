@@ -53,6 +53,7 @@
     "lint-staged": "lint-staged",
     "precommit": "lint-staged",
     "heroku-postbuild": "npm run build",
+    "prestart": "npm run build",
     "release": "release",
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
