@@ -6,7 +6,6 @@ const shell = require('shelljs');
 const clear = require('cli-clear');
 const { exec } = require('child_process');
 const path = require('path');
-const fs = require('fs');
 const helper = require('./__helpers');
 
 const isCleanSetup = process.env.CLEANSETUP || false;
@@ -61,13 +60,6 @@ function initGit(callback) {
 }
 
 /**
- * Deletes a file in the current directory
- */
-function deleteFileInCurrentDir(file, callback) {
-  fs.unlink(path.join(__dirname, file), callback);
-}
-
-/**
  * Callback function after installing dependencies
  */
 function installDepsCallback(error) {
@@ -78,18 +70,16 @@ function installDepsCallback(error) {
     process.exit(1);
   }
 
-  deleteFileInCurrentDir('setup.js', () => {
-    process.stdout.write('Initialising new repository...');
-    initGit(() => {
-      cleanSetup(() => {
-        updateReadme(() => {
-          clear();
-          process.stdout.write('\n');
-          process.stdout.write('\nRAN! is ready to go!');
-          process.stdout.write('\n');
-          process.stdout.write('\n');
-          process.exit(0);
-        });
+  process.stdout.write('Initialising new repository...');
+  initGit(() => {
+    cleanSetup(() => {
+      updateReadme(() => {
+        clear();
+        process.stdout.write('\n');
+        process.stdout.write('\nRAN! is ready to go!');
+        process.stdout.write('\n');
+        process.stdout.write('\n');
+        process.exit(0);
       });
     });
   });
