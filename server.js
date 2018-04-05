@@ -48,10 +48,6 @@ try {
   // silence is golden
 }
 
-const buildStats = isProd
-  ? JSON.parse(fs.readFileSync('./.next/build-stats.json', 'utf8').toString())
-  : null;
-
 const buildId = isProd
   ? fs.readFileSync('./.next/BUILD_ID', 'utf8').toString()
   : null;
@@ -136,7 +132,7 @@ app.prepare().then(() => {
       app.serveStatic(req, res, path.resolve('./.next/app.js'))
     );
 
-    const hash = buildStats['app.js'] ? buildStats['app.js'].hash : buildId;
+    const hash = buildId;
 
     server.get(`/_next/${hash}/app.js`, (req, res) =>
       app.serveStatic(req, res, path.resolve('./.next/app.js'))
