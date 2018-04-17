@@ -63,7 +63,7 @@
   "dependencies": {
     "babel-plugin-inline-import-graphql-ast": "2.3.6",
     "babel-plugin-styled-components": "1.5.1",
-    "chalk": "2.3.2",
+    "chalk": "2.4.0",
     "color": "3.0.0",
     "compression": "1.7.2",
     "cors": "2.8.4",
