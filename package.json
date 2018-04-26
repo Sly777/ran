@@ -81,7 +81,7 @@
     "next": "5.1.0",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.4.1",
-    "offline-plugin": "4.9.0",
+    "offline-plugin": "5.0.0",
     "prop-types": "15.6.1",
     "react": "16.3.1",
     "react-apollo": "1.4.16",
