@@ -24,7 +24,7 @@
     "toolkit"
   ],
   "engines": {
-    "node": "8.x",
+    "node": "10",
     "npm": ">=4.x"
   },
   "pre-commit": "lint-staged",
