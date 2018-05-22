@@ -14,4 +14,4 @@ But before that, you need to follow this;
 - Then, run ```./helper_scripts/prepare-server-on-digitalocean.sh``` on Server Console
 - It will install nodejs and PM2
 - Then, run ```yarn && yarn run build``` to prepare packages & build
-- Finally, run ```pm2 start npm -- start``` to start server
+- Finally, run ```pm2 start npm -- start:multicore``` to start server

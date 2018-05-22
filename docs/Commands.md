@@ -42,11 +42,6 @@ _command:_ ```yarn run dev``` (or ```npm run dev```)
 
 Run lint and then open the server on your local on development mode
 
-### dev:next
-_command:_ ```yarn run dev:next``` (or ```npm run dev:next```)
-
-Run lint and then open the server on your local on development mode with **Next.js command**
-
 ### analyze
 _command:_ ```yarn run analyze``` (or ```npm run analyze```)
 
@@ -61,6 +56,16 @@ Build the application for Production
 _command:_ ```yarn run build:static_export``` (or ```npm run build:static_export```)
 
 Build and export your application by using Static HTML Export feature of Next.js. To see limitations, [Click here](/docs/Architecture/static-html-export.md) 
+
+### start
+_command:_ ```yarn run start``` (or ```npm run start```)
+
+Start the application for Production
+
+### start:multicore
+_command:_ ```yarn run start:multicore``` (or ```npm run start:multicore```)
+
+Start the application for Production with multicore support (via PM2). You need to install PM2 globally.
 
 ### setup
 _command:_ ```yarn run setup``` (or ```npm run setup```)

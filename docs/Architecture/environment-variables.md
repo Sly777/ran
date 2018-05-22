@@ -42,7 +42,7 @@ process.env.EMAIL
 On any of your client-side scripts, you can access your environment variables similarly
 ```javascript
 export default (props) => (
-  <div>My email is {process.env.PORT}</div>
+  <div>My email is {process.env.EMAIL}</div>
 );
 ```
 
