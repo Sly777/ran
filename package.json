@@ -23,10 +23,6 @@
     "run",
     "toolkit"
   ],
-  "engines": {
-    "node": "8.x",
-    "npm": ">=4.x"
-  },
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
