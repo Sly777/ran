@@ -1,32 +1,33 @@
 {
-    "env": {
-        "development": {
-            "presets": ["next/babel", "flow"]
-        },
-        "production": {
-            "presets": ["next/babel", "flow"]
-        },
-        "test": {
-            "presets": [
-                [
-                    "env",
-                    {
-                        "modules": "commonjs"
-                    }
-                ],
-                "next/babel"
-            ]
-        }
+  "env": {
+    "development": {
+      "presets": ["next/babel"]
     },
-    "plugins": [
+    "production": {
+      "presets": ["next/babel"]
+    },
+    "test": {
+      "presets": [
         [
-            "styled-components",
-            {
-                "ssr": true,
-                "displayName": true,
-                "preprocess": false
-            }
+          "env",
+          {
+            "modules": "commonjs"
+          }
         ],
-        "babel-plugin-inline-import-graphql-ast"
-    ]
+        "next/babel"
+      ]
+    }
+  },
+  "plugins": [
+    "@babel/plugin-transform-flow-strip-types",
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    "babel-plugin-inline-import-graphql-ast"
+  ]
 }
