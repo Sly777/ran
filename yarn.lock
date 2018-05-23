@@ -2837,9 +2837,9 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint-watch@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/eslint-watch/-/eslint-watch-3.1.4.tgz#76ae7a587e2100fa6c7cfc3753108f80880b3d16"
+eslint-watch@3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/eslint-watch/-/eslint-watch-3.1.5.tgz#52072135b45f07230b5e4df67354804eb8d6f2c8"
   dependencies:
     babel-polyfill "^6.20.0"
     bluebird "^3.5.1"
