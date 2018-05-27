@@ -28,6 +28,6 @@
         "preprocess": false
       }
     ],
-    "babel-plugin-inline-import-graphql-ast"
+    "import-graphql"
   ]
 }
