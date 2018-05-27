@@ -113,7 +113,7 @@
     "lint-staged": "7.1.2",
     "ngrok": "3.0.1",
     "pre-commit": "1.2.2",
-    "prettier": "1.12.1",
+    "prettier": "1.13.0",
     "replace-in-file": "3.4.0",
     "shelljs": "0.8.2",
     "webpack-bundle-analyzer": "2.13.0"
