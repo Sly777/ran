@@ -57,7 +57,7 @@
     "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export"
   },
   "dependencies": {
-    "babel-plugin-inline-import-graphql-ast": "2.4.0",
+    "babel-plugin-inline-import-graphql-ast": "2.4.1",
     "babel-plugin-styled-components": "1.5.1",
     "chalk": "2.4.1",
     "color": "3.0.0",
