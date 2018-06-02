@@ -64,7 +64,7 @@
     "compression": "1.7.2",
     "cors": "2.8.4",
     "cross-env": "5.1.5",
-    "dotenv": "5.0.1",
+    "dotenv": "6.0.0",
     "dotenv-webpack": "1.5.5",
     "express": "4.16.3",
     "graphql": "^0.10.5",
