@@ -93,7 +93,7 @@
     "babel-eslint": "8.2.3",
     "cli-clear": "1.0.4",
     "eslint": "4.19.1",
-    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-airbnb": "17.0.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-loader": "2.0.0",
     "eslint-plugin-flowtype": "2.46.3",
