@@ -61,7 +61,7 @@
     "babel-plugin-styled-components": "1.5.1",
     "chalk": "2.4.1",
     "color": "3.0.0",
-    "compression": "1.7.2",
+    "compression": "1.7.3",
     "cors": "2.8.4",
     "cross-env": "5.1.5",
     "dotenv": "5.0.1",
