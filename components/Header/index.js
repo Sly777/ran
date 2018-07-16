@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import LinkList from '../../components/LinkList';
+import LinkList from '../LinkList';
 import { Header as StyledHeader, Img } from './styles';
 import connect from './store';
 

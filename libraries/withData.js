@@ -12,7 +12,7 @@ type Props = {
   headers: HeadersType,
   accessToken: ?string,
   initialState: Object,
-  url: UrlType
+  router: Object
 };
 
 type Context = {
@@ -41,6 +41,13 @@ export default (
       accessToken: null
     };
 
+    constructor(props: Props) {
+      super(props);
+
+      this.apolloClient = apolloClient(this.props.headers);
+      this.reduxStore = reduxStore(this.apolloClient, this.props.initialState);
+    }
+
     static async getInitialProps(ctx: Context) {
       const headers = ctx.req ? ctx.req.headers : {};
       const token: string = cookies(ctx)[persist.ACCESS_TOKEN_KEY];
@@ -48,7 +55,9 @@ export default (
       const client = apolloClient(headers, token);
       const store = reduxStore(client, client.initialState, token);
       const props = {
-        url: { query: ctx.query, pathname: ctx.pathname },
+        router: {
+          url: { query: ctx.query, pathname: ctx.pathname }
+        },
         ...(await (typeof Component.getInitialProps === 'function'
           ? Component.getInitialProps(ctx)
           : {}))
@@ -76,14 +85,8 @@ export default (
       };
     }
 
-    constructor(props: Props) {
-      super(props);
-
-      this.apolloClient = apolloClient(this.props.headers);
-      this.reduxStore = reduxStore(this.apolloClient, this.props.initialState);
-    }
-
     apolloClient: Object;
+
     reduxStore: Object;
 
     render() {

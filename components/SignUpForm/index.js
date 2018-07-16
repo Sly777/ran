@@ -25,6 +25,13 @@ type State = {
 };
 
 class SignUpForm extends React.Component<Props, State> {
+  formFields = [
+    { key: 1, attr: { name: 'firstName', type: 'text', label: 'First Name' } },
+    { key: 2, attr: { name: 'lastName', type: 'text', label: 'Last Name' } },
+    { key: 3, attr: { name: 'email', type: 'email', label: 'Email' } },
+    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } }
+  ];
+
   static propTypes = {
     mutations: PropTypes.shape({
       signUp: PropTypes.func.isRequired
@@ -49,13 +56,6 @@ class SignUpForm extends React.Component<Props, State> {
       });
     }
   }
-
-  formFields = [
-    { key: 1, attr: { name: 'firstName', type: 'text', label: 'First Name' } },
-    { key: 2, attr: { name: 'lastName', type: 'text', label: 'Last Name' } },
-    { key: 3, attr: { name: 'email', type: 'email', label: 'Email' } },
-    { key: 4, attr: { name: 'password', type: 'password', label: 'Password' } }
-  ];
 
   handleTouch = () => {
     this.setState({ touched: true });

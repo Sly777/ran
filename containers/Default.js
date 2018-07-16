@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import App from '../components/App';
@@ -6,10 +7,10 @@ import Header from '../components/Header';
 import { onComponentDidMount } from '../libraries/googleAnalytics';
 import ProjectInfo from '../components/ProjectInfo';
 
-export default class Default extends React.Component {
+class Default extends React.Component {
   static propTypes = {
     title: PropTypes.string,
-    url: PropTypes.object.isRequired,
+    router: PropTypes.object.isRequired,
     children: PropTypes.element.isRequired
   };
 
@@ -31,10 +32,12 @@ export default class Default extends React.Component {
               : 'RAN! React . GraphQL . Next.js Toolkit'}
           </title>
         </Helmet>
-        <Header pathname={this.props.url.pathname} />
+        <Header pathname={this.props.router.url.pathname} />
         <ProjectInfo />
         {this.props.children}
       </App>
     );
   }
 }
+
+export default withRouter(Default);

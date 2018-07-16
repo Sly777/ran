@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
 const { IgnorePlugin } = require('webpack');
 const OfflinePlugin = require('offline-plugin');
-const router = require('./routes');
 const Dotenv = require('dotenv-webpack');
+const router = require('./routes');
 
 const initExport = {
   webpack: (config, { dev }) => {
@@ -85,7 +85,7 @@ if (process.env.STATIC_EXPORT) {
   initExport.exportPathMap = function exportPathMap() {
     const routes = {};
     routes['/'] = {
-      page: 'index'
+      page: '/'
     };
     router.routes.forEach(route => {
       if (!route.pattern.includes(':')) {

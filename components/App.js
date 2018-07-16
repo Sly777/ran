@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import color from 'color';
 import themeList from '../libraries/theme';
-import { App as ThemedApp } from '../components/Theme';
+import { App as ThemedApp } from './Theme';
 
 let offlineInstalled = false;
 
