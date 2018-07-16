@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { withRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import App from '../components/App';
@@ -8,7 +9,7 @@ import ProjectInfo from '../components/ProjectInfo';
 
 type Props = {
   title?: string,
-  url: UrlType,
+  router: Object,
   children: React.Element<*>
 };
 
@@ -21,7 +22,7 @@ const Default = (props: Props) => (
           : 'RAN! React . GraphQL . Next.js Toolkit'}
       </title>
     </Helmet>
-    <Header pathname={props.url.pathname} />
+    <Header pathname={props.router.url.pathname} />
     <ProjectInfo />
     {props.children}
   </App>
@@ -29,7 +30,7 @@ const Default = (props: Props) => (
 
 Default.propTypes = {
   title: PropTypes.string,
-  url: PropTypes.object.isRequired,
+  router: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired
 };
 
@@ -37,4 +38,4 @@ Default.defaultProps = {
   title: ''
 };
 
-export default Default;
+export default withRouter(Default);

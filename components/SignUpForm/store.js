@@ -24,5 +24,8 @@ const mapDispatchToProps = dispatch => ({
 
 export default comp => {
   const compWithApollo = withMutation(comp);
-  return connect(null, mapDispatchToProps)(compWithApollo);
+  return connect(
+    null,
+    mapDispatchToProps
+  )(compWithApollo);
 };
