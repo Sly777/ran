@@ -94,7 +94,7 @@
     "cli-clear": "1.0.4",
     "eslint": "5.1.0",
     "eslint-config-airbnb": "17.0.0",
-    "eslint-config-prettier": "2.9.0",
+    "eslint-config-prettier": "2.10.0",
     "eslint-loader": "2.0.0",
     "eslint-plugin-flowtype": "2.50.0",
     "eslint-plugin-graphql": "2.1.1",
