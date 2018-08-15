@@ -89,7 +89,7 @@
     "styled-components": "3.3.3"
   },
   "devDependencies": {
-    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.47",
+    "@babel/plugin-transform-flow-strip-types": "7.0.0-rc.1",
     "babel-eslint": "8.2.6",
     "cli-clear": "1.0.4",
     "eslint": "5.1.0",
