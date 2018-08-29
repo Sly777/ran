@@ -16,6 +16,6 @@ export const Main = styled.div`
   }
 `;
 
-export const SubmitButton = T.Button.extend`
+export const SubmitButton = styled(T.Button)`
   opacity: ${({ touched }) => (touched ? 1 : 0.5)};
 `;

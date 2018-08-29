@@ -16,7 +16,7 @@ export const Loading = styled.div`
   display: flex;
 `;
 
-export const Title = T.A.extend`
+export const Title = styled(T.A)`
   font-size: 14px;
   margin-right: 10px;
   text-decoration: none;
@@ -34,14 +34,15 @@ export const ItemList = styled.ul`
   padding: 0;
 `;
 
-export const ShowMore = T.Button.extend`
+export const ShowMore = styled(T.Button)`
   &:before {
     align-self: center;
     border-style: solid;
     border-width: 6px 4px 0 4px;
     border-color: #ffffff transparent transparent transparent;
-    content: "";
+    content: '';
     height: 0;
     margin-right: 5px;
     width: 0;
-  }`;
+  }
+`;
