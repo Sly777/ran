@@ -54,7 +54,8 @@
     "graphql:play": "graphql playground",
     "graphql:update_schema": "graphql get-schema",
     "graphql:see_graph": "graphql voyager",
-    "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export"
+    "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export",
+    "zip-for-beanstalk": "npm prune --production && zip -qr ran-boilerplate.zip . -x \"*.zip\""
   },
   "dependencies": {
     "babel-plugin-import-graphql": "2.6.2",
