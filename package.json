@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "babel-plugin-import-graphql": "2.6.2",
-    "babel-plugin-styled-components": "1.6.2",
+    "babel-plugin-styled-components": "1.6.3",
     "chalk": "2.4.1",
     "color": "3.0.0",
     "compression": "1.7.3",
