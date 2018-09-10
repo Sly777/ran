@@ -21,7 +21,7 @@
 
 - ***Performance-first***
 
-- ***Production Deployment Ready for Now, Digital Ocean, Heroku, and AWS ***
+- ***Production Deployment Ready for Now, Digital Ocean, Heroku, and AWS***
 
 - ***Prettier and ESLint integrated***
 
