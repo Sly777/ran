@@ -87,7 +87,7 @@
     "react-redux": "5.0.7",
     "redux": "4.0.0",
     "rimraf": "2.6.2",
-    "styled-components": "3.4.5"
+    "styled-components": "3.4.6"
   },
   "devDependencies": {
     "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.47",
