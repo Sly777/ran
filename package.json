@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "babel-plugin-import-graphql": "2.6.2",
-    "babel-plugin-styled-components": "1.6.2",
+    "babel-plugin-styled-components": "1.6.4",
     "chalk": "2.4.1",
     "color": "3.0.0",
     "compression": "1.7.3",
@@ -75,19 +75,19 @@
     "js-cookie": "2.2.0",
     "lru-cache": "4.1.3",
     "moment": "2.22.2",
-    "next": "6.1.1",
+    "next": "6.1.2",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.4.2",
     "offline-plugin": "5.0.5",
     "prop-types": "15.6.2",
-    "react": "16.4.2",
+    "react": "16.5.0",
     "react-apollo": "1.4.16",
-    "react-dom": "16.4.2",
+    "react-dom": "16.5.0",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.7",
     "redux": "4.0.0",
     "rimraf": "2.6.2",
-    "styled-components": "3.4.5"
+    "styled-components": "3.4.6"
   },
   "devDependencies": {
     "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.47",
