@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack');
 const router = require('./routes');
 
 const initExport = {
-  webpack: (config, { dev }) => {
+  webpack: (config, { dev, isServer }) => {
     const prod = !dev;
 
     config.plugins.push(new Dotenv({ path: './public.env' }));
@@ -25,7 +25,7 @@ const initExport = {
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'server',
-          analyzerPort: 8888,
+          analyzerPort: isServer ? 8888 : 8889,
           openAnalyzer: true
         })
       );
