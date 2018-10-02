@@ -54,7 +54,9 @@
     "graphql:update_schema": "graphql get-schema",
     "graphql:see_graph": "graphql voyager",
     "build:static_export": "cross-env STATIC_EXPORT=true npm run build && cross-env STATIC_EXPORT=true next export",
-    "zip-for-beanstalk": "npm prune --production && zip -qr ran-boilerplate.zip . -x \"*.zip\""
+    "zip-for-beanstalk": "npm prune --production && zip -qr ran-boilerplate.zip . -x \"*.zip\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-plugin-import-graphql": "2.6.2",
@@ -86,7 +88,8 @@
     "react-redux": "5.0.7",
     "redux": "4.0.0",
     "rimraf": "2.6.2",
-    "styled-components": "3.4.9"
+    "styled-components": "3.4.9",
+    "snyk": "^1.99.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-flow-strip-types": "7.0.0",
@@ -126,5 +129,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "snyk": true
 }
