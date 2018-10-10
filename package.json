@@ -103,7 +103,7 @@
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
     "eslint-watch": "4.0.2",
-    "figlet": "1.2.0",
+    "figlet": "1.2.1",
     "flow-bin": "0.82.0",
     "graphql-cli": "^2.16.7",
     "graphql-cli-voyager": "0.1.3",
