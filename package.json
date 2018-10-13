@@ -96,7 +96,7 @@
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "3.1.0",
     "eslint-loader": "2.1.1",
-    "eslint-plugin-flowtype": "2.50.3",
+    "eslint-plugin-flowtype": "3.0.0",
     "eslint-plugin-graphql": "2.1.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
