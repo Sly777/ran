@@ -116,7 +116,7 @@
     "prettier": "1.14.3",
     "replace-in-file": "3.4.2",
     "shelljs": "0.8.2",
-    "webpack-bundle-analyzer": "3.0.2"
+    "webpack-bundle-analyzer": "3.0.3"
   },
   "collective": {
     "type": "opencollective",
