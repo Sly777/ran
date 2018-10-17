@@ -74,7 +74,7 @@
     "js-cookie": "2.2.0",
     "lru-cache": "4.1.3",
     "moment": "2.22.2",
-    "next": "7.0.1",
+    "next": "7.0.2",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.4.2",
     "offline-plugin": "5.0.5",
