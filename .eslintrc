@@ -39,7 +39,8 @@
     "import/no-extraneous-dependencies": 0,
     "prettier/prettier": "error",
     "flowtype/define-flow-type": 1,
-    "react/destructuring-assignment": 0
+    "react/destructuring-assignment": 0,
+    "linebreak-style": ["error", "windows"]
   },
   "settings": {
     "flowtype": {
