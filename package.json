@@ -57,6 +57,8 @@
     "zip-for-beanstalk": "npm prune --production && zip -qr ran-boilerplate.zip . -x \"*.zip\""
   },
   "dependencies": {
+    "apollo-boost": "^0.1.23",
+    "apollo-client-preset": "^1.0.8",
     "babel-plugin-import-graphql": "2.6.2",
     "babel-plugin-styled-components": "1.8.0",
     "chalk": "2.4.1",
@@ -67,7 +69,7 @@
     "dotenv": "6.1.0",
     "dotenv-webpack": "1.5.7",
     "express": "4.16.4",
-    "graphql": "^0.10.5",
+    "graphql": "^14.0.2",
     "helmet": "3.14.0",
     "ip": "1.1.5",
     "isomorphic-fetch": "2.2.1",
@@ -80,10 +82,10 @@
     "offline-plugin": "5.0.5",
     "prop-types": "15.6.2",
     "react": "16.5.2",
-    "react-apollo": "1.4.16",
+    "react-apollo": "^2.3.3",
     "react-dom": "16.5.2",
     "react-helmet": "5.2.0",
-    "react-redux": "5.0.7",
+    "react-redux": "^6.0.0",
     "redux": "4.0.1",
     "rimraf": "2.6.2",
     "styled-components": "3.4.9"

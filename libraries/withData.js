@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
+import { Provider as ReduxProvider } from 'react-redux';
 import PropTypes from 'prop-types';
 import 'isomorphic-fetch';
 import cookies from 'next-cookies';
@@ -43,17 +44,21 @@ export default (
 
     constructor(props: Props) {
       super(props);
-
-      this.apolloClient = apolloClient(this.props.headers);
-      this.reduxStore = reduxStore(this.apolloClient, this.props.initialState);
+      this.apolloClient = apolloClient(
+        this.props.headers,
+        '',
+        this.props.initialState.apollo
+      );
+      this.reduxStore = reduxStore(this.props.initialState.auth);
     }
 
     static async getInitialProps(ctx: Context) {
+      let apolloState = {};
+      let serverState = {};
+
       const headers = ctx.req ? ctx.req.headers : {};
       const token: string = cookies(ctx)[persist.ACCESS_TOKEN_KEY];
 
-      const client = apolloClient(headers, token);
-      const store = reduxStore(client, client.initialState, token);
       const props = {
         router: {
           url: { query: ctx.query, pathname: ctx.pathname }
@@ -64,21 +69,26 @@ export default (
       };
 
       if (!process.browser) {
+        const client = apolloClient(headers || {}, token || '', {});
+        const store = reduxStore();
+
         const app = (
-          <ApolloProvider client={client} store={store}>
-            <Component {...props} />
+          <ApolloProvider client={client}>
+            <ReduxProvider store={store}>
+              <Component {...props} />
+            </ReduxProvider>
           </ApolloProvider>
         );
         await getDataFromTree(app);
+
+        apolloState = client.cache.extract();
+        serverState = store.getState();
       }
 
-      const state = store.getState();
       return {
         initialState: {
-          ...state,
-          apollo: {
-            data: state.apollo.data
-          }
+          reduxState: serverState,
+          apolloState
         },
         headers,
         ...props
@@ -91,8 +101,10 @@ export default (
 
     render() {
       return (
-        <ApolloProvider client={this.apolloClient} store={this.reduxStore}>
-          <Component {...this.props} />
+        <ApolloProvider client={this.apolloClient}>
+          <ReduxProvider store={this.reduxStore}>
+            <Component {...this.props} />
+          </ReduxProvider>
         </ApolloProvider>
       );
     }
