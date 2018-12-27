@@ -11,12 +11,11 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const router = require('./routes');
-const logger = require('./server/logger');
-
 const isDev = process.env.NODE_ENV !== 'production';
 const isProd = !isDev;
 const ngrok = isDev && process.env.ENABLE_TUNNEL ? require('ngrok') : null;
+const router = require('./routes');
+const logger = require('./server/logger');
 
 const customHost = process.env.HOST;
 const host = customHost || null;
@@ -147,13 +146,15 @@ app.prepare().then(() => {
     }
 
     if (ngrok) {
-      ngrok.connect(port, (innerErr, url) => {
-        if (innerErr) {
-          return logger.error(innerErr);
+      ngrok.connect(
+        port,
+        (innerErr, url) => {
+          if (innerErr) {
+            return logger.error(innerErr);
+          }
+          logger.appStarted(port, prettyHost, url);
         }
-
-        logger.appStarted(port, prettyHost, url);
-      });
+      );
     } else {
       logger.appStarted(port, prettyHost);
     }

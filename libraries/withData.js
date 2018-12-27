@@ -12,8 +12,9 @@ import persist from './persist';
 type Props = {
   headers: HeadersType,
   accessToken: ?string,
-  initialState: Object,
-  router: Object
+  router: Object,
+  apolloState: Object,
+  reduxState: Object
 };
 
 type Context = {
@@ -33,9 +34,10 @@ export default (
 ): React.ComponentType<Props> =>
   class extends React.Component<Props> {
     static propTypes = {
+      apolloState: PropTypes.object.isRequired,
+      reduxState: PropTypes.object.isRequired,
       headers: PropTypes.object.isRequired,
-      accessToken: PropTypes.string,
-      initialState: PropTypes.object.isRequired
+      accessToken: PropTypes.string
     };
 
     static defaultProps = {
@@ -44,12 +46,8 @@ export default (
 
     constructor(props: Props) {
       super(props);
-      this.apolloClient = apolloClient(
-        this.props.headers,
-        '',
-        this.props.initialState.apollo
-      );
-      this.reduxStore = reduxStore(this.props.initialState.auth);
+      this.apolloClient = apolloClient({}, '', this.props.apolloState);
+      this.reduxStore = reduxStore(this.props.reduxState);
     }
 
     static async getInitialProps(ctx: Context) {
@@ -86,10 +84,8 @@ export default (
       }
 
       return {
-        initialState: {
-          reduxState: serverState,
-          apolloState
-        },
+        reduxState: serverState,
+        apolloState,
         headers,
         ...props
       };
