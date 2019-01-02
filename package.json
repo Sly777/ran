@@ -85,7 +85,7 @@
     "react-helmet": "5.2.0",
     "react-redux": "5.0.7",
     "redux": "4.0.1",
-    "rimraf": "2.6.2",
+    "rimraf": "2.6.3",
     "styled-components": "3.4.9"
   },
   "devDependencies": {
