@@ -1,16 +1,18 @@
 import { createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+
 import { dispatchers } from '../components/AuthFields/store';
-import getReducer from './reducer';
+import rootReducer from './reducer';
 import createMiddleware from './middleware';
 import persist from './persist';
 
 let reduxStore = null;
+const middleware = createMiddleware(thunkMiddleware);
 
-export default (apolloClient, initialState, token) => {
+export default (initialState, token) => {
   let store;
   if (!process.browser || !reduxStore) {
-    const middleware = createMiddleware(apolloClient.middleware());
-    store = createStore(getReducer(apolloClient), initialState, middleware);
+    store = createStore(rootReducer(), initialState, middleware);
 
     let tokenInStore = store.getState().auth.token;
 

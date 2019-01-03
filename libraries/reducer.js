@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
 import { reducer as authReducer } from '../components/AuthFields/store';
 
-export default function getReducer(client) {
+export default function getReducer() {
   return combineReducers({
-    apollo: client.reducer(),
     auth: authReducer
   });
 }
