@@ -21,7 +21,7 @@
   "plugins": [
     "@babel/plugin-transform-flow-strip-types",
     [
-      "styled-components",
+      "babel-plugin-styled-components",
       {
         "ssr": true,
         "displayName": true,
