@@ -11,7 +11,7 @@ import persist from './persist';
 
 type Props = {
   headers: HeadersType,
-  accessToken: ?string,
+  accessToken?: string,
   router: Object,
   apolloState: Object,
   reduxState: Object
