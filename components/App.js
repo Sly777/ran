@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import color from 'color';
 import themeList from '../libraries/theme';
 import { App as ThemedApp } from './Theme';
@@ -12,6 +12,16 @@ type Props = {
   children: React.Node,
   theme?: string
 };
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 const App = ({ children, theme }: Props) => {
   const themeName = !themeList[theme] ? 'main' : theme;
@@ -33,7 +43,10 @@ const App = ({ children, theme }: Props) => {
 
   return (
     <ThemeProvider theme={themeList[themeName]}>
-      <ThemedApp>{children}</ThemedApp>
+      <ThemedApp>
+        <GlobalStyle />
+        {children}
+      </ThemedApp>
     </ThemeProvider>
   );
 };
@@ -46,15 +59,5 @@ App.propTypes = {
   children: PropTypes.array.isRequired,
   theme: PropTypes.string
 };
-
-injectGlobal`
-  * {
-    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
-`;
 
 export default App;
