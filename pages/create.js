@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import CreatePost from '../components/CreatePost';
-import withData from '../libraries/withData';
+import withData from '../libraries/WithData';
 import DefaultCon from '../containers/Default';
 
 export default withData(props => (

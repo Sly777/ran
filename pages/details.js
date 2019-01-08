@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { withRouter } from 'next/router';
 import PostInfo from '../components/PostInfo';
-import withData from '../libraries/withData';
+import withData from '../libraries/WithData';
 import DefaultCon from '../containers/Default';
 
 export default withData(

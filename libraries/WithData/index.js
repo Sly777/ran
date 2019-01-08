@@ -1,13 +1,14 @@
 // @flow
 import * as React from 'react';
-import { ApolloProvider, getDataFromTree } from 'react-apollo';
-import { Provider as ReduxProvider } from 'react-redux';
+import { getDataFromTree } from 'react-apollo';
 import PropTypes from 'prop-types';
 import 'isomorphic-fetch';
 import cookies from 'next-cookies';
 import apolloClient from '../ApolloClient';
 import reduxStore from '../reduxStore';
 import persist from '../persist';
+
+import Renderer from './Render';
 
 type Props = {
   headers: HeadersType,
@@ -71,12 +72,15 @@ export default (
         const store = reduxStore();
 
         const app = (
-          <ApolloProvider client={client}>
-            <ReduxProvider store={store}>
-              <Component {...props} />
-            </ReduxProvider>
-          </ApolloProvider>
+          <Renderer
+            client={client}
+            store={store}
+            ctx={ctx || {}}
+            router={props.router}
+            Component={Component}
+          />
         );
+
         await getDataFromTree(app);
 
         apolloState = client.cache.extract();
@@ -97,11 +101,13 @@ export default (
 
     render() {
       return (
-        <ApolloProvider client={this.apolloClient}>
-          <ReduxProvider store={this.reduxStore}>
-            <Component {...this.props} />
-          </ReduxProvider>
-        </ApolloProvider>
+        <Renderer
+          client={this.apolloClient}
+          store={this.reduxStore}
+          ctx={{}}
+          router={this.props.router}
+          Component={Component}
+        />
       );
     }
   };
