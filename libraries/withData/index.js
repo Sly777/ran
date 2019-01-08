@@ -5,9 +5,9 @@ import { Provider as ReduxProvider } from 'react-redux';
 import PropTypes from 'prop-types';
 import 'isomorphic-fetch';
 import cookies from 'next-cookies';
-import apolloClient from './apolloClient';
-import reduxStore from './reduxStore';
-import persist from './persist';
+import apolloClient from '../ApolloClient';
+import reduxStore from '../reduxStore';
+import persist from '../persist';
 
 type Props = {
   headers: HeadersType,
@@ -46,7 +46,7 @@ export default (
 
     constructor(props: Props) {
       super(props);
-      this.apolloClient = apolloClient({}, '', this.props.apolloState);
+      this.apolloClient = apolloClient({}, '', this.props.apolloState, {});
       this.reduxStore = reduxStore(this.props.reduxState);
     }
 
@@ -67,7 +67,7 @@ export default (
       };
 
       if (!process.browser) {
-        const client = apolloClient(headers || {}, token || '', {});
+        const client = apolloClient(headers || {}, token || '', {}, ctx);
         const store = reduxStore();
 
         const app = (

@@ -2,7 +2,11 @@ import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloLink } from 'apollo-client-preset';
-import persist from './persist';
+import { onError } from 'apollo-link-error';
+
+import graphQLErrorsHandler from './graphqlErrorsHandler';
+import netwotkErrorsHandler from './networkErrorsHandler';
+import persist from '../persist';
 
 let apolloClient = null;
 
@@ -11,8 +15,20 @@ const httpLink = createHttpLink({
   credentials: 'include'
 });
 
-function createClient(headers, token, initialState) {
+function createClient(headers, token, initialState, ctx) {
   let accessToken = token;
+
+  const errorLink = onError(
+    ({ graphQLErrors, networkError, operation, forward }) => {
+      if (graphQLErrors) {
+        graphQLErrorsHandler(graphQLErrors, operation, forward, ctx);
+      }
+
+      if (networkError) {
+        netwotkErrorsHandler(networkError, operation, forward, ctx);
+      }
+    }
+  );
 
   (async () => {
     // eslint-disable-next-line no-param-reassign
@@ -26,7 +42,9 @@ function createClient(headers, token, initialState) {
       }
     });
     return forward(operation);
-  }).concat(httpLink);
+  })
+    .concat(errorLink)
+    .concat(httpLink);
 
   return new ApolloClient({
     headers,
@@ -37,12 +55,12 @@ function createClient(headers, token, initialState) {
   });
 }
 
-export default (headers, token, initialState) => {
+export default (headers, token, initialState, ctx) => {
   if (!process.browser) {
-    return createClient(headers, token, initialState);
+    return createClient(headers, token, initialState, ctx);
   }
   if (!apolloClient) {
-    apolloClient = createClient(headers, token, initialState);
+    apolloClient = createClient(headers, token, initialState, ctx);
   }
   return apolloClient;
 };
