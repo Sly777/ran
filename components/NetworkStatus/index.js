@@ -30,13 +30,13 @@ class NetworkStatus extends React.Component<Props, State> {
 
   render() {
     return (
-      <>
+      <div>
         {!this.state.online && (
           <styles.Root>
             <styles.Label> Offline </styles.Label>
           </styles.Root>
         )}
-      </>
+      </div>
     );
   }
 }
