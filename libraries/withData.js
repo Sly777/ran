@@ -41,7 +41,7 @@ export default (
     };
 
     static defaultProps = {
-      accessToken: null
+      accessToken: ''
     };
 
     constructor(props: Props) {
@@ -67,17 +67,24 @@ export default (
       };
 
       if (!process.browser) {
-        const client = apolloClient(headers || {}, token || '', {});
+        const client = apolloClient(headers || {}, token || '', {}, ctx);
         const store = reduxStore();
 
-        const app = (
-          <ApolloProvider client={client}>
-            <ReduxProvider store={store}>
-              <Component {...props} />
-            </ReduxProvider>
-          </ApolloProvider>
-        );
-        await getDataFromTree(app);
+        try {
+          const app = (
+            <ApolloProvider client={client}>
+              <ReduxProvider store={store}>
+                <Component {...props} />
+              </ReduxProvider>
+            </ApolloProvider>
+          );
+          await getDataFromTree(app);
+        } catch (error) {
+          // Prevent Apollo Client GraphQL errors from crashing SSR.
+          // Handle them in components via the data.error prop:
+          // https://github.com/apollographql/react-apollo/issues/406
+          // http://dev.apollodata.com/react/api-queries.html#graphql-query-data-error
+        }
 
         apolloState = client.cache.extract();
         serverState = store.getState();
