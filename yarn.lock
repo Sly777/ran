@@ -7377,6 +7377,14 @@ prop-types@15.6.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0, 
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@15.7.0:
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.0.tgz#cc45233a8ccef80f4a2e3a6bf575bee4e19b4a50"
+  integrity sha512-rlfizAIb1WrkMkbFm3uk7cZGqeVPOhHHMj3gy9FUHE+Ha5lKvbIzj9ygvLdG8Cv2CQEhQnP5djXS7pbmTOpBqw==
+  dependencies:
+    object-assign "^4.1.1"
+    react-is "^16.8.1"
+
 protochain@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/protochain/-/protochain-1.0.5.tgz#991c407e99de264aadf8f81504b5e7faf7bfa260"
@@ -7593,6 +7601,11 @@ react-is@^16.3.2, react-is@^16.6.0, react-is@^16.6.3:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
   integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
+
+react-is@^16.8.1:
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.1.tgz#a80141e246eb894824fb4f2901c0c50ef31d4cdb"
+  integrity sha512-ioMCzVDWvCvKD8eeT+iukyWrBGrA3DiFYkXfBsVYIRdaREZuBjENG+KjrikavCLasozqRWTwFUagU/O4vPpRMA==
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
