@@ -80,7 +80,7 @@
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.4.2",
     "offline-plugin": "5.0.6",
-    "prop-types": "15.6.2",
+    "prop-types": "15.7.0",
     "react": "16.7.0",
     "react-apollo": "2.3.3",
     "react-dom": "16.7.0",
