@@ -6739,10 +6739,10 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-offline-plugin@5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/offline-plugin/-/offline-plugin-5.0.6.tgz#7a7b244220cddb8a8cabecb172ec5c0be03e74b2"
-  integrity sha512-qvcDmeI30xmvSlmqjopAj7QCuM1MEzvmDyuMTN2saDReSay5nUqCpKysexH1KUNXv5H/TfmHd+rngNPkRFj3YA==
+offline-plugin@5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/offline-plugin/-/offline-plugin-5.0.7.tgz#26936ad1a7699f4d67e0a095a258972a4ccf1788"
+  integrity sha512-ArMFt4QFjK0wg8B5+R/6tt65u6Dk+Pkx4PAcW5O7mgIF3ywMepaQqFOQgfZD4ybanuGwuJihxUwMRgkzd+YGYw==
   dependencies:
     deep-extend "^0.5.1"
     ejs "^2.3.4"
