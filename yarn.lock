@@ -2799,10 +2799,10 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-decompress-zip@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/decompress-zip/-/decompress-zip-0.3.1.tgz#3e4c6972fe80d89bb0fa9542e30044019ae6f626"
-  integrity sha512-pNGzi0RIpLA/CqrMQoSuh/1+YiVGJSEhQeibgoZQEdPFQOhO5pvqim3sp1qMvio3+mkonUQ1Akjdw8RgvV/RsA==
+decompress-zip@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/decompress-zip/-/decompress-zip-0.3.2.tgz#f3fa2841666abce394604f4a9e8a7085c202d464"
+  integrity sha512-Ab1QY4LrWMrUuo53lLnmGOby7v8ryqxJ+bKibKSiPisx+25mhut1dScVBXAYx14i/PqSrFZvR2FRRazhLbvL+g==
   dependencies:
     binary "^0.3.0"
     graceful-fs "^4.1.3"
@@ -6435,13 +6435,13 @@ next@7.0.2:
     webpackbar "2.6.3"
     write-file-webpack-plugin "4.3.2"
 
-ngrok@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-3.1.0.tgz#a148b7567d1bae918ee7b0f461bd8f58411016fd"
-  integrity sha512-8eui7ZJkBaczrl8FS4m7G2qh8JJYUOeznE7UsJAbeGuktGtb6aWXiCGqbgngqK/l0S4jue1JIgIZbFtbMJMv6A==
+ngrok@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ngrok/-/ngrok-3.2.0.tgz#7c033926e087987a42892d323795e3711021576b"
+  integrity sha512-1aZ/Qr+zmn3Y96CtSxGt7wxFwGVHzbF5FbLJ7GBcB7T/I9NOycW9rhsWYJiDB45CO7BLGCjnWE27ZAa0kQU8UQ==
   dependencies:
     "@types/node" "^8.10.30"
-    decompress-zip "^0.3.1"
+    decompress-zip "^0.3.2"
     request "^2.88.0"
     request-promise-native "^1.0.5"
     uuid "^3.3.2"
