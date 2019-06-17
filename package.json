@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-flow-strip-types": "7.2.3",
-    "babel-eslint": "10.0.1",
+    "babel-eslint": "10.0.2",
     "cli-clear": "1.0.4",
     "eslint": "5.11.1",
     "eslint-config-airbnb": "17.1.0",
