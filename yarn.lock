@@ -3292,12 +3292,12 @@ eslint-module-utils@^2.2.0:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-flowtype@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.2.0.tgz#824364ed5940a404b91326fdb5a313a2a74760df"
-  integrity sha512-baJmzngM6UKbEkJ5OY3aGw2zjXBt5L2QKZvTsOlXX7yHKIjNRrlJx2ods8Rng6EdqPR9rVNIQNYHpTs0qfn2qA==
+eslint-plugin-flowtype@3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.10.4.tgz#442ae8933d0160443d9f28d505fec34c03ce1e15"
+  integrity sha512-OYzNDV08jXq/l0UdhSt275UipREgL5iqtN16SgFlAXJD8OmBAmZNh/QCg5h+L6FrrdPJgEXsVukihN8ceJ11MQ==
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.11"
 
 eslint-plugin-graphql@3.0.1:
   version "3.0.1"
