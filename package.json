@@ -107,7 +107,7 @@
     "eslint-watch": "4.0.2",
     "figlet": "1.2.1",
     "flow-bin": "0.89.0",
-    "graphql-cli": "3.0.4",
+    "graphql-cli": "3.0.14",
     "graphql-cli-voyager": "0.1.3",
     "handlebars": "4.0.12",
     "husky": "1.3.1",
