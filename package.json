@@ -57,7 +57,7 @@
     "zip-for-beanstalk": "npm prune --production && zip -qr ran-boilerplate.zip . -x \"*.zip\""
   },
   "dependencies": {
-    "apollo-boost": "0.1.23",
+    "apollo-boost": "0.4.7",
     "apollo-client-preset": "1.0.8",
     "babel-plugin-import-graphql": "2.6.2",
     "babel-plugin-styled-components": "1.10.0",
