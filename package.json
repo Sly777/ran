@@ -110,7 +110,7 @@
     "graphql-cli": "3.0.4",
     "graphql-cli-voyager": "0.1.3",
     "handlebars": "4.0.12",
-    "husky": "1.3.1",
+    "husky": "4.2.2",
     "inquirer": "6.2.1",
     "lint-staged": "8.1.0",
     "ngrok": "3.1.0",
