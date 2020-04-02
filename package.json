@@ -61,7 +61,7 @@
     "apollo-client-preset": "1.0.8",
     "babel-plugin-import-graphql": "2.6.2",
     "babel-plugin-styled-components": "1.10.0",
-    "chalk": "2.4.1",
+    "chalk": "4.0.0",
     "color": "3.1.0",
     "compression": "1.7.3",
     "cors": "2.8.5",
