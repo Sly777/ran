@@ -5860,9 +5860,9 @@ locate-path@^3.0.0:
     path-exists "^3.0.0"
 
 lodash-es@^4.17.5:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.10.tgz#62cd7104cdf5dd87f235a837f0ede0e8e5117e05"
-  integrity sha512-iesFYPmxYYGTcmQK0sL8bX3TGHyM6b2qREaB4kamHfQyfPJP0xgoGxp19nsH16nsfquLdiyKyX3mQkfiSGV8Rg==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
