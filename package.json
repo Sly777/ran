@@ -76,7 +76,7 @@
     "js-cookie": "2.2.0",
     "lru-cache": "5.1.1",
     "moment": "2.23.0",
-    "next": "7.0.2",
+    "next": "9.3.4",
     "next-cookies": "Sly777/next-cookies#master",
     "next-routes": "1.4.2",
     "offline-plugin": "5.0.6",
@@ -87,7 +87,7 @@
     "react-helmet": "5.2.0",
     "react-redux": "6.0.0",
     "redux": "4.0.1",
-    "rimraf": "2.6.3",
+    "rimraf": "4.0.0",
     "styled-components": "4.1.3"
   },
   "devDependencies": {
